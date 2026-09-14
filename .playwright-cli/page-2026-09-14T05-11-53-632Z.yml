@@ -1,0 +1,130 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - link "Kiranlata home" [ref=f1e4] [cursor=pointer]:
+      - /url: /index.html
+      - img "Kiranlata" [ref=f1e5]
+    - button "Open menu" [ref=f1e6] [cursor=pointer]
+  - main [ref=f1e8]:
+    - generic [ref=f1e9]:
+      - img "Illustrated village weaving courtyard where artisans work at traditional handlooms" [ref=f1e11]
+      - generic [ref=f1e13]:
+        - text: KIRANLATA · কিরণলতা
+        - paragraph [ref=f1e14]: From the looms of India & Bangladesh · To New York
+        - heading [level=1] [ref=f1e15]:
+          - text: A way of life,
+          - emphasis [ref=f1e16]: woven in six yards.
+        - paragraph [ref=f1e17]: Kiranlata brings distinctive handloom sarees—and the human stories within them—to women across the United States.
+        - generic [ref=f1e18]:
+          - link "Shop the collection ↘" [ref=f1e19] [cursor=pointer]:
+            - /url: "#collections"
+            - text: Shop the collection
+            - generic [ref=f1e20]: ↘
+          - link "Meet the hands" [ref=f1e21] [cursor=pointer]:
+            - /url: /hands.html
+    - generic [ref=f1e22]:
+      - generic [ref=f1e23]:
+        - paragraph [ref=f1e24]: The Kiranlata promise
+        - heading [level=2] [ref=f1e25]:
+          - text: Sarees that
+          - emphasis [ref=f1e26]: tell a story.
+        - paragraph [ref=f1e27]: Not hundreds of designs. Small, carefully considered collections, where every saree has its own character and every thread can be traced back to craft.
+      - generic [ref=f1e28]:
+        - article [ref=f1e29]:
+          - generic [ref=f1e31]: "01"
+          - heading "Handloom, always" [level=3] [ref=f1e32]: Handloom,always
+          - paragraph [ref=f1e33]: Woven by artisans on traditional looms, with the beautiful irregularity of the human hand.
+        - article [ref=f1e34]:
+          - generic [aria-hidden] [ref=f1e35]: ❦
+          - generic [ref=f1e36]: "02"
+          - heading "Natural threads" [level=3] [ref=f1e37]: Naturalthreads
+          - paragraph [ref=f1e38]: Breathable cotton and luminous silk. Never synthetic fibers.
+        - article [ref=f1e39]:
+          - generic [aria-hidden] [ref=f1e40]: ⌁
+          - generic [ref=f1e41]: "03"
+          - heading "Chosen with meaning" [level=3] [ref=f1e42]: Chosen withmeaning
+          - paragraph [ref=f1e43]: Distinctive pieces selected for their technique, provenance and quiet character.
+        - article [ref=f1e44]:
+          - generic [aria-hidden] [ref=f1e45]: ∞
+          - generic [ref=f1e46]: "04"
+          - heading "Made to live on" [level=3] [ref=f1e47]: Made tolive on
+          - paragraph [ref=f1e48]: To be worn, loved, remembered—and one day passed into another pair of hands.
+    - generic [ref=f1e49]:
+      - generic [ref=f1e50]:
+        - img "Hand-drawn close view of a Jamdani artisan weaving motifs by hand" [ref=f1e52]
+        - generic [ref=f1e53]: Each motif, placed by hand
+      - generic [ref=f1e54]:
+        - paragraph [ref=f1e55]: The slow intelligence of hands
+        - heading [level=2] [ref=f1e56]:
+          - text: From their hands
+          - emphasis [ref=f1e57]: to your story.
+        - paragraph [ref=f1e58]: "A handloom saree begins with rhythm: warp held taut, shuttle passing, motifs counted thread by thread. It carries the time, knowledge and touch of the person who made it."
+        - paragraph [ref=f1e59]: We work to connect that living tradition with the woman who will give the saree its next chapter.
+        - link "Why handloom matters" [ref=f1e60] [cursor=pointer]:
+          - /url: /story.html
+    - generic [ref=f1e62]:
+      - generic [ref=f1e63]:
+        - paragraph [ref=f1e64]: Small-batch seasonal edits
+        - heading [level=2] [ref=f1e65]:
+          - text: Woven stories,
+          - emphasis [ref=f1e66]: waiting for yours.
+        - paragraph [ref=f1e67]: Our first collection is taking shape. These are the textile traditions at the heart of Kiranlata.
+      - tablist "Saree collections" [ref=f1e68]:
+        - tab "Jamdani" [selected] [ref=f1e69] [cursor=pointer]
+        - tab "Baluchari" [ref=f1e70] [cursor=pointer]
+        - tab "Tangail" [ref=f1e71] [cursor=pointer]
+      - tabpanel "Jamdani" [ref=f1e72]:
+        - generic [ref=f1e73]:
+          - img "Illustrated woman wearing an ivory and red handwoven Jamdani saree" [ref=f1e74]
+          - generic [ref=f1e75]: 01 / 03
+          - generic [ref=f1e76]: Handloomarchive
+        - generic [ref=f1e77]:
+          - paragraph [ref=f1e78]: Poetry in extra weft
+          - heading "Jamdani whispers" [level=3] [ref=f1e79]: Jamdaniwhispers
+          - paragraph [ref=f1e80]: Featherlight cotton, with motifs introduced one patient thread at a time. A storied Bengal weave that rewards a closer look.
+          - generic [ref=f1e81]:
+            - generic [ref=f1e82]: Bengal
+            - generic [ref=f1e83]: Fine cotton · Extra weft
+          - link "Join the first look ↗" [ref=f1e84] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Join the first look
+            - generic [ref=f1e85]: ↗
+    - generic [ref=f1e86]:
+      - generic [ref=f1e87]:
+        - paragraph [ref=f1e88]: A boutique between two worlds
+        - blockquote [ref=f1e89]:
+          - text: “Heritage is not kept behind glass. It is
+          - emphasis [ref=f1e90]: worn, loved, and lived in.
+          - text: ”
+      - generic [ref=f1e91]:
+        - paragraph [ref=f1e92]: Kiranlata is a New York-based, thoughtfully curated saree boutique bringing distinctive handloom and artisanal sarees from India and Bangladesh to women across the United States.
+        - paragraph [ref=f1e93]: We believe a saree can hold a place, a maker, a memory—and still feel entirely your own. Our collections stay small so every piece can be known and chosen with care.
+    - generic [ref=f1e95]:
+      - paragraph [ref=f1e96]: Six yards. Many lifetimes.
+      - heading [level=2] [ref=f1e97]:
+        - text: Some things become more beautiful
+        - emphasis [ref=f1e98]: because they are passed on.
+    - generic [ref=f1e99]:
+      - paragraph [ref=f1e100]: The first collection is coming
+      - heading [level=2] [ref=f1e101]:
+        - text: Come closer to
+        - emphasis [ref=f1e102]: the story.
+      - paragraph [ref=f1e103]: Join us for first access to small handloom releases, private previews and personal saree guidance from New York.
+      - link "Begin an enquiry ↗" [ref=f1e104] [cursor=pointer]:
+        - /url: mailto:hello@example.com
+        - text: Begin an enquiry
+        - generic [ref=f1e105]: ↗
+      - generic [ref=f1e106]: KIRANLATA · HANDLOOM · COTTON · SILK ·
+  - contentinfo [ref=f1e107]:
+    - link "Kiranlata" [ref=f1e108] [cursor=pointer]:
+      - /url: index.html
+    - paragraph [ref=f1e109]: A way of life, woven in six yards.India · Bangladesh · New York
+    - navigation [ref=f1e110]:
+      - link "Shipping & returns" [ref=f1e111] [cursor=pointer]:
+        - /url: policies/shipping-returns.html
+      - link "Privacy" [ref=f1e112] [cursor=pointer]:
+        - /url: policies/privacy.html
+      - link "Instagram" [ref=f1e113] [cursor=pointer]:
+        - /url: "#contact"
+    - generic [ref=f1e114]: © 2026 Kiranlata
