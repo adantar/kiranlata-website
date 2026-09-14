@@ -93,3 +93,6 @@
 
 /* Touch devices cannot hover: keep a localized reading field behind hero copy */
 @media(max-width:900px),(hover:none){.heritage-copy:after{opacity:.78;background:radial-gradient(ellipse at 28% 58%,#1c110bd9 0%,#1c110ba3 48%,transparent 78%)}.story-mast:after,.collection-hero>div:after{opacity:.76}.collection-hero:before{background:linear-gradient(0deg,#28180cdb 0%,#28180c73 52%,transparent 82%)}}
+
+/* Mobile menu control sits left while the mark remains optically centered */
+@media(max-width:900px){.regional-header .menu-button{grid-column:1;grid-row:1;justify-self:start}.regional-header .logo-brand{grid-column:2;grid-row:1}}
