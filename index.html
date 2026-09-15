@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260915-19">
+  <script src="assets/js/main.js?v=20260915-19" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -55,13 +55,56 @@
     </section>
 
     <section id="collections" class="collections section-pad">
-      <div class="section-intro reveal"><p class="eyebrow">Small-batch seasonal edits</p><h2>Woven stories,<br><em>waiting for yours.</em></h2><p>Our first collection is taking shape. These are the textile traditions at the heart of Kiranlata.</p></div>
-      <div class="tabs" role="tablist" aria-label="Saree collections"><button role="tab" id="tab-jamdani" aria-selected="true" data-collection="jamdani">Jamdani</button><button role="tab" id="tab-baluchari" aria-selected="false" data-collection="baluchari">Baluchari</button><button role="tab" id="tab-tangail" aria-selected="false" data-collection="tangail">Tangail</button></div>
-      <article id="collection-panel" class="collection-feature" role="tabpanel" aria-labelledby="tab-jamdani">
-        <div class="collection-visual reveal"><img src="assets/images/story/collection-jamdani.png" alt="Illustrated woman wearing an ivory and red handwoven Jamdani saree"><span class="image-number">01 / 03</span><span class="collection-mark">Handloom<br>archive</span></div>
-        <div class="collection-copy reveal"><p class="eyebrow" data-kicker>Poetry in extra weft</p><h3 data-title>Jamdani<br>whispers</h3><p data-description>Featherlight cotton, with motifs introduced one patient thread at a time. A storied Bengal weave that rewards a closer look.</p><div class="collection-meta"><span data-origin>Bengal</span><span data-fabric>Fine cotton · Extra weft</span></div><a class="button dark" href="#contact">Join the first look <span>↗</span></a></div>
-      </article>
+      <div class="section-intro reveal"><p class="eyebrow">Small-batch seasonal edits</p><h2>Woven stories,<br><em>waiting for yours.</em></h2><p>Three featured traditions offer a way into the collection. Explore all twelve weaves whenever you are ready.</p></div>
+      <div class="mobile-weave-directory" aria-label="Browse the complete collection by region">
+        <div class="mobile-directory-intro"><div><p class="eyebrow">The complete collection</p><h3>Find your weave</h3></div><button class="directory-toggle" type="button" aria-expanded="true"><span data-directory-toggle-label>Minimize</span><b aria-hidden="true">−</b></button></div>
+        <section><a class="mobile-directory-region" href="collections/bengal.html">Bengal Handloom <span>↗</span></a><div><a href="collections/bengal.html#gorod">Gorod</a><a href="collections/bengal.html#dhaniakhali">Dhaniakhali</a><a href="collections/bengal.html#baluchari">Baluchari</a><a href="collections/bengal.html#phulia">Phulia</a><a href="collections/bengal.html#kalakshetra">Bengal Kalakshetra</a></div></section>
+        <section><a class="mobile-directory-region" href="collections/odisha.html">Odisha Handloom <span>↗</span></a><div><a href="collections/odisha.html#dhalapathar">Dhalapathar</a></div></section>
+        <section><a class="mobile-directory-region" href="collections/south-india.html">South Indian Handloom <span>↗</span></a><div><a href="collections/south-india.html#ilkal">Ilkal</a><a href="collections/south-india.html#narayanpet">Narayanpet</a><a href="collections/south-india.html#patteda-anchu">Patteda Anchu</a><a href="collections/kanchipuram.html#kanchipuram">Kanchipuram</a></div></section>
+        <section class="mobile-directory-standalone"><p>Individual traditions</p><div><a href="collections/banarasi.html#banarasi">Banarasi <span>↗</span></a><a href="collections/maheshwari.html#maheshwari">Maheshwari <span>↗</span></a></div></section>
+      </div>
+      <nav class="weave-explorer" aria-label="Explore all available saree weaves">
+        <div class="weave-explorer-heading"><span>Explore by weave</span><strong>12 living traditions</strong></div>
+        <div class="weave-groups">
+          <div><small>Bengal</small><a href="collections/bengal.html#gorod">Gorod</a><a href="collections/bengal.html#dhaniakhali">Dhaniakhali</a><a href="collections/bengal.html#baluchari">Baluchari</a><a href="collections/bengal.html#phulia">Phulia</a><a href="collections/bengal.html#kalakshetra">Bengal Kalakshetra</a></div>
+          <div><small>Odisha</small><a href="collections/odisha.html#dhalapathar">Dhalapathar</a></div>
+          <div><small>South India</small><a href="collections/south-india.html#ilkal">Ilkal</a><a href="collections/south-india.html#narayanpet">Narayanpet</a><a href="collections/south-india.html#patteda-anchu">Patteda Anchu</a><a href="collections/kanchipuram.html#kanchipuram">Kanchipuram</a></div>
+          <div><small>Heritage silk</small><a href="collections/banarasi.html#banarasi">Banarasi</a><a href="collections/maheshwari.html#maheshwari">Maheshwari</a></div>
+        </div>
+        <button class="weave-explorer-mobile" type="button" aria-haspopup="dialog" aria-controls="weave-drawer"><span><small>Keep exploring while you browse</small>Open all 12 weaves</span><b aria-hidden="true">＋</b></button>
+      </nav>
+      <div class="featured-heading"><div><p class="eyebrow">The seasonal edit</p><h3>Featured weaves</h3></div><p>Three ways into the collection</p></div>
+      <div class="featured-stories" aria-label="Three featured saree traditions">
+        <article class="collection-feature featured-story" id="featured-dhaniakhali">
+          <div class="collection-visual reveal"><img src="assets/images/story/collection-jamdani.png" alt="Concept portrait of a woman wearing an ivory and red Bengal cotton saree"><span class="image-number">Featured 01 of 03</span><span class="collection-mark">Everyday<br>ease</span></div>
+          <div class="collection-copy reveal"><p class="eyebrow">Everyday Bengal, beautifully resolved</p><h3>Dhaniakhali<br>clarity</h3><p>Crisp handloom cotton, a rhythmic woven border and the quiet assurance of a saree designed to be lived in.</p><div class="collection-meta"><span>Hooghly · West Bengal</span><span>Handloom cotton · Woven border</span></div><a class="button dark" href="collections/bengal.html#dhaniakhali">View the collection <span>↗</span></a></div>
+        </article>
+        <article class="collection-feature featured-story reverse" id="featured-baluchari">
+          <div class="collection-visual reveal"><img src="assets/images/story/collection-baluchari.png" alt="Concept portrait displaying the narrative pallu of a maroon Baluchari silk saree"><span class="image-number">Featured 02 of 03</span><span class="collection-mark">Woven<br>narrative</span></div>
+          <div class="collection-copy reveal"><p class="eyebrow">A pallu that tells a tale</p><h3>Baluchari<br>narratives</h3><p>Substantial silk becomes a storyteller: figurative scenes, floral medallions and temple-like frames unfold across the anchal in intricate woven panels.</p><div class="collection-meta"><span>Bishnupur · West Bengal</span><span>Handloom silk · Figured pallu</span></div><a class="button dark" href="collections/bengal.html#baluchari">View the collection <span>↗</span></a></div>
+        </article>
+        <article class="collection-feature featured-story" id="featured-kanchipuram">
+          <div class="collection-visual reveal"><img src="assets/images/catalogue/regions/south-india-board.webp" alt="Concept study of richly colored South Indian handloom sarees"><span class="image-number">Featured 03 of 03</span><span class="collection-mark">Silk<br>grandeur</span></div>
+          <div class="collection-copy reveal"><p class="eyebrow">Temple geometry in luminous silk</p><h3>Kanchipuram<br>grandeur</h3><p>Weighty mulberry silk, contrasting borders and enduring zari architecture give this southern classic its unmistakable presence.</p><div class="collection-meta"><span>Kanchipuram · Tamil Nadu</span><span>Mulberry silk · Interlocked border</span></div><a class="button dark" href="collections/kanchipuram.html#kanchipuram">View the collection <span>↗</span></a></div>
+        </article>
+      </div>
     </section>
+
+    <dialog class="weave-drawer" id="weave-drawer" aria-labelledby="weave-drawer-title">
+      <div class="weave-drawer-head"><div><p class="eyebrow">The Kiranlata collection</p><h2 id="weave-drawer-title">Explore all weaves</h2></div><button type="button" data-close-weaves aria-label="Close weave menu">×</button></div>
+      <div class="weave-drawer-groups">
+        <section><h3>Bengal Handloom</h3><a href="collections/bengal.html#gorod">Gorod</a><a href="collections/bengal.html#dhaniakhali">Dhaniakhali</a><a href="collections/bengal.html#baluchari">Baluchari</a><a href="collections/bengal.html#phulia">Phulia</a><a href="collections/bengal.html#kalakshetra">Bengal Kalakshetra</a></section>
+        <section><h3>Odisha Handloom</h3><a href="collections/odisha.html#dhalapathar">Dhalapathar</a></section>
+        <section><h3>South Indian Handloom</h3><a href="collections/south-india.html#ilkal">Ilkal</a><a href="collections/south-india.html#narayanpet">Narayanpet</a><a href="collections/south-india.html#patteda-anchu">Patteda Anchu</a><a href="collections/kanchipuram.html#kanchipuram">Kanchipuram</a></section>
+        <section><h3>Heritage Silk</h3><a href="collections/banarasi.html#banarasi">Banarasi</a><a href="collections/maheshwari.html#maheshwari">Maheshwari</a></section>
+      </div>
+    </dialog>
+
+    <aside class="weave-popover" id="weave-popover" role="dialog" aria-modal="false" aria-label="Weave preview" hidden>
+      <div class="weave-popover-sketch" aria-hidden="true"></div>
+      <div class="weave-popover-copy"><p data-weave-detail></p><h3 data-weave-name></h3><p data-weave-note></p><a data-weave-link href="#">View collection <span>↗</span></a></div>
+      <button type="button" data-close-weave-popover aria-label="Close weave preview">×</button>
+    </aside>
 
     <section id="story" class="story-village section-pad">
       <div class="story-lead reveal"><p class="eyebrow">A boutique between two worlds</p><blockquote>“Heritage is not kept behind glass. It is <em>worn, loved, and lived in.</em>”</blockquote></div>
