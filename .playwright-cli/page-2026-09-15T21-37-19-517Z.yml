@@ -1,0 +1,241 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f7e3]:
+    - link "Kiranlata home" [ref=f7e4] [cursor=pointer]:
+      - /url: /index.html
+      - img "Kiranlata" [ref=f7e5]
+    - button "Open menu" [ref=f7e6] [cursor=pointer]
+  - main [ref=f7e8]:
+    - generic [ref=f7e9]:
+      - paragraph [ref=f7e10]: A garment · A language · A living archive
+      - heading [level=1] [ref=f7e11]:
+        - text: The evolution
+        - emphasis [ref=f7e12]: of the saree.
+      - paragraph [ref=f7e13]: Not one origin story, but thousands of years of cloth, place, ingenuity and personal expression.
+      - generic [aria-hidden] [ref=f7e14]: শাড়ি
+    - generic [ref=f7e15]:
+      - paragraph [ref=f7e16]: A cloth still becoming
+      - heading [level=2] [ref=f7e17]:
+        - text: Six thousand yearsof
+        - emphasis [ref=f7e18]: living textile knowledge.
+      - paragraph [ref=f7e19]: This chronology marks documented textile and saree-history milestones—not exact “invention dates.” Most traditions evolved across generations, and their beginnings cannot responsibly be reduced to a single year.
+    - region [ref=f7e20]:
+      - generic [ref=f7e21]:
+        - paragraph [ref=f7e22]: A wider map of the saree
+        - heading [level=2] [ref=f7e23]:
+          - text: Traditions,
+          - emphasis [ref=f7e24]: across time and place.
+        - generic [ref=f7e25]:
+          - paragraph [ref=f7e26]: A selected chronology of South Asian saree traditions. Periods mark documented roots, emergence or flourishing—not exact invention dates. Weaving times are indicative and change with yarn, motif density and artisan team.
+          - paragraph [ref=f7e27]: ✦ In Kiranlata’s current regional edit
+          - link "Sources & dating notes ↓" [ref=f7e28] [cursor=pointer]:
+            - /url: "#research-notes"
+            - text: Sources & dating notes
+            - generic [ref=f7e29]: ↓
+      - list [ref=f7e30]:
+        - listitem [ref=f7e31]:
+          - generic [ref=f7e33]:
+            - time [ref=f7e34]: 15th–16th c.
+            - heading "Kanchipuram" [level=3] [ref=f7e35]
+            - paragraph [ref=f7e36]: Tamil Nadu · interlocked silk and zari traditions
+            - paragraph [ref=f7e37]:
+              - generic [ref=f7e38]: Known forms
+              - text: Korvai · Petni · Tissue
+          - strong [ref=f7e39]:
+            - generic [ref=f7e40]: Typical loom time
+            - text: 10–20 days
+          - text: ✦
+        - listitem [ref=f7e41]:
+          - generic [ref=f7e43]:
+            - time [ref=f7e44]: 16th–17th c. flourishing
+            - heading "Dhakai Jamdani" [level=3] [ref=f7e45]
+            - paragraph [ref=f7e46]: Dhaka · discontinuous supplementary weft
+            - paragraph [ref=f7e47]:
+              - generic [ref=f7e48]: Known layouts
+              - text: Jaal · Butidar · Tercha · Panna Hazar
+          - strong [ref=f7e49]:
+            - generic [ref=f7e50]: Typical loom time
+            - text: 1–6 months
+          - text: ✦
+        - listitem [ref=f7e51]:
+          - generic [ref=f7e53]:
+            - time [ref=f7e54]: 16th–18th c. flourishing
+            - heading "Banarasi" [level=3] [ref=f7e55]
+            - paragraph [ref=f7e56]: Varanasi · drawloom brocade and zari
+            - paragraph [ref=f7e57]:
+              - generic [ref=f7e58]: Known forms
+              - text: Katan · Organza · Georgette · Shattir
+          - strong [ref=f7e59]:
+            - generic [ref=f7e60]: Typical loom time
+            - text: 15 days–6 months
+          - text: ✦
+        - listitem [ref=f7e61]:
+          - generic [ref=f7e63]:
+            - time [ref=f7e64]: 18th c.
+            - heading "Baluchari" [level=3] [ref=f7e65]
+            - paragraph [ref=f7e66]: Bengal · narrative figured silk pallus
+            - paragraph [ref=f7e67]:
+              - generic [ref=f7e68]: Known forms
+              - text: Baluchari · Swarnachari
+          - strong [ref=f7e69]:
+            - generic [ref=f7e70]: Typical loom time
+            - text: 1–3 weeks
+          - text: ✦
+        - listitem [ref=f7e71]:
+          - generic [ref=f7e73]:
+            - time [ref=f7e74]: Late 18th c.
+            - heading "Maheshwari" [level=3] [ref=f7e75]
+            - paragraph [ref=f7e76]: Madhya Pradesh · light silk-cotton with striped borders
+            - paragraph [ref=f7e77]:
+              - generic [ref=f7e78]: Known forms
+              - text: Chandrakala · Chandratara · Baingani Chandrakala
+          - strong [ref=f7e79]:
+            - generic [ref=f7e80]: Typical loom time
+            - text: 5–10 days
+          - text: ✦
+        - listitem [ref=f7e81]:
+          - generic [ref=f7e83]:
+            - time [ref=f7e84]: 19th c. documented forms
+            - heading "Odisha Ikats" [level=3] [ref=f7e85]
+            - paragraph [ref=f7e86]: Odisha · resist-dyed yarn alignment
+            - paragraph [ref=f7e87]:
+              - generic [ref=f7e88]: Known forms
+              - text: Sambalpuri · Bomkai · Bandha
+          - strong [ref=f7e89]:
+            - generic [ref=f7e90]: Typical loom time
+            - text: 2–8 weeks
+          - text: ✦
+        - listitem [ref=f7e91]:
+          - generic [ref=f7e93]:
+            - time [ref=f7e94]: 19th–20th c. present forms
+            - heading "Tangail & Phulia" [level=3] [ref=f7e95]
+            - paragraph [ref=f7e96]: Bangladesh and Bengal · fine cotton with extra-weft borders
+            - paragraph [ref=f7e97]:
+              - generic [ref=f7e98]: Known forms
+              - text: Butidar · Jangla · Jamdani
+          - strong [ref=f7e99]:
+            - generic [ref=f7e100]: Typical loom time
+            - text: 7–20 days
+          - text: ✦
+        - listitem [ref=f7e101]:
+          - generic [ref=f7e103]:
+            - time [ref=f7e104]: 19th–20th c. present forms
+            - heading "Deccan South" [level=3] [ref=f7e105]
+            - paragraph [ref=f7e106]: Distinctive joins, checks and borders
+            - paragraph [ref=f7e107]:
+              - generic [ref=f7e108]: Known forms
+              - text: Ilkal · Narayanpet · Patteda Anchu
+          - strong [ref=f7e109]:
+            - generic [ref=f7e110]: Typical loom time
+            - text: 3–12 days
+          - text: ✦
+      - generic [ref=f7e111]:
+        - generic [ref=f7e112]:
+          - time [ref=f7e113]: Ancient roots
+          - heading "Paithani" [level=3] [ref=f7e114]
+          - paragraph [ref=f7e115]: Maharashtra · tapestry silk
+          - strong [ref=f7e116]: 2 months–1 year
+        - generic [ref=f7e117]:
+          - time [ref=f7e118]: 11th–12th c. roots
+          - heading "Patan Patola" [level=3] [ref=f7e119]
+          - paragraph [ref=f7e120]: Gujarat · double ikat
+          - strong [ref=f7e121]: 6 months–1 year
+        - generic [ref=f7e122]:
+          - time [ref=f7e123]: 13th–15th c.
+          - heading "Chanderi" [level=3] [ref=f7e124]
+          - paragraph [ref=f7e125]: Madhya Pradesh · translucent silk-cotton
+          - strong [ref=f7e126]: 3–10 days
+        - generic [ref=f7e127]:
+          - time [ref=f7e128]: 17th c.
+          - heading "Kota Doria" [level=3] [ref=f7e129]
+          - paragraph [ref=f7e130]: Rajasthan · checked khat weave
+          - strong [ref=f7e131]: 3–5 days
+        - generic [ref=f7e132]:
+          - time [ref=f7e133]: Centuries-old
+          - heading "Pochampally Ikat" [level=3] [ref=f7e134]
+          - paragraph [ref=f7e135]: Telangana · yarn tie-resist
+          - strong [ref=f7e136]: 7–15 days
+      - paragraph [ref=f7e137]: The main vertical rail highlights Kiranlata’s regional edit. The wider constellation adds important traditions beyond the current catalogue. All production ranges describe skilled handloom work; highly intricate or custom pieces may take substantially longer.
+    - region "Saree and South Asian textile history timeline" [ref=f7e138]:
+      - article [ref=f7e139]:
+        - text: ✦
+        - img "Hand-drawn interpretation of an early South Asian unstitched cotton drape" [ref=f7e141]
+        - generic [ref=f7e142]:
+          - time [ref=f7e143]: c. 4000 BCE onward
+          - heading "Cloth before the modern sari" [level=3] [ref=f7e144]
+          - paragraph [ref=f7e145]: India’s handmade textile history reaches back at least six millennia. Ancient cotton knowledge preceded the garment we now call the saree, which emerged gradually from traditions of wrapped, unstitched cloth.
+          - text: "Try this: notice how one length becomes architecture on the body."
+      - article [ref=f7e146]:
+        - text: ✦
+        - img "Hand-drawn interpretation of fine figured muslin in a historic Dhaka weaving setting" [ref=f7e148]
+        - generic [ref=f7e149]:
+          - time [ref=f7e150]: 16th–17th centuries
+          - heading "Courts, workshops and fine muslin" [level=3] [ref=f7e151]
+          - paragraph [ref=f7e152]: Under Mughal patronage, regional workshops and established crafts reached wider markets. Bengal’s extraordinarily fine cottons and figured muslins became celebrated far beyond the subcontinent.
+          - text: "Look closer: Jamdani motifs are woven—not embroidered."
+      - article [ref=f7e153]:
+        - text: ✦
+        - img "Hand-drawn Baluchari saree with narrative woven pallu" [ref=f7e155]
+        - generic [ref=f7e156]:
+          - time [ref=f7e157]: 18th–19th centuries
+          - heading "Narratives enter the pallu" [level=3] [ref=f7e158]
+          - paragraph [ref=f7e159]: Baluchari developed as a celebrated Bengal silk tradition, its pallus arranged like woven picture galleries. Museum records preserve regional silk, brocade and cotton sarees from this era.
+          - text: "Decode it: a pallu can be read like a graphic novel."
+      - article [ref=f7e160]:
+        - text: ✦
+        - img "Hand-drawn contemporary South Asian woman artisan weaving at a wooden handloom" [ref=f7e162]
+        - generic [ref=f7e163]:
+          - time [ref=f7e164]: 19th–20th centuries
+          - heading "Industry, resistance and survival" [level=3] [ref=f7e165]
+          - paragraph [ref=f7e166]: Mechanised production transformed textile markets, yet handmade cloth endured. During the freedom movement, khadi and hand-spinning became expressions of self-reliance and political identity.
+          - text: "Ask of every saree: handloom or powerloom—and how do we know?"
+      - article [ref=f7e167]:
+        - text: ✦
+        - img "Hand-drawn close view of Jamdani motifs being woven by hand" [ref=f7e169]
+        - generic [ref=f7e170]:
+          - time [ref=f7e171]: "2013"
+          - heading "Jamdani recognised by UNESCO" [level=3] [ref=f7e172]
+          - paragraph [ref=f7e173]: UNESCO inscribed Bangladesh’s traditional art of Jamdani weaving. Motifs are formed directly on the loom through a labour-intensive discontinuous-weft technique transmitted within weaving communities.
+          - text: "Human signature: tiny variations reveal the rhythm of the hand."
+      - article [ref=f7e174]:
+        - text: ✦
+        - img "Illustrated woman in a Tangail saree beside a traditional loom" [ref=f7e176]
+        - generic [ref=f7e177]:
+          - time [ref=f7e178]: "2025"
+          - heading "Tangail joins the living-heritage list" [level=3] [ref=f7e179]
+          - paragraph [ref=f7e180]: Traditional saree weaving art of Tangail, Bangladesh, joined UNESCO’s Representative List—recognition of a tradition kept alive through practice and transmission.
+          - text: "Your chapter: wear, repeat, ask, remember, pass on."
+    - generic [ref=f7e181]:
+      - paragraph [ref=f7e182]: The timeline does not end here
+      - heading [level=2] [ref=f7e183]:
+        - text: History survives
+        - emphasis [ref=f7e184]: when it is worn.
+      - link "Explore the regional archive ↗" [ref=f7e185] [cursor=pointer]:
+        - /url: /collections/bengal.html
+        - text: Explore the regional archive
+        - generic [ref=f7e186]: ↗
+    - generic [ref=f7e187]:
+      - heading "Research notes" [level=2] [ref=f7e188]
+      - paragraph [ref=f7e189]: Chronology informed by institutional sources from the Victoria and Albert Museum, The Metropolitan Museum of Art, UNESCO Intangible Cultural Heritage, and IGNCA. Dates describe documented evidence or recognition, not definitive invention dates.
+      - generic [ref=f7e190]:
+        - 'link "V&A: Indian textiles" [ref=f7e191] [cursor=pointer]':
+          - /url: https://www.vam.ac.uk/articles/indian-textiles
+        - 'link "The Met: Trade and production" [ref=f7e192] [cursor=pointer]':
+          - /url: https://www.metmuseum.org/de/essays/indian-textiles-trade-and-production
+        - 'link "UNESCO: Jamdani" [ref=f7e193] [cursor=pointer]':
+          - /url: https://ich.unesco.org/en/RL/traditional-art-of-jamdani-weaving-00879
+        - link "UNESCO living heritage lists" [ref=f7e194] [cursor=pointer]:
+          - /url: https://ich.unesco.org/en/lists
+  - contentinfo [ref=f7e195]:
+    - link "Kiranlata" [ref=f7e196] [cursor=pointer]:
+      - /url: /index.html
+    - paragraph [ref=f7e197]: A way of life, woven in six yards.India · Bangladesh · New York
+    - navigation [ref=f7e198]:
+      - link "Our story" [ref=f7e199] [cursor=pointer]:
+        - /url: /story.html
+      - link "Collections" [ref=f7e200] [cursor=pointer]:
+        - /url: /collections/bengal.html
+      - link "Enquire" [ref=f7e201] [cursor=pointer]:
+        - /url: /index.html#contact
+    - generic [ref=f7e202]: © 2026 Kiranlata

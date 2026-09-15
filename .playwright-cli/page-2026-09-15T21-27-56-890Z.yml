@@ -1,0 +1,234 @@
+- generic [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - link "Kiranlata home" [ref=f1e4] [cursor=pointer]:
+      - /url: /index.html
+      - img "Kiranlata" [ref=f1e5]
+    - button "Open menu" [ref=f1e6] [cursor=pointer]
+  - main [ref=f1e8]:
+    - generic [ref=f1e9]:
+      - generic [ref=f1e10]:
+        - paragraph [ref=f1e11]: Eastern India · Living handloom traditions
+        - heading "Bengal Handloom" [level=1] [ref=f1e12]
+        - paragraph [ref=f1e13]: From crisp everyday cotton to narrative silk, Bengal’s looms speak through distinctive borders, texture and enduring regional craft.
+      - generic "Featured Dhaniakhali sarees" [ref=f1e14]:
+        - link "View Fish Motif Dhaniakhali, DHA-003" [ref=f1e15] [cursor=pointer]:
+          - /url: "#dhaniakhali"
+          - img "Fish Motif Dhaniakhali saree" [ref=f1e16]
+          - generic [ref=f1e17]:
+            - generic [ref=f1e18]: Dhaniakhali
+            - text: Fish Motif
+        - link "View Ikat Border Dhaniakhali, DHA-005" [ref=f1e19] [cursor=pointer]:
+          - /url: "#dhaniakhali"
+          - img "Ikat Border Dhaniakhali saree" [ref=f1e20]
+          - generic [ref=f1e21]:
+            - generic [ref=f1e22]: Dhaniakhali
+            - text: Ikat Border
+        - link "View Traditional Dhaniakhali, DHA-007" [ref=f1e23] [cursor=pointer]:
+          - /url: "#dhaniakhali"
+          - img "Traditional Dhaniakhali saree" [ref=f1e24]
+          - generic [ref=f1e25]:
+            - generic [ref=f1e26]: Dhaniakhali
+            - text: Traditional
+    - generic [ref=f1e27]:
+      - generic [ref=f1e28]:
+        - paragraph [ref=f1e29]: Refine the collection
+        - heading "Find your weave" [level=2] [ref=f1e30]
+        - paragraph [ref=f1e31]: Showing 9 sarees · Dhaniakhali
+      - generic [ref=f1e32]:
+        - paragraph [ref=f1e33]: Filter by weave
+        - generic [ref=f1e34]:
+          - link "All Bengal" [ref=f1e35] [cursor=pointer]:
+            - /url: "#all"
+          - link "Gorod" [ref=f1e36] [cursor=pointer]:
+            - /url: "#gorod"
+          - link "✦Dhaniakhali" [ref=f1e37] [cursor=pointer]:
+            - /url: "#dhaniakhali"
+          - link "Baluchari" [ref=f1e38] [cursor=pointer]:
+            - /url: "#baluchari"
+          - link "Phulia" [ref=f1e39] [cursor=pointer]:
+            - /url: "#phulia"
+          - link "Bengal Kalakshetra" [ref=f1e40] [cursor=pointer]:
+            - /url: "#kalakshetra"
+    - generic [ref=f1e41]:
+      - generic [ref=f1e42]:
+        - paragraph [ref=f1e43]: Hooghly district · West Bengal
+        - heading "Dhaniakhali" [level=2] [ref=f1e44]
+        - heading "The quiet rhythm of Bengal cotton" [level=3] [ref=f1e45]
+        - paragraph [ref=f1e46]: Crisp, enduring and unmistakably grounded in place.
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Dhaniakhali is a traditional cotton handloom saree from the Hooghly district of West Bengal, with a weaving heritage that stretches back generations. Known for its crisp cotton, distinctive borders, and everyday elegance, the saree developed around the weaving communities of Dhaniakhali and the surrounding villages.
+        - paragraph [ref=f1e49]: Originally valued as a practical cotton saree for Bengal’s warm climate, Dhaniakhali became known for its durability, comfort, and understated beauty. Traditionally woven on handlooms, its character comes from the slight texture of the cloth and the rhythm of the woven border rather than elaborate ornamentation.
+        - paragraph [ref=f1e50]: Today, Dhaniakhali remains part of Bengal’s living handloom tradition and is protected by a Geographical Indication (GI) tag, recognizing its connection to the region and its weaving heritage.
+      - generic [ref=f1e51]:
+        - generic [ref=f1e52]:
+          - term [ref=f1e53]: Cloth
+          - definition [ref=f1e54]: Handloom cotton
+        - generic [ref=f1e55]:
+          - term [ref=f1e56]: Known for
+          - definition [ref=f1e57]: Distinctive woven borders
+        - generic [ref=f1e58]:
+          - term [ref=f1e59]: Heritage
+          - definition [ref=f1e60]: Geographical Indication protected
+      - link "View the collection" [ref=f1e62] [cursor=pointer]:
+        - /url: "#collection"
+        - text: View the collection
+        - generic [aria-hidden] [ref=f1e63]: ↓
+      - generic [aria-hidden]: ধ
+    - generic [ref=f1e64]:
+      - generic [ref=f1e65]:
+        - generic [ref=f1e66]:
+          - paragraph [ref=f1e67]: Collection preview
+          - heading "Dhaniakhali" [level=2] [ref=f1e68]
+        - paragraph [ref=f1e69]: Real Dhaniakhali photography · More collections arriving soon
+      - complementary "Filter Dhaniakhali products" [ref=f1e70]:
+        - generic [ref=f1e71]:
+          - generic [ref=f1e72]:
+            - paragraph [ref=f1e73]: Refine Dhaniakhali
+            - heading "Find your saree" [level=3] [ref=f1e74]
+          - button "Clear filters" [ref=f1e75] [cursor=pointer]
+        - group "Design" [ref=f1e76]:
+          - generic [ref=f1e78]:
+            - button "All designs" [pressed] [ref=f1e79] [cursor=pointer]
+            - button "Fish Motif" [ref=f1e80] [cursor=pointer]
+            - button "Ikat Border" [ref=f1e81] [cursor=pointer]
+            - button "Traditional" [ref=f1e82] [cursor=pointer]
+        - group "Color" [ref=f1e83]:
+          - generic [ref=f1e85]:
+            - button "All colors" [pressed] [ref=f1e86] [cursor=pointer]
+            - button "White" [ref=f1e87] [cursor=pointer]
+            - button "Red" [ref=f1e89] [cursor=pointer]
+            - button "Black" [ref=f1e91] [cursor=pointer]
+            - button "Basanti Yellow" [ref=f1e93] [cursor=pointer]
+            - button "Yellow" [ref=f1e95] [cursor=pointer]
+            - button "Light Pink" [ref=f1e97] [cursor=pointer]
+            - button "Pinkish Red" [ref=f1e99] [cursor=pointer]
+            - button "Rose Red" [ref=f1e101] [cursor=pointer]
+        - group "Price" [ref=f1e103]:
+          - generic [ref=f1e105]:
+            - generic [ref=f1e106]:
+              - text: Up to
+              - status [ref=f1e107]: $45
+            - slider "Up to" [disabled] [ref=f1e108]: "45"
+            - generic [ref=f1e109]: All current pieces are $45
+        - paragraph [ref=f1e110]: 9 of 9 sarees
+      - text: ✦
+      - generic [ref=f1e111]:
+        - article "Open Fish Motif Dhaniakhali details" [ref=f1e112] [cursor=pointer]:
+          - generic [ref=f1e113]:
+            - img "Fish Motif Dhaniakhali product photograph" [ref=f1e114]
+            - generic [ref=f1e115]: DHA-001
+          - heading "Fish Motif Dhaniakhali" [level=3] [ref=f1e116]
+          - paragraph [ref=f1e117]:
+            - text: Pure cotton · White, Red · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e118]: $45
+        - article "Open Fish Motif Dhaniakhali details" [ref=f1e119] [cursor=pointer]:
+          - generic [ref=f1e120]:
+            - img "Fish Motif Dhaniakhali product photograph" [ref=f1e121]
+            - generic [ref=f1e122]: DHA-002
+          - heading "Fish Motif Dhaniakhali" [level=3] [ref=f1e123]
+          - paragraph [ref=f1e124]:
+            - text: Pure cotton · White, Red, Black · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e125]: $45
+        - article "Open Fish Motif Dhaniakhali details" [ref=f1e126] [cursor=pointer]:
+          - generic [ref=f1e127]:
+            - img "Fish Motif Dhaniakhali product photograph" [ref=f1e128]
+            - generic [ref=f1e129]: DHA-003
+          - heading "Fish Motif Dhaniakhali" [level=3] [ref=f1e130]
+          - paragraph [ref=f1e131]:
+            - text: Pure cotton · White, Red, Basanti Yellow · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e132]: $45
+        - article "Open Fish Motif Dhaniakhali details" [ref=f1e133] [cursor=pointer]:
+          - generic [ref=f1e134]:
+            - img "Fish Motif Dhaniakhali product photograph" [ref=f1e135]
+            - generic [ref=f1e136]: DHA-004
+          - heading "Fish Motif Dhaniakhali" [level=3] [ref=f1e137]
+          - paragraph [ref=f1e138]:
+            - text: Pure cotton · White, Red, Yellow · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e139]: $45
+        - article "Open Ikat Border Dhaniakhali details" [ref=f1e140] [cursor=pointer]:
+          - generic [ref=f1e141]:
+            - img "Ikat Border Dhaniakhali product photograph" [ref=f1e142]
+            - generic [ref=f1e144]: DHA-005
+            - generic:
+              - button "Previous view" [ref=f1e145]: ‹
+              - button "Next view" [ref=f1e146]: ›
+            - generic [aria-hidden] [ref=f1e147]: 1 / 2
+          - heading "Ikat Border Dhaniakhali" [level=3] [ref=f1e148]
+          - paragraph [ref=f1e149]:
+            - text: Pure cotton · White, Red · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e150]: $45
+        - article "Open Traditional Dhaniakhali details" [ref=f1e151] [cursor=pointer]:
+          - generic [ref=f1e152]:
+            - img "Traditional Dhaniakhali product photograph" [ref=f1e153]
+            - generic [ref=f1e156]: DHA-006
+            - generic:
+              - button "Previous view" [ref=f1e157]: ‹
+              - button "Next view" [ref=f1e158]: ›
+            - generic [aria-hidden] [ref=f1e159]: 1 / 3
+          - heading "Traditional Dhaniakhali" [level=3] [ref=f1e160]
+          - paragraph [ref=f1e161]:
+            - text: Pure cotton · White, Red · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e162]: $45
+        - article "Open Traditional Dhaniakhali details" [ref=f1e163] [cursor=pointer]:
+          - generic [ref=f1e164]:
+            - img "Traditional Dhaniakhali product photograph" [ref=f1e165]
+            - generic [ref=f1e167]: DHA-007
+            - generic:
+              - button "Previous view" [ref=f1e168]: ‹
+              - button "Next view" [ref=f1e169]: ›
+            - generic [aria-hidden] [ref=f1e170]: 1 / 2
+          - heading "Traditional Dhaniakhali" [level=3] [ref=f1e171]
+          - paragraph [ref=f1e172]:
+            - text: Pure cotton · White, Red, Black · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e173]: $45
+        - article "Open Traditional Dhaniakhali details" [ref=f1e174] [cursor=pointer]:
+          - generic [ref=f1e175]:
+            - img "Traditional Dhaniakhali product photograph" [ref=f1e176]
+            - generic [ref=f1e178]: DHA-008
+            - generic:
+              - button "Previous view" [ref=f1e179]: ‹
+              - button "Next view" [ref=f1e180]: ›
+            - generic [aria-hidden] [ref=f1e181]: 1 / 2
+          - heading "Traditional Dhaniakhali" [level=3] [ref=f1e182]
+          - paragraph [ref=f1e183]:
+            - text: Pure cotton · Light Pink, Pinkish Red · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e184]: $45
+        - article "Open Traditional Dhaniakhali details" [ref=f1e185] [cursor=pointer]:
+          - generic [ref=f1e186]:
+            - img "Traditional Dhaniakhali product photograph" [ref=f1e187]
+            - generic [ref=f1e190]: DHA-009
+            - generic:
+              - button "Previous view" [ref=f1e191]: ‹
+              - button "Next view" [ref=f1e192]: ›
+            - generic [aria-hidden] [ref=f1e193]: 1 / 3
+          - heading "Traditional Dhaniakhali" [level=3] [ref=f1e194]
+          - paragraph [ref=f1e195]:
+            - text: Pure cotton · Light Pink, Rose Red · GI-tagged Dhaniakhali weave ·
+            - strong [ref=f1e196]: $45
+    - dialog [ref=f1e197]:
+      - button "Close product details" [active] [ref=f1e198] [cursor=pointer]: ×
+      - generic [ref=f1e199]:
+        - generic [ref=f1e200]:
+          - generic [ref=f1e201]:
+            - img "Ikat Border Dhaniakhali, view 1 of 2" [ref=f1e203]
+            - button "Previous product view" [ref=f1e205] [cursor=pointer]: ‹
+            - button "Next product view" [ref=f1e206] [cursor=pointer]: ›
+            - generic [ref=f1e207]: 1 / 2
+          - generic "Choose a product view" [ref=f1e208]:
+            - button "Show view 1" [ref=f1e209] [cursor=pointer]:
+              - generic [ref=f1e211]: "01"
+            - button "Show view 2" [ref=f1e212] [cursor=pointer]:
+              - generic [ref=f1e214]: "02"
+        - generic [ref=f1e215]:
+          - paragraph [ref=f1e216]: Bengal Handloom · DHA-005
+          - heading "Ikat Border Dhaniakhali" [level=2] [ref=f1e217]
+          - paragraph [ref=f1e218]: Pure cotton · White, Red · GI-tagged Dhaniakhali weave
+          - paragraph [ref=f1e219]: $45
+          - paragraph [ref=f1e221]: Use the gallery to explore the drape, border and woven detail of this saree.
+          - link "Enquire about this saree ↘" [ref=f1e222] [cursor=pointer]:
+            - /url: /index.html#contact
+            - text: Enquire about this saree
+            - generic [ref=f1e223]: ↘
+          - paragraph [ref=f1e224]: Real product photography · Available to enquire

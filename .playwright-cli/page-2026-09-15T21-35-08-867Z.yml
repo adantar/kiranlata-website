@@ -1,0 +1,225 @@
+- generic [active] [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f4e3]:
+    - link "Kiranlata home" [ref=f4e4] [cursor=pointer]:
+      - /url: /index.html
+      - img "Kiranlata" [ref=f4e5]
+    - button "Open menu" [ref=f4e6] [cursor=pointer]
+  - main [ref=f4e8]:
+    - generic [ref=f4e9]:
+      - img "Illustrated village weaving courtyard where artisans work at traditional handlooms" [ref=f4e11]
+      - generic [ref=f4e13]:
+        - text: KIRANLATA · কিরণলতা
+        - paragraph [ref=f4e14]: From the looms of India & Bangladesh · To New York
+        - heading [level=1] [ref=f4e15]:
+          - text: A way of life,
+          - emphasis [ref=f4e16]: woven in six yards.
+        - paragraph [ref=f4e17]: Kiranlata brings distinctive handloom sarees—and the human stories within them—to women across the United States.
+        - generic [ref=f4e18]:
+          - link "Shop the collection ↘" [ref=f4e19] [cursor=pointer]:
+            - /url: "#collections"
+            - text: Shop the collection
+            - generic [ref=f4e20]: ↘
+          - link "Explore the heritage" [ref=f4e21] [cursor=pointer]:
+            - /url: /history.html
+    - generic [ref=f4e22]:
+      - generic [ref=f4e23]:
+        - paragraph [ref=f4e24]: The Kiranlata promise
+        - heading [level=2] [ref=f4e25]:
+          - text: Sarees that
+          - emphasis [ref=f4e26]: tell a story.
+        - paragraph [ref=f4e27]: Not hundreds of designs. Small, carefully considered collections, where every saree has its own character and every thread can be traced back to craft.
+      - generic [ref=f4e28]:
+        - article [ref=f4e29]:
+          - generic [ref=f4e31]: "01"
+          - heading "Handloom, always" [level=3] [ref=f4e32]: Handloom,always
+          - paragraph [ref=f4e33]: Woven by artisans on traditional looms, with the beautiful irregularity of the human hand.
+        - article [ref=f4e34]:
+          - generic [aria-hidden] [ref=f4e35]: ❦
+          - generic [ref=f4e36]: "02"
+          - heading "Natural threads" [level=3] [ref=f4e37]: Naturalthreads
+          - paragraph [ref=f4e38]: Breathable cotton and luminous silk. Never synthetic fibers.
+        - article [ref=f4e39]:
+          - generic [aria-hidden] [ref=f4e40]: ⌁
+          - generic [ref=f4e41]: "03"
+          - heading "Chosen with meaning" [level=3] [ref=f4e42]: Chosen withmeaning
+          - paragraph [ref=f4e43]: Distinctive pieces selected for their technique, provenance and quiet character.
+        - article [ref=f4e44]:
+          - generic [aria-hidden] [ref=f4e45]: ∞
+          - generic [ref=f4e46]: "04"
+          - heading "Made to live on" [level=3] [ref=f4e47]: Made tolive on
+          - paragraph [ref=f4e48]: To be worn, loved, remembered—and one day passed into another pair of hands.
+    - generic [ref=f4e49]:
+      - generic [ref=f4e50]:
+        - img "Hand-drawn close view of a Jamdani artisan weaving motifs by hand" [ref=f4e52]
+        - generic [ref=f4e53]: Each motif, placed by hand
+      - generic [ref=f4e54]:
+        - paragraph [ref=f4e55]: The slow intelligence of hands
+        - heading [level=2] [ref=f4e56]:
+          - text: From their hands
+          - emphasis [ref=f4e57]: to your story.
+        - paragraph [ref=f4e58]: "A handloom saree begins with rhythm: warp held taut, shuttle passing, motifs counted thread by thread. It carries the time, knowledge and touch of the person who made it."
+        - paragraph [ref=f4e59]: We work to connect that living tradition with the woman who will give the saree its next chapter.
+        - link "Why handloom matters" [ref=f4e60] [cursor=pointer]:
+          - /url: /story.html
+    - generic [ref=f4e62]:
+      - generic [ref=f4e63]:
+        - paragraph [ref=f4e64]: Small-batch seasonal edits
+        - heading [level=2] [ref=f4e65]:
+          - text: Woven stories,
+          - emphasis [ref=f4e66]: waiting for yours.
+        - paragraph [ref=f4e67]: Three featured traditions offer a way into the collection. Explore all twelve weaves whenever you are ready.
+      - generic "Browse the complete collection by region" [ref=f4e68]:
+        - generic [ref=f4e69]:
+          - generic [ref=f4e70]:
+            - paragraph [ref=f4e71]: The complete collection
+            - heading "Find your weave" [level=3] [ref=f4e72]
+          - button "Minimize" [expanded] [ref=f4e73] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f4e75]: −
+        - generic [ref=f4e76]:
+          - link "Bengal Handloom ↗" [ref=f4e77] [cursor=pointer]:
+            - /url: collections/bengal.html
+            - text: Bengal Handloom
+            - generic [ref=f4e78]: ↗
+          - generic [ref=f4e79]:
+            - link "Gorod" [ref=f4e80] [cursor=pointer]:
+              - /url: collections/bengal.html#gorod
+            - link "Dhaniakhali" [ref=f4e81] [cursor=pointer]:
+              - /url: collections/bengal.html#dhaniakhali
+            - link "Baluchari" [ref=f4e82] [cursor=pointer]:
+              - /url: collections/bengal.html#baluchari
+            - link "Phulia" [ref=f4e83] [cursor=pointer]:
+              - /url: collections/bengal.html#phulia
+            - link "Bengal Kalakshetra" [ref=f4e84] [cursor=pointer]:
+              - /url: collections/bengal.html#kalakshetra
+        - generic [ref=f4e85]:
+          - link "Odisha Handloom ↗" [ref=f4e86] [cursor=pointer]:
+            - /url: collections/odisha.html
+            - text: Odisha Handloom
+            - generic [ref=f4e87]: ↗
+          - link "Dhalapathar" [ref=f4e89] [cursor=pointer]:
+            - /url: collections/odisha.html#dhalapathar
+        - generic [ref=f4e90]:
+          - link "South Indian Handloom ↗" [ref=f4e91] [cursor=pointer]:
+            - /url: collections/south-india.html
+            - text: South Indian Handloom
+            - generic [ref=f4e92]: ↗
+          - generic [ref=f4e93]:
+            - link "Ilkal" [ref=f4e94] [cursor=pointer]:
+              - /url: collections/south-india.html#ilkal
+            - link "Narayanpet" [ref=f4e95] [cursor=pointer]:
+              - /url: collections/south-india.html#narayanpet
+            - link "Patteda Anchu" [ref=f4e96] [cursor=pointer]:
+              - /url: collections/south-india.html#patteda-anchu
+            - link "Kanchipuram" [ref=f4e97] [cursor=pointer]:
+              - /url: collections/kanchipuram.html#kanchipuram
+        - generic [ref=f4e98]:
+          - paragraph [ref=f4e99]: Individual traditions
+          - generic [ref=f4e100]:
+            - link "Banarasi ↗" [ref=f4e101] [cursor=pointer]:
+              - /url: collections/banarasi.html#banarasi
+              - text: Banarasi
+              - generic [ref=f4e102]: ↗
+            - link "Maheshwari ↗" [ref=f4e103] [cursor=pointer]:
+              - /url: collections/maheshwari.html#maheshwari
+              - text: Maheshwari
+              - generic [ref=f4e104]: ↗
+      - navigation "Explore all available saree weaves" [ref=f4e105]:
+        - button "Keep exploring while you browse Open all 12 weaves" [ref=f4e106] [cursor=pointer]:
+          - generic [ref=f4e107]:
+            - generic [ref=f4e108]: Keep exploring while you browse
+            - text: Open all 12 weaves
+          - generic [aria-hidden] [ref=f4e109]: ＋
+      - generic [ref=f4e110]:
+        - generic [ref=f4e111]:
+          - paragraph [ref=f4e112]: The seasonal edit
+          - heading "Featured weaves" [level=3] [ref=f4e113]
+        - paragraph [ref=f4e114]: Three ways into the collection
+      - generic "Three featured saree traditions" [ref=f4e115]:
+        - article [ref=f4e116]:
+          - generic [ref=f4e117]:
+            - img "Concept portrait of a woman wearing an ivory and red Bengal cotton saree" [ref=f4e118]
+            - generic [ref=f4e119]: Featured 01 of 03
+            - generic [ref=f4e120]: Everydayease
+          - generic [ref=f4e121]:
+            - paragraph [ref=f4e122]: Everyday Bengal, beautifully resolved
+            - heading "Dhaniakhali clarity" [level=3] [ref=f4e123]: Dhaniakhaliclarity
+            - paragraph [ref=f4e124]: Crisp handloom cotton, a rhythmic woven border and the quiet assurance of a saree designed to be lived in.
+            - generic [ref=f4e125]:
+              - generic [ref=f4e126]: Hooghly · West Bengal
+              - generic [ref=f4e127]: Handloom cotton · Woven border
+            - link "View the collection ↗" [ref=f4e128] [cursor=pointer]:
+              - /url: collections/bengal.html#dhaniakhali
+              - text: View the collection
+              - generic [ref=f4e129]: ↗
+        - article [ref=f4e130]:
+          - generic [ref=f4e131]:
+            - img "Concept portrait displaying the narrative pallu of a maroon Baluchari silk saree" [ref=f4e132]
+            - generic [ref=f4e133]: Featured 02 of 03
+            - generic [ref=f4e134]: Wovennarrative
+          - generic [ref=f4e135]:
+            - paragraph [ref=f4e136]: A pallu that tells a tale
+            - heading "Baluchari narratives" [level=3] [ref=f4e137]: Balucharinarratives
+            - paragraph [ref=f4e138]: "Substantial silk becomes a storyteller: figurative scenes, floral medallions and temple-like frames unfold across the anchal in intricate woven panels."
+            - generic [ref=f4e139]:
+              - generic [ref=f4e140]: Bishnupur · West Bengal
+              - generic [ref=f4e141]: Handloom silk · Figured pallu
+            - link "View the collection ↗" [ref=f4e142] [cursor=pointer]:
+              - /url: collections/bengal.html#baluchari
+              - text: View the collection
+              - generic [ref=f4e143]: ↗
+        - article [ref=f4e144]:
+          - generic [ref=f4e145]:
+            - img "Concept study of richly colored South Indian handloom sarees" [ref=f4e146]
+            - generic [ref=f4e147]: Featured 03 of 03
+            - generic [ref=f4e148]: Silkgrandeur
+          - generic [ref=f4e149]:
+            - paragraph [ref=f4e150]: Temple geometry in luminous silk
+            - heading "Kanchipuram grandeur" [level=3] [ref=f4e151]: Kanchipuramgrandeur
+            - paragraph [ref=f4e152]: Weighty mulberry silk, contrasting borders and enduring zari architecture give this southern classic its unmistakable presence.
+            - generic [ref=f4e153]:
+              - generic [ref=f4e154]: Kanchipuram · Tamil Nadu
+              - generic [ref=f4e155]: Mulberry silk · Interlocked border
+            - link "View the collection ↗" [ref=f4e156] [cursor=pointer]:
+              - /url: collections/kanchipuram.html#kanchipuram
+              - text: View the collection
+              - generic [ref=f4e157]: ↗
+    - generic [ref=f4e158]:
+      - generic [ref=f4e159]:
+        - paragraph [ref=f4e160]: A boutique between two worlds
+        - blockquote [ref=f4e161]:
+          - text: “Heritage is not kept behind glass. It is
+          - emphasis [ref=f4e162]: worn, loved, and lived in.
+          - text: ”
+      - generic [ref=f4e163]:
+        - paragraph [ref=f4e164]: Kiranlata is a New York-based, thoughtfully curated saree boutique bringing distinctive handloom and artisanal sarees from India and Bangladesh to women across the United States.
+        - paragraph [ref=f4e165]: We believe a saree can hold a place, a maker, a memory—and still feel entirely your own. Our collections stay small so every piece can be known and chosen with care.
+    - generic [ref=f4e167]:
+      - paragraph [ref=f4e168]: Six yards. Many lifetimes.
+      - heading [level=2] [ref=f4e169]:
+        - text: Some things become more beautiful
+        - emphasis [ref=f4e170]: because they are passed on.
+    - generic [ref=f4e171]:
+      - paragraph [ref=f4e172]: The first collection is coming
+      - heading [level=2] [ref=f4e173]:
+        - text: Come closer to
+        - emphasis [ref=f4e174]: the story.
+      - paragraph [ref=f4e175]: Join us for first access to small handloom releases, private previews and personal saree guidance from New York.
+      - link "Begin an enquiry ↗" [ref=f4e176] [cursor=pointer]:
+        - /url: mailto:hello@example.com
+        - text: Begin an enquiry
+        - generic [ref=f4e177]: ↗
+      - generic [ref=f4e178]: KIRANLATA · HANDLOOM · COTTON · SILK ·
+  - contentinfo [ref=f4e179]:
+    - link "Kiranlata" [ref=f4e180] [cursor=pointer]:
+      - /url: index.html
+    - paragraph [ref=f4e181]: A way of life, woven in six yards.India · Bangladesh · New York
+    - navigation [ref=f4e182]:
+      - link "Shipping & returns" [ref=f4e183] [cursor=pointer]:
+        - /url: policies/shipping-returns.html
+      - link "Privacy" [ref=f4e184] [cursor=pointer]:
+        - /url: policies/privacy.html
+      - link "Instagram" [ref=f4e185] [cursor=pointer]:
+        - /url: "#contact"
+    - generic [ref=f4e186]: © 2026 Kiranlata
