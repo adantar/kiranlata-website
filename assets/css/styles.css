@@ -180,6 +180,12 @@
 @media(max-width:420px){.weave-popover{grid-template-columns:104px 1fr}.weave-popover-sketch{min-height:162px}.weave-popover-copy>p:first-child{font-size:.5rem}.weave-popover-copy>p:nth-of-type(2){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
 @media(prefers-reduced-motion:reduce){.weave-popover{transition:none}}
 
+/* The compact desktop weave navigator appears only after the full directory passes. */
+@media(min-width:901px){
+  .weave-explorer{max-height:0;padding-block:0;border-color:transparent;overflow:clip;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:max-height .25s ease,padding .25s ease,opacity .25s ease,transform .25s ease,visibility 0s linear .25s}
+  .weave-explorer.is-ready{max-height:96px;padding-block:.8rem;border-color:#d9b66d55;overflow:visible;opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
+}
+
 /* Mobile storefront polish: generous touch targets, clear focus and collision-free type. */
 @media(max-width:900px){
   body.mobile-nav-open{overflow:hidden}
