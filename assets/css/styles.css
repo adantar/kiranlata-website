@@ -243,19 +243,19 @@
 
 /* Individual crops prevent neighboring sprite cells from bleeding at fluid widths. */
 .loom-object{aspect-ratio:auto;height:clamp(155px,15vw,230px);background-position:center;background-size:contain}.tools-sprite{height:clamp(170px,17vw,250px);background-image:none}.motifs-sprite{background-image:none}
-#elements-tools .loom-element:nth-child(1) .loom-object{background-image:url('../images/craft/tool-cotton.png')}
-#elements-tools .loom-element:nth-child(2) .loom-object{background-image:url('../images/craft/tool-silk.png')}
-#elements-tools .loom-element:nth-child(3) .loom-object{background-image:url('../images/craft/tool-zari.png')}
-#elements-tools .loom-element:nth-child(4) .loom-object{background-image:url('../images/craft/tool-pit-loom.png')}
-#elements-tools .loom-element:nth-child(5) .loom-object{background-image:url('../images/craft/tool-shuttle.png')}
-#elements-tools .loom-element:nth-child(6) .loom-object{background-image:url('../images/craft/tool-reed-heddles.png')}
-#elements-tools .loom-element:nth-child(7) .loom-object{background-image:url('../images/craft/tool-charkha-pirn.png')}
-#elements-motifs .loom-element:nth-child(1) .loom-object{background-image:url('../images/craft/motif-dhaniakhali.png')}
-#elements-motifs .loom-element:nth-child(2) .loom-object{background-image:url('../images/craft/motif-baluchari.png')}
-#elements-motifs .loom-element:nth-child(3) .loom-object{background-image:url('../images/craft/motif-banarasi.png')}
-#elements-motifs .loom-element:nth-child(4) .loom-object{background-image:url('../images/craft/motif-kanchipuram.png')}
-#elements-motifs .loom-element:nth-child(5) .loom-object{background-image:url('../images/craft/motif-jamdani.png')}
-#elements-motifs .loom-element:nth-child(6) .loom-object{background-image:url('../images/craft/motif-maheshwari.png')}
+#elements-tools .loom-element:nth-child(1) .loom-object{background-image:url('../images/craft/tool-cotton-v2.png')}
+#elements-tools .loom-element:nth-child(2) .loom-object{background-image:url('../images/craft/tool-silk-v2.png')}
+#elements-tools .loom-element:nth-child(3) .loom-object{background-image:url('../images/craft/tool-zari-v2.png')}
+#elements-tools .loom-element:nth-child(4) .loom-object{background-image:url('../images/craft/tool-pit-loom-v2.png')}
+#elements-tools .loom-element:nth-child(5) .loom-object{background-image:url('../images/craft/tool-shuttle-v2.png')}
+#elements-tools .loom-element:nth-child(6) .loom-object{background-image:url('../images/craft/tool-reed-heddles-v2.png')}
+#elements-tools .loom-element:nth-child(7) .loom-object{background-image:url('../images/craft/tool-charkha-pirn-v2.png')}
+#elements-motifs .loom-element:nth-child(1) .loom-object{background-image:url('../images/craft/motif-dhaniakhali-v2.png')}
+#elements-motifs .loom-element:nth-child(2) .loom-object{background-image:url('../images/craft/motif-baluchari-v2.png')}
+#elements-motifs .loom-element:nth-child(3) .loom-object{background-image:url('../images/craft/motif-banarasi-v2.png')}
+#elements-motifs .loom-element:nth-child(4) .loom-object{background-image:url('../images/craft/motif-kanchipuram-v2.png')}
+#elements-motifs .loom-element:nth-child(5) .loom-object{background-image:url('../images/craft/motif-jamdani-v2.png')}
+#elements-motifs .loom-element:nth-child(6) .loom-object{background-image:url('../images/craft/motif-maheshwari-v2.png')}
 @media(max-width:1050px){.loom-object,.tools-sprite{height:200px}}
 @media(max-width:700px){.loom-object,.tools-sprite,.motifs-sprite{height:145px}}
 
