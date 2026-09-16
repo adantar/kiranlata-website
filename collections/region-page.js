@@ -14,7 +14,7 @@ const banarasiProduct=(id,name,design,colors,count)=>({
   details:`Pure silk · ${colors.join(', ')} · GI-tagged Banaras Brocades and Sarees`,
   images:Array.from({length:count},(_,index)=>{
     const number=String(index+1).padStart(2,'0');
-    return {card:`${P}banarasi/${id}/${number}-large.jpg?v=3`,large:`${P}banarasi/${id}/${number}-large.jpg?v=3`};
+    return {card:`${P}banarasi/${id}/${number}-large.jpg?v=4`,large:`${P}banarasi/${id}/${number}-large.jpg?v=4`};
   })
 });
 const regionPages={
@@ -71,7 +71,7 @@ categoryStories.maheshwari={maheshwari:editorial('Maheshwar · Madhya Pradesh','
 const key=document.body.dataset.region,info=regionPages[key],main=document.querySelector('#main-content');
 if(info&&main){
   const panelStyle=info.panel==null?'':`style="width:300%;max-width:none;transform:translateX(-${info.panel*33.333}%);object-fit:cover"`;
-  const featureSets={bengal:[['DHA-003','Dhaniakhali','Fish Motif','/assets/images/products/dhaniakhali/DHA-003/01-card.jpg'],['DHA-005','Dhaniakhali','Ikat Border','/assets/images/products/dhaniakhali/DHA-005/01-card.jpg'],['DHA-007','Dhaniakhali','Traditional','/assets/images/products/dhaniakhali/DHA-007/01-card.jpg']],banarasi:[['BAN-001','Banarasi','Traditional · Red','/assets/images/products/banarasi/BAN-001/01-large.jpg?v=3'],['BAN-002','Banarasi','Traditional · Emerald Green','/assets/images/products/banarasi/BAN-002/01-large.jpg?v=3']]},mastFeatures=featureSets[key];
+  const featureSets={bengal:[['DHA-003','Dhaniakhali','Fish Motif','/assets/images/products/dhaniakhali/DHA-003/01-card.jpg'],['DHA-005','Dhaniakhali','Ikat Border','/assets/images/products/dhaniakhali/DHA-005/01-card.jpg'],['DHA-007','Dhaniakhali','Traditional','/assets/images/products/dhaniakhali/DHA-007/01-card.jpg']],banarasi:[['BAN-001','Banarasi','Traditional · Red','/assets/images/products/banarasi/BAN-001/01-large.jpg?v=4'],['BAN-002','Banarasi','Traditional · Emerald Green','/assets/images/products/banarasi/BAN-002/01-large.jpg?v=4']]},mastFeatures=featureSets[key];
   const mastVisual=mastFeatures?`<div class="region-board bengal-feature-board${mastFeatures.length===2?' two-up':''}" aria-label="Featured ${info.title} sarees">${mastFeatures.map(([id,weave,label,image])=>`<a href="#${info.types[0][1]}" data-feature-product="${id}" aria-label="View ${label} ${weave}, ${id}"><img src="${image}" alt="${label} ${weave} saree"><span><small>${weave}</small>${label}</span></a>`).join('')}</div>`:`<div class="region-board region-coming-board" aria-label="${info.title} collection in preparation"><span class="loom-line line-one"></span><span class="loom-line line-two"></span><div><p>In preparation</p><strong>New pieces,<br>thoughtfully chosen.</strong><small>Real product photography will arrive with the collection.</small></div></div>`;
   const areaFilters=info.groups?`<div class="filter-level" data-area-filters><p>1 · Choose an area</p><div><button data-area="all" aria-pressed="true">All Bengal</button>${info.groups.map(([name,slug])=>`<button data-area="${slug}" aria-pressed="false">${name}</button>`).join('')}</div></div>`:'';
   const typeFilters=`<div class="filter-level" data-type-filters><p>${info.groups?'2 · Choose a weave':'Filter by weave'}</p><div><a href="#all" data-filter="all" data-area="all">All ${info.title.replace(' Handloom','')}</a>${info.types.filter(([,slug])=>slug!=='all').map(([name,slug,area])=>`<a id="filter-${slug}" href="#${slug}" data-filter="${slug}" data-area="${area||'all'}">${name}</a>`).join('')}</div></div>`;
