@@ -1,0 +1,140 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation "Learn about Kiranlata" [ref=e4]:
+      - link "Our story" [ref=e5] [cursor=pointer]:
+        - /url: /story.html
+      - link "Evolution of the Saree" [ref=e6] [cursor=pointer]:
+        - /url: /history.html
+    - link "Kiranlata home" [ref=e7] [cursor=pointer]:
+      - /url: /index.html
+      - img "Kiranlata" [ref=e8]
+    - link "Enquire" [ref=e10] [cursor=pointer]:
+      - /url: /index.html#contact
+  - navigation "Site menu" [ref=e11]:
+    - generic [ref=e12]:
+      - link "Bengal Handloom" [ref=e13] [cursor=pointer]:
+        - /url: /collections/bengal.html
+      - button "Show Bengal Handloom collections" [ref=e14] [cursor=pointer]
+    - generic [ref=e16]:
+      - link "Odisha Handloom" [ref=e17] [cursor=pointer]:
+        - /url: /collections/odisha.html
+      - button "Show Odisha collections" [ref=e18] [cursor=pointer]
+    - generic [ref=e20]:
+      - link "South Indian Handloom" [ref=e21] [cursor=pointer]:
+        - /url: /collections/south-india.html
+      - button "Show South Indian collections" [ref=e22] [cursor=pointer]
+    - link "Banarasi" [ref=e25] [cursor=pointer]:
+      - /url: /collections/banarasi.html
+    - link "Maheshwari" [ref=e27] [cursor=pointer]:
+      - /url: /collections/maheshwari.html
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: Varanasi · Uttar Pradesh
+        - heading "Banarasi" [level=1] [ref=e32]
+        - paragraph [ref=e33]: Lustrous silk, intricate zari and garden-like jaal patterns woven in one of India’s most storied textile cities.
+      - generic "Featured Banarasi sarees" [ref=e34]:
+        - link "View Traditional · Red Banarasi, BAN-001" [ref=e35] [cursor=pointer]:
+          - /url: "#banarasi"
+          - img "Traditional · Red Banarasi saree" [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]: Banarasi
+            - text: Traditional · Red
+        - link "View Traditional · Emerald Green Banarasi, BAN-002" [ref=e39] [cursor=pointer]:
+          - /url: "#banarasi"
+          - img "Traditional · Emerald Green Banarasi saree" [ref=e40]
+          - generic [ref=e41]:
+            - generic [ref=e42]: Banarasi
+            - text: Traditional · Emerald Green
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Refine the collection
+        - heading "Find your weave" [level=2] [ref=e46]
+        - paragraph [ref=e47]: Showing 2 sarees · Banarasi
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: Filter by weave
+        - generic [ref=e50]:
+          - link "All Banarasi" [ref=e51] [cursor=pointer]:
+            - /url: "#all"
+          - link "✦Banarasi" [ref=e52] [cursor=pointer]:
+            - /url: "#banarasi"
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - paragraph [ref=e55]: Varanasi · Uttar Pradesh
+        - heading "Banarasi" [level=2] [ref=e56]
+        - heading "A garden drawn in silk and zari" [level=3] [ref=e57]
+        - paragraph [ref=e58]: Lustre, density and extraordinary brocade skill.
+      - generic [ref=e59]:
+        - paragraph [ref=e60]: Banarasi sarees are woven in and around Varanasi and are celebrated for richly structured brocade. Floral jaals, individual butis and metallic zari are organized through techniques that can range from delicate to architectural.
+        - paragraph [ref=e61]: "The finest examples reveal their complexity gradually: first as lustre and pattern, then as a close conversation between ground cloth, supplementary threads and the disciplined hand of the weaver."
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - term [ref=e64]: Cloth
+          - definition [ref=e65]: Silk brocade
+        - generic [ref=e66]:
+          - term [ref=e67]: Signature
+          - definition [ref=e68]: Zari, jaal and butidar patterning
+        - generic [ref=e69]:
+          - term [ref=e70]: Heritage
+          - definition [ref=e71]: Geographical Indication protected
+      - link "View the collection" [ref=e73] [cursor=pointer]:
+        - /url: "#collection"
+        - text: View the collection
+        - generic [aria-hidden] [ref=e74]: ↓
+      - generic [aria-hidden]: ধ
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: Collection preview
+          - heading "Banarasi" [level=2] [ref=e79]
+        - paragraph [ref=e80]: Real Banarasi photography · Price available on request
+      - complementary "Filter Banarasi products" [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: Refine Banarasi
+            - heading "Find your saree" [level=3] [ref=e85]
+          - button "Clear filters" [ref=e86] [cursor=pointer]
+        - group "Design" [ref=e87]:
+          - generic [ref=e89]:
+            - button "All designs" [pressed] [ref=e90] [cursor=pointer]
+            - button "Traditional" [ref=e91] [cursor=pointer]
+        - group "Color" [ref=e92]:
+          - generic [ref=e94]:
+            - button "All colors" [pressed] [ref=e95] [cursor=pointer]
+            - button "Red" [ref=e96] [cursor=pointer]
+            - button "Emerald Green" [ref=e98] [cursor=pointer]
+        - paragraph [ref=e100]: 2 of 2 sarees
+      - text: ✦
+      - generic [ref=e101]:
+        - article "Open Traditional Banarasi — Red details" [ref=e102] [cursor=pointer]:
+          - generic [ref=e103]:
+            - img "Traditional Banarasi — Red product photograph" [ref=e104]
+            - generic [ref=e107]: BAN-001
+            - generic:
+              - button "Previous view" [ref=e108]: ‹
+              - button "Next view" [ref=e109]: ›
+            - generic [aria-hidden] [ref=e110]: 1 / 3
+          - heading "Traditional Banarasi — Red" [level=3] [ref=e111]
+          - paragraph [ref=e112]:
+            - text: Pure silk · Red · GI-tagged Banaras Brocades and Sarees ·
+            - strong [ref=e113]: Contact us for price
+          - generic [ref=e114]:
+            - text: View details
+            - generic [aria-hidden] [ref=e115]: ↗
+        - article "Open Traditional Banarasi — Emerald Green details" [ref=e116] [cursor=pointer]:
+          - generic [ref=e117]:
+            - img "Traditional Banarasi — Emerald Green product photograph" [ref=e118]
+            - generic [ref=e120]: BAN-002
+            - generic:
+              - button "Previous view" [ref=e121]: ‹
+              - button "Next view" [ref=e122]: ›
+            - generic [aria-hidden] [ref=e123]: 1 / 2
+          - heading "Traditional Banarasi — Emerald Green" [level=3] [ref=e124]
+          - paragraph [ref=e125]:
+            - text: Pure silk · Emerald Green · GI-tagged Banaras Brocades and Sarees ·
+            - strong [ref=e126]: Contact us for price
+          - generic [ref=e127]:
+            - text: View details
+            - generic [aria-hidden] [ref=e128]: ↗
