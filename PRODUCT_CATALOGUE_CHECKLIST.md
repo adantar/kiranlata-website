@@ -25,6 +25,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 - [ ] Add the product ID, customer-facing name, design, normalized color list, fabric, GI weave, numeric price, availability, and image list.
 - [ ] Use **Design** for treatments such as Fish Motif, Traditional, and Ikat Border; the weave itself remains the category.
+- [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
 - [ ] Remove superseded concept products once real inventory for that category is approved.
 
@@ -80,6 +81,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## Rollout status
 
 - [x] Dhaniakhali: initial nine real products, optimized images, galleries, modal, filters, masthead features, and responsive interactions.
+- [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out enquiry state.
 - [ ] Dhaniakhali: apply this checklist automatically to each future product batch.
 - [ ] Gorod: replace concept inventory and apply the complete system.
 - [ ] Baluchari: replace concept inventory and apply the complete system.
