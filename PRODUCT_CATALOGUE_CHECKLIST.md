@@ -23,7 +23,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 ## 3. Product data
 
-- [ ] Add the product ID, customer-facing name, design, normalized color list, fabric, GI weave, numeric price, availability, and image list.
+- [ ] Add the product ID, customer-facing name, design, normalized color list, fabric, GI weave, internal numeric price, availability, and image list.
+- [ ] Keep numeric prices internal. Customer-facing cards and detailed views must say **Contact us for price**.
 - [ ] Use **Design** for treatments such as Fish Motif, Traditional, and Ikat Border; the weave itself remains the category.
 - [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
@@ -31,7 +32,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 ## 4. Collection behavior
 
-- [ ] Product image, name, price, and “View details” affordance open the correct detailed view.
+- [ ] Product image, name, pricing message, and “View details” affordance open the correct detailed view.
 - [ ] One-image products show no arrows, counter, thumbnails, automatic cycling, or fake loop.
 - [ ] Multi-image products support desktop hover cycling and previous/next arrows.
 - [ ] Multi-image products support touch swipe and visible mobile arrow controls.
@@ -44,8 +45,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 - [ ] Generate Design options from the products currently available in the selected weave.
 - [ ] Generate Color options from normalized product color arrays.
-- [ ] Generate the price limits from numeric product prices.
-- [ ] If all products share one price, show the single current price instead of a meaningless slider range.
+- [ ] Do not expose numeric prices or render a price filter while public pricing is inquiry-only.
 - [ ] Confirm combined filters work and “Clear filters” restores every product.
 - [ ] Confirm result counts update accessibly.
 
