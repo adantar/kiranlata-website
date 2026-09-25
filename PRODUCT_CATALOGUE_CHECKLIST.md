@@ -45,8 +45,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 - [ ] Generate Design options from the products currently available in the selected weave.
 - [ ] Generate Color options from normalized product color arrays.
+- [ ] Generate Availability options from published product data. Always provide **All**; show **Available** and **Sold Out** only when those states exist in the selected weave.
 - [ ] Do not expose numeric prices or render a price filter while public pricing is inquiry-only.
-- [ ] Confirm combined filters work and “Clear filters” restores every product.
+- [ ] Confirm Design, Color, and Availability filters work in combination and “Clear filters” restores every product.
 - [ ] Confirm result counts update accessibly.
 
 ## 6. Editorial and masthead consistency
