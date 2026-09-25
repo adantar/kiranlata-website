@@ -1,13 +1,14 @@
 const product=(name,details,type,area,asset,row=0,layout='grid')=>({name,details,type,area,asset,row,layout});
 const paired=(asset,type,area,a,b)=>[product(a[0],a[1],type,area,asset,0),product(b[0],b[1],type,area,asset,1)];
 const P='/assets/images/products/';
-const dhaniakhaliProduct=(id,name,design,colors,count,price=45,availability='Available')=>({
+const dhaniakhaliProduct=(id,name,design,colors,count,price=45,availability='Available',assetVersion='')=>({
   id,name,design,colors,type:'dhaniakhali',area:'all',layout:'photos',price:'Contact us for price',priceValue:price,
   availability,
   details:`Pure cotton · ${colors.join(', ')} · GI-tagged Dhaniakhali weave`,
   images:Array.from({length:count},(_,index)=>{
     const number=String(index+1).padStart(2,'0');
-    return {card:`${P}dhaniakhali/${id}/${number}-card.jpg`,large:`${P}dhaniakhali/${id}/${number}-large.jpg`};
+    const version=assetVersion?`?v=${assetVersion}`:'';
+    return {card:`${P}dhaniakhali/${id}/${number}-card.jpg${version}`,large:`${P}dhaniakhali/${id}/${number}-large.jpg${version}`};
   })
 });
 const banarasiProduct=(id,name,design,colors,count)=>({
@@ -40,7 +41,7 @@ const regionPages={
     dhaniakhaliProduct('DHA-017','Fish Motif Dhaniakhali','Fish Motif',['Black','Red','Yellow'],2),
     dhaniakhaliProduct('DHA-018','Fish Motif Dhaniakhali','Fish Motif',['Black','White'],3),
     dhaniakhaliProduct('DHA-019','Fish Motif Dhaniakhali','Fish Motif',['Black','White'],3),
-    dhaniakhaliProduct('DHA-020','Traditional Dhaniakhali','Traditional',['White','Black','Red'],3),
+    dhaniakhaliProduct('DHA-020','Fish Motif Dhaniakhali','Fish Motif',['White','Black'],1,45,'Available','2'),
     dhaniakhaliProduct('DHA-021','Traditional Dhaniakhali','Traditional',['Navy Blue','Yellow'],1),
     product('Ranga Oxblood Baluchari','Silk · Narrative figured pallu','baluchari','all',P+'baluchari-oxblood-views.webp',0,'strip'),product('Bonolata Olive Baluchari','Silk · Figured floral pallu','baluchari','all',P+'baluchari-olive-views.webp',0,'strip'),
     ...paired(P+'phulia-products.webp','phulia','all',['Sage Rekha Phulia','Cotton · Contemporary border'],['Megh Blue Phulia','Cotton · Fine buti']),
