@@ -28,6 +28,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Use **Design** for treatments such as Fish Motif, Traditional, and Ikat Border; the weave itself remains the category.
 - [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
+- [ ] Preserve special product attributes such as collector status and an included blouse piece as structured data, and surface them consistently on cards and detailed views.
 - [ ] Remove superseded concept products once real inventory for that category is approved.
 
 ## 4. Collection behavior
@@ -88,7 +89,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Baluchari: replace concept inventory and apply the complete system.
 - [ ] Phulia: replace concept inventory and apply the complete system.
 - [ ] Bengal Kalakshetra: replace concept inventory and apply the complete system.
-- [ ] Dhalapathar: replace concept inventory and apply the complete system.
+- [x] Dhalapathar: two real collector pieces, optimized galleries, blouse-piece labelling, masthead features, filters, and responsive interactions.
 - [ ] Ilkal: replace concept inventory and apply the complete system.
 - [ ] Narayanpet: replace concept inventory and apply the complete system.
 - [ ] Patteda Anchu: replace concept inventory and apply the complete system.
