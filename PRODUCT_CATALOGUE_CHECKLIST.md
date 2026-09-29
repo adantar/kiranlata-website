@@ -47,6 +47,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Generate Design options from the products currently available in the selected weave.
 - [ ] Generate Color options from normalized product color arrays.
 - [ ] Generate Availability options from published product data. Always provide **All**; show **Available** and **Sold Out** only when those states exist in the selected weave.
+- [ ] When a regional page contains real inventory for multiple weaves, derive and render Design, Color, and Availability filters independently for each selected weave; adding one weave must not replace or contaminate another weave's facets.
 - [ ] Do not expose numeric prices or render a price filter while public pricing is inquiry-only.
 - [ ] Confirm Design, Color, and Availability filters work in combination and “Clear filters” restores every product.
 - [ ] Confirm result counts update accessibly.
@@ -85,7 +86,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Dhaniakhali: initial nine real products, optimized images, galleries, modal, filters, masthead features, and responsive interactions.
 - [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out enquiry state.
 - [ ] Dhaniakhali: apply this checklist automatically to each future product batch.
-- [ ] Gorod: replace concept inventory and apply the complete system.
+- [x] Gorod: six real products, optimized galleries, researched editorial copy, independent filters, masthead features, and responsive interactions.
 - [ ] Baluchari: replace concept inventory and apply the complete system.
 - [ ] Phulia: replace concept inventory and apply the complete system.
 - [ ] Bengal Kalakshetra: replace concept inventory and apply the complete system.
