@@ -238,7 +238,8 @@
 .product-quick-view{overflow:hidden}
 .quick-view-layout>*{min-width:0}
 .quick-view-copy{justify-content:center;padding:clamp(1.5rem,3vw,3.25rem) clamp(3.9rem,4vw,4.75rem) clamp(1.5rem,3vw,3.25rem) clamp(1.5rem,3vw,3.25rem);overflow:hidden}
-.quick-view-copy h2{max-width:100%;margin:.35rem 0 .7rem;font-size:clamp(2.35rem,min(4.2vw,7vh),4.65rem);line-height:.9;overflow-wrap:break-word}
+.quick-view-copy h2{max-width:100%;margin:.35rem 0 .7rem;font-size:clamp(2.35rem,min(4.2vw,7vh),4.65rem);line-height:.9;overflow-wrap:normal;word-break:normal;hyphens:none}
+.quick-view-copy h2.is-long-title{font-size:clamp(2.15rem,min(3.35vw,6.2vh),3.8rem);line-height:.94}
 .quick-view-details{font-size:.74rem;line-height:1.45}
 .quick-view-price{margin:.85rem 0;font-size:1.75rem;line-height:1}
 .quick-view-availability{margin:0 0 .8rem;padding:.4rem .72rem;border-color:#6d100b66;background:#f3e3cf;color:#6d100b}
@@ -269,6 +270,7 @@
   .quick-view-stage{height:calc(50svh - 78px)}
   .quick-view-copy{justify-content:flex-start;padding:1.35rem 1.15rem max(2rem,env(safe-area-inset-bottom));overflow:visible}
   .quick-view-copy h2{margin:.3rem 0 .65rem;font-size:clamp(2.15rem,10vw,2.9rem);line-height:.94}
+  .quick-view-copy h2.is-long-title{font-size:clamp(2rem,8.7vw,2.65rem);line-height:.98}
   .quick-view-details{font-size:.7rem;line-height:1.4}
   .quick-view-price{margin:.75rem 0;font-size:1.6rem}
   .quick-view-availability{margin:0 0 .65rem}
