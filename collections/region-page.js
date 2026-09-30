@@ -76,6 +76,12 @@ const regionPages={
   kanchipuram:{eyebrow:'Kanchipuram · Tamil Nadu',title:'Kanchipuram',intro:'Architectural borders, substantial silk and the celebrated korvai join give Kanchipuram sarees their unmistakable presence.',board:'/assets/images/catalogue/regions/silk-regions-board.webp',panel:1,types:[['Kanchipuram','kanchipuram']],cards:paired(P+'kanchipuram-products.webp','kanchipuram','all',['Maroon Temple Korvai','Mulberry silk · Contrast border'],['Peacock Magenta Korvai','Mulberry silk · Figured pallu'])},
   maheshwari:{eyebrow:'Maheshwar · Madhya Pradesh',title:'Maheshwari',intro:'Light silk-cotton, elegant stripes and reversible borders carry the refined geometry of Maheshwar’s weaving heritage.',board:'/assets/images/catalogue/regions/silk-regions-board.webp',panel:2,types:[['Maheshwari','maheshwari']],cards:paired(P+'maheshwari-products.webp','maheshwari','all',['Sage Chandrakala','Silk-cotton · Zari border'],['Baingani Checks','Silk-cotton · Reversible border'])}
 };
+globalThis.kiranlataProductCatalogues={
+  dhaniakhali:regionPages.bengal.cards.filter(item=>item.type==='dhaniakhali'&&item.id),
+  gorod:regionPages.bengal.cards.filter(item=>item.type==='gorod'&&item.id),
+  dhalapathar:regionPages.odisha.cards.filter(item=>item.type==='dhalapathar'&&item.id),
+  banarasi:regionPages.banarasi.cards.filter(item=>item.type==='banarasi'&&item.id)
+};
 const categoryStories={
   bengal:{
     dhaniakhali:{kicker:'Hooghly district · West Bengal',title:'The quiet rhythm of Bengal cotton',lead:'Crisp, enduring and unmistakably grounded in place.',facts:[['Cloth','Handloom cotton'],['Known for','Distinctive woven borders'],['Heritage','Geographical Indication protected']],paragraphs:[
@@ -173,6 +179,7 @@ if(info&&main){
     thumbs.querySelectorAll('button').forEach((button,i)=>button.onclick=()=>showQuickView(i));showQuickView(Math.min(startAt,views.length-1));quickView.showModal();document.body.classList.add('quick-view-open')
   };
   mastVisualElement.addEventListener('click',event=>{const link=event.target.closest('[data-feature-product]');if(!link)return;event.preventDefault();const index=info.cards.findIndex(item=>item.id===link.dataset.featureProduct),item=info.cards[index],card=main.querySelector(`[data-product-index="${index}"]`);if(index<0||!item||!card)return;applyFilter(item.type,{updateUrl:true});openQuickView(card)});
+  const requestedProduct=new URLSearchParams(location.search).get('product');if(requestedProduct)requestAnimationFrame(()=>requestAnimationFrame(()=>{const index=info.cards.findIndex(item=>item.id===requestedProduct),item=info.cards[index],card=main.querySelector(`[data-product-index="${index}"]`);if(index<0||!item||!card)return;applyFilter(item.type);openQuickView(card)}));
   const closeQuickView=()=>{quickView.close();document.body.classList.remove('quick-view-open');returnFocus?.focus()};
   cards.forEach(card=>{card.addEventListener('click',event=>{if(event.target.closest('.preview-arrows'))return;const active=[...card.querySelectorAll('.sheet-view')].findIndex(img=>img.classList.contains('is-active'));openQuickView(card,Math.max(active,0))});card.addEventListener('keydown',event=>{if((event.key==='Enter'||event.key===' ')&&!event.target.closest('button')){event.preventDefault();openQuickView(card)}})});
   quickView.querySelector('.quick-view-close').onclick=closeQuickView;quickView.querySelector('.quick-view-arrow.previous').onclick=()=>showQuickView(quickIndex-1);quickView.querySelector('.quick-view-arrow.next').onclick=()=>showQuickView(quickIndex+1);quickView.addEventListener('click',event=>{if(event.target===quickView)closeQuickView()});quickView.addEventListener('close',()=>document.body.classList.remove('quick-view-open'));stage.addEventListener('touchstart',event=>{quickTouchStart=event.changedTouches[0].clientX},{passive:true});stage.addEventListener('touchend',event=>{const distance=event.changedTouches[0].clientX-quickTouchStart;if(Math.abs(distance)>42)showQuickView(quickIndex+(distance<0?1:-1))},{passive:true});
