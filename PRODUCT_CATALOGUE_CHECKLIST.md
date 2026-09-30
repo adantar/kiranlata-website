@@ -55,10 +55,14 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## 6. Editorial and masthead consistency
 
 - [ ] Feature three commercially useful and visually distinct real products when enough inventory exists.
+- [ ] Treat the category masthead selection as the homepage feature authority: one product uses one photograph, two use both, and three or more use the masthead's top three without duplication.
+- [ ] When masthead featured IDs change, update the corresponding entry in `assets/js/featured-weaves.js` in the same task.
+- [ ] Recalculate the homepage feature's collection count whenever products are added or removed; confirm the count matches published catalogue data.
 - [ ] Use three independently clickable masthead tiles linked to the exact product details.
 - [ ] Use floating ivory-and-gold captions with an image gradient and animated underline—no rectangular caption card.
 - [ ] Select features that represent distinct designs, price positions, or use cases rather than near-duplicates.
 - [ ] Keep category descriptions and collection actions consistent with the established Bengal layout.
+- [ ] For a new homepage feature, use the `kiranlata-featured-weave` skill to research its educational taxonomy, create a distinct regional art direction, and verify synchronized interactions.
 
 ## 7. Professional QA
 

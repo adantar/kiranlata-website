@@ -10,5 +10,6 @@ Key rules:
 - Derive design, color, and price filters from product data so new values appear automatically.
 - A one-photo product is static and has no misleading gallery controls. Multi-photo products retain desktop hover cycling, arrows, touch swipe, modal thumbnails, and counters.
 - Keep product cards, detailed views, masthead features, focus treatments, and responsive behavior visually consistent across categories.
+- Keep homepage featured-weave product IDs and collection counts synchronized with catalogue masthead selections and published inventory. Use the `kiranlata-featured-weave` skill when creating or updating these homepage chapters.
 - Test desktop, tablet, mobile, keyboard interaction, touch behavior, image loading, console errors, and horizontal overflow before deployment.
 - Work locally unless the user explicitly requests a GitHub push or deployment.
