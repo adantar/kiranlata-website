@@ -42,6 +42,14 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Keyboard focus and desktop hover add the same subtle zoom, tonal overlay, and gold frame.
 - [ ] Touch press provides brief visual feedback without relying on hover.
 
+### Availability-status workflow
+
+- [ ] Change availability once in the product metadata; never hardcode a product's status independently into a card, modal, filter, homepage drawer, or enquiry form.
+- [ ] For every product changed to **Sold Out**, verify the collection-card badge, muted product treatment, Availability filter, quick-view status, sold-out enquiry wording, and homepage collection-drawer status wherever that product appears.
+- [ ] For every product returned to **Available**, verify that all sold-out treatments disappear from those same surfaces.
+- [ ] Do not add availability badges to editorial masthead or homepage feature imagery unless that surface adopts availability labels for every product consistently. Product codes must still appear on every real-product masthead tile.
+- [ ] Recalculate only counts affected by the change. Availability changes do not alter total collection counts, but any visible available/sold-out subtotal must be derived again from product metadata.
+
 ## 5. Dynamic filters
 
 - [ ] Generate Design options from the products currently available in the selected weave.
