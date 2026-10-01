@@ -236,7 +236,7 @@ if(layeredAtlas){
   function renderRegions(){const view=views[currentView];if(currentView==='world'){regionBar.hidden=true;regionBar.replaceChildren();return}regionBar.hidden=false;regionBar.replaceChildren(...view.regions.map(([key,label])=>{const button=document.createElement('button');button.type='button';button.textContent=label;button.dataset.region=key;button.classList.toggle('is-active',key===currentRegion);button.setAttribute('aria-pressed',String(key===currentRegion));button.addEventListener('click',()=>{currentRegion=key;expandedCluster='';renderRegions();renderMarkers();setLocation(view);layeredAtlas.querySelector('[data-atlas-breadcrumb]').textContent=key==='all'?view.title:`${view.title} · ${label}`});return button}))}
   let viewLoadToken=0;
   function selectView(key){
-    const token=++viewLoadToken,view=views[key],mapSource=view.image.replace('-accurate.svg','-terrain.svg'),nextSource=`${mapSource}?v=20261001-1`,card=layeredAtlas.querySelector('.atlas-location-card'),preload=new Image();
+    const token=++viewLoadToken,view=views[key],mapSource=view.image.replace('-accurate.svg','-terrain.svg'),nextSource=`${mapSource}?v=20261001-2`,card=layeredAtlas.querySelector('.atlas-location-card'),preload=new Image();
     map.classList.add('is-loading-view');
     preload.src=nextSource;
     const commit=()=>{
