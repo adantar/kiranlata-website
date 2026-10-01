@@ -33,7 +33,7 @@ const dhalapatharProduct=(id,colors,labels,mastheadLabel,price=150,availability=
 });
 const productHighlightsFor=item=>[item.collectionStatus?'Rare Collector':'',item.includesBlousePiece?'Blouse Included':''].filter(Boolean);
 const regionPages={
-  bengal:{eyebrow:'West Bengal · Bangladesh · The wider Bengal cultural region',title:'Bengal Handloom',intro:'Across West Bengal and Bangladesh—and among Bengali communities in Tripura and Assam’s Barak Valley—weaving traditions range from crisp everyday cotton and fine muslin to narrative silk.',board:'/assets/images/catalogue/regions/bengal-board.webp',types:[['Gorod','gorod'],['Dhaniakhali','dhaniakhali'],['Baluchari','baluchari'],['Phulia','phulia'],['Bengal Kalakshetra','kalakshetra']],cards:[
+  bengal:{eyebrow:'West Bengal · Bangladesh · The wider Bengal cultural region',title:'Bengal Handloom',intro:'Across West Bengal and Bangladesh—and among Bengali communities in Tripura and Assam’s Barak Valley—weaving traditions range from crisp everyday cotton and fine muslin to narrative silk.',board:'/assets/images/catalogue/regions/bengal-board.webp',types:[['Gorod','gorod'],['Dhaniakhali/Dhonekhali','dhaniakhali'],['Baluchari','baluchari'],['Phulia Tangail','phulia'],['Bengal Kalakshetra','kalakshetra']],cards:[
     gorodProduct('GOR-001',1,100),
     gorodProduct('GOR-002',2,200),
     gorodProduct('GOR-003',1,200),
