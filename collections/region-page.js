@@ -59,7 +59,7 @@ const regionPages={
     dhaniakhaliProduct('DHA-011','Ikat Border Dhaniakhali','Ikat Border',['Black','Yellow'],1),
     dhaniakhaliProduct('DHA-012','Ikat Border Dhaniakhali','Ikat Border',['Black','Red'],1),
     dhaniakhaliProduct('DHA-013','Ikat Border Dhaniakhali','Ikat Border',['Grey','Blue'],1,45,'Sold Out'),
-    dhaniakhaliProduct('DHA-014','Inch Par Dhaniakhali','Inch Par',['Light Mauve','Wine'],1),
+    dhaniakhaliProduct('DHA-014','Inch Par Dhaniakhali','Inch Par',['Light Mauve','Wine'],1,45,'Sold Out'),
     dhaniakhaliProduct('DHA-015','Traditional Dhaniakhali','Traditional',['Grey','Red','Black','White'],3),
     dhaniakhaliProduct('DHA-016','Traditional Dhaniakhali','Traditional',['Navy Blue','Red','Yellow'],1),
     dhaniakhaliProduct('DHA-017','Fish Motif Dhaniakhali','Fish Motif',['Black','Red','Yellow'],2),
