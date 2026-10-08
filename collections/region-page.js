@@ -23,6 +23,12 @@ const phuliaProduct=(id,name,colors,count,price,availability='Available',masthea
   details:`100% pure cotton · ${colors.join(', ')} · Handwoven · GI-tagged Tangail Saree of Bengal`,
   images:Array.from({length:count},(_,index)=>{const number=String(index+1).padStart(2,'0');return {card:`${P}phulia/${id}/${number}-card.jpg`,large:`${P}phulia/${id}/${number}-large.jpg`,label:index===0?'Primary view':'Alternate view'}})
 });
+const figurePhuliaProduct=(id,name,colors,price)=>({
+  id,name,design:'Figure Motif',colors,type:'phulia',area:'all',layout:'photos',price:'Contact us for price',priceValue:price,
+  availability:'Available',mastheadLabel:'Figure Motif',
+  details:`100% pure cotton · ${colors.join(', ')} · Handwoven · GI-tagged Tangail Saree of Bengal`,
+  images:[{card:`${P}phulia/${id}/01-card.webp`,large:`${P}phulia/${id}/01-large.webp`,label:'Primary view'}]
+});
 const banarasiProduct=(id,name,design,colors,count)=>({
   id,name,design,colors,type:'banarasi',area:'all',layout:'photos',price:'Contact us for price',
   details:`Pure silk · ${colors.join(', ')} · GI-tagged Banaras Brocades and Sarees`,
@@ -68,13 +74,15 @@ const regionPages={
     dhaniakhaliProduct('DHA-020','Fish Motif Dhaniakhali','Fish Motif',['White','Black'],1,45,'Available','2'),
     dhaniakhaliProduct('DHA-021','Traditional Dhaniakhali','Traditional',['Navy Blue','Yellow'],1),
     product('Ranga Oxblood Baluchari','Silk · Narrative figured pallu','baluchari','all',P+'baluchari-oxblood-views.webp',0,'strip'),product('Bonolata Olive Baluchari','Silk · Figured floral pallu','baluchari','all',P+'baluchari-olive-views.webp',0,'strip'),
-    phuliaProduct('PHU-001','Traditional Phulia Tangail — Black and White',['White','Black'],1,55),
-    phuliaProduct('PHU-002','Traditional Phulia Tangail — Red, Black and White',['White','Red','Black'],1,55,'Available','Red, Black & White'),
-    phuliaProduct('PHU-003','Traditional Phulia Tangail — White and Red (Doodhe Alta)',['White','Red'],2,55),
-    phuliaProduct('PHU-004','Traditional Phulia Tangail — White and Red',['White','Red'],1,75,'Available','White & Red'),
-    phuliaProduct('PHU-005','Traditional Phulia Tangail — Dark Green and White',['Dark Green','White'],2,65),
-    phuliaProduct('PHU-006','Traditional Phulia Tangail — Maroon and White',['Maroon','White'],1,65),
-    phuliaProduct('PHU-007','Traditional Phulia Tangail — Ivory Multicolor',['Ivory','Teal Blue','Red','Black','Grey','Mustard'],1,75,'Sold Out','Ivory Multicolor'),
+    phuliaProduct('PHU-001','Traditional Phulia Tangail',['White','Black'],1,55),
+    phuliaProduct('PHU-002','Traditional Phulia Tangail',['White','Red','Black'],1,55,'Available','Traditional'),
+    phuliaProduct('PHU-003','Traditional Phulia Tangail',['White','Red'],2,55),
+    phuliaProduct('PHU-004','Traditional Phulia Tangail',['White','Red'],1,75,'Available','Traditional'),
+    phuliaProduct('PHU-005','Traditional Phulia Tangail',['Dark Green','White'],2,65),
+    phuliaProduct('PHU-006','Traditional Phulia Tangail',['Maroon','White'],1,65),
+    phuliaProduct('PHU-007','Traditional Phulia Tangail',['Ivory','Teal Blue','Red','Black','Grey','Mustard'],1,75,'Sold Out','Traditional'),
+    figurePhuliaProduct('PHU-008','Figure Motif Phulia Tangail',['Off-white','Red'],55),
+    figurePhuliaProduct('PHU-009','Figure Motif Phulia Tangail',['Black','Muted Mustard'],55),
     ...paired(P+'kalakshetra-products.webp','kalakshetra','all',['Terracotta Lok Kalakshetra','Cotton-silk · Folk motifs'],['Indigo Bagan Kalakshetra','Cotton-silk · Botanical motifs'])]},
   odisha:{eyebrow:'Odisha · Eastern India',title:'Odisha Handloom',intro:'A focused presentation of Dhalapathar’s rare cotton tradition, named for its village of origin in Khordha district and protected as Dhalapathar Parda & Fabrics.',types:[['Dhalapathar','dhalapathar']],cards:[
     dhalapatharProduct('DHP-001',['Rust','Multicolor'],['Primary view','Alternate view','Blouse piece'],'Rust & Multicolor',210,'Sold Out'),
@@ -141,7 +149,7 @@ const mastCopy={
 const key=document.body.dataset.region,info=regionPages[key],main=document.querySelector('#main-content');
 if(info&&main){
   const panelStyle=info.panel==null?'':`style="width:300%;max-width:none;transform:translateX(-${info.panel*33.333}%);object-fit:cover"`;
-  const featuredIds={bengal:{all:['DHA-003','DHA-005','DHA-007'],gorod:['GOR-002','GOR-003','GOR-006'],dhaniakhali:['DHA-003','DHA-014','DHA-015'],phulia:['PHU-004','PHU-007','PHU-002']},odisha:{all:['DHP-001','DHP-002'],dhalapathar:['DHP-001','DHP-002']},banarasi:{all:['BAN-001','BAN-002'],banarasi:['BAN-001','BAN-002']}};
+  const featuredIds={bengal:{all:['DHA-003','DHA-005','DHA-007'],gorod:['GOR-002','GOR-003','GOR-006'],dhaniakhali:['DHA-003','DHA-014','DHA-015'],phulia:['PHU-008','PHU-007','PHU-002']},odisha:{all:['DHP-001','DHP-002'],dhalapathar:['DHP-001','DHP-002']},banarasi:{all:['BAN-001','BAN-002'],banarasi:['BAN-001','BAN-002']}};
   const featureFor=id=>{const item=info.cards.find(card=>card.id===id),image=item?.images?.[0]?.card;if(!item||!image)return null;return [id,labelForType(item.type),item.mastheadLabel||item.design||item.name,image]};
   const labelForType=slug=>info.types.find(([,value])=>value===slug)?.[0]||info.title;
   const buildMastVisual=slug=>{
