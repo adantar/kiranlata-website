@@ -71,6 +71,10 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Select features that represent distinct designs, price positions, or use cases rather than near-duplicates.
 - [ ] Keep category descriptions and collection actions consistent with the established Bengal layout.
 - [ ] For a new homepage feature, use the `kiranlata-featured-weave` skill to research its educational taxonomy, create a distinct regional art direction, and verify synchronized interactions.
+- [ ] Keep the new feature's intro, collage canvas, reader panel, and chapter spacing consistent with the other homepage features at each responsive breakpoint; do not let a longer heading or copy change a single chapter's visual scale.
+- [ ] If the full category name is too long for the display heading, use a concise display-only name while preserving the full category name in navigation, accessible labels, product data, and the collection CTA.
+- [ ] Measure all sibling feature heights and the chapter gap at desktop, tablet, standard-phone, and narrow-phone widths. Confirm long glossary content is fully visible; prefer content-sized rows with shared minimum heights to clipping or text-specific fixed heights.
+- [ ] Check the key interactive states (each educational tab, arrows, photos, product drawer) after responsive reflow, including keyboard/touch and reduced-motion behavior.
 
 ## 7. Professional QA
 
