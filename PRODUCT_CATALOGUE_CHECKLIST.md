@@ -24,7 +24,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## 3. Product data
 
 - [ ] Add the product ID, customer-facing name, design, normalized color list, fabric, GI weave, internal numeric price, availability, and image list.
-- [ ] Keep numeric prices internal. Customer-facing cards and detailed views must say **Contact us for price**.
+- [ ] Treat approved numeric `priceValue` as the source of truth: display the recorded price on public product cards, detailed views, and homepage feature drawers. Do not invent or derive missing prices.
+- [ ] Keep BAN-001 and BAN-002 inquiry-only: show **Contact us for price** and route the link to the enquiry form with that product's ID. Other real products with a recorded price show the amount and an **Enquire about this saree** link that carries the product ID and availability.
+- [ ] Keep concept/placeholding listings outside real-product pricing and enquiry changes unless they are explicitly converted to approved inventory.
 - [ ] Use **Design** for treatments such as Fish Motif, Traditional, and Ikat Border; the weave itself remains the category.
 - [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
@@ -33,7 +35,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 ## 4. Collection behavior
 
+- [ ] Main-menu collection links, submenu weave links, and in-page weave/region filters land on the product catalogue, not the editorial description; verify both direct hash entry and on-page selection.
 - [ ] Product image, name, pricing message, and “View details” affordance open the correct detailed view.
+- [ ] Keep product price and inquiry treatment consistent between the collection card, detailed view, and homepage featured-weave drawer. An inquiry link carries the exact product ID.
 - [ ] One-image products show no arrows, counter, thumbnails, automatic cycling, or fake loop.
 - [ ] Multi-image products support desktop hover cycling and previous/next arrows.
 - [ ] Multi-image products support touch swipe and visible mobile arrow controls.
@@ -56,8 +60,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Generate Color options from normalized product color arrays.
 - [ ] Generate Availability options from published product data. Always provide **All**; show **Available** and **Sold Out** only when those states exist in the selected weave.
 - [ ] When a regional page contains real inventory for multiple weaves, derive and render Design, Color, and Availability filters independently for each selected weave; adding one weave must not replace or contaminate another weave's facets.
-- [ ] Do not expose numeric prices or render a price filter while public pricing is inquiry-only.
-- [ ] Confirm Design, Color, and Availability filters work in combination and “Clear filters” restores every product.
+- [ ] Derive price-filter choices from recorded prices for the selected weave; show a **Price on request** option only where products in that weave have no numeric price. Keep concept/placeholding listings out of product price facets.
+- [ ] Confirm Design, Color, Availability, and Price filters work in combination and “Clear filters” restores every real product.
 - [ ] Confirm result counts update accessibly.
 
 ## 6. Editorial and masthead consistency

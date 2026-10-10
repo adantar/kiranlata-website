@@ -1136,3 +1136,16 @@ body.enquiry-open{overflow:hidden}
 @media(max-width:900px){.weave-feature{min-height:1576px;grid-template-rows:280px min(64svh,650px) minmax(644px,auto)}.featured-weave-intro h3{font-size:clamp(2.8rem,8vw,4rem)}}
 @media(max-width:560px){.featured-stories>[data-featured-weave]{gap:2.5rem}.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-intro h3{font-size:clamp(2.8rem,12.5vw,3.2rem);overflow-wrap:normal}.featured-weave-lead{font-size:clamp(.95rem,4vw,1.1rem)}.collection-drawer-stage>a{height:161px;min-height:161px}}
 @media(max-width:350px){.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-panel{padding:.65rem}.featured-weave-panel:before,.featured-weave-panel>div:before{display:none}.featured-weave-panel>div{grid-template-columns:36px 1fr;gap:.5rem;padding:.55rem 0}.featured-weave-icon{width:36px;height:36px}.featured-weave-panel strong{font-size:.82rem}.featured-weave-panel p span{font-size:.64rem}}
+
+/* Catalogue price display and enquiry links */
+.product-facets{grid-template-columns:minmax(210px,.75fr) minmax(0,1fr) minmax(0,1.1fr)}
+.facet-primary,.facet-secondary{display:grid;align-content:start;gap:1.5rem;min-width:0}
+.facet-secondary{grid-template-columns:1fr}
+.preview-product-meta{display:block;line-height:1.65}
+.visible-product-price{white-space:nowrap}
+.product-enquiry-link{margin-left:.35rem;white-space:nowrap;font-size:.9em}
+.quick-view-copy [hidden]{display:none}
+.quick-view-price-enquiry{align-self:flex-start;margin:1.4rem 0;color:#342b1e;font:1.35rem var(--serif)}
+.collection-drawer-price{font-size:.62rem!important;letter-spacing:.02em!important;text-transform:none!important;color:#493724!important}
+@media(max-width:1050px){.product-facets{grid-template-columns:repeat(2,minmax(0,1fr))}.facet-secondary{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.product-facets{grid-template-columns:1fr}.facet-secondary{grid-column:auto;grid-template-columns:1fr}.facet-primary,.facet-secondary{gap:1.25rem}.quick-view-price-enquiry{margin:.65rem 0;font-size:1.35rem}}
