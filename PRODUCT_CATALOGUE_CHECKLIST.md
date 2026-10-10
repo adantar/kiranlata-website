@@ -25,8 +25,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 - [ ] Add the product ID, customer-facing name, design, normalized color list, fabric, GI weave, internal numeric price, availability, and image list.
 - [ ] Treat approved numeric `priceValue` as the source of truth: display the recorded price on public product cards, detailed views, and homepage feature drawers. Do not invent or derive missing prices.
-- [ ] Keep BAN-001 and BAN-002 inquiry-only: show **Contact us for price** and route the link to the enquiry form with that product's ID. Other real products with a recorded price show the amount and an **Enquire about this saree** link that carries the product ID and availability.
-- [ ] Keep concept/placeholding listings outside real-product pricing and enquiry changes unless they are explicitly converted to approved inventory.
+- [ ] Keep BAN-001 and BAN-002 inquiry-only: show **Contact us for price** and route the link to the inquiry form with that product's ID. Other real products with a recorded price show the amount on its own clear line and an **Inquire about this saree** link that carries the product ID and availability.
+- [ ] Keep concept/placeholding listings outside real-product pricing and inquiry changes unless they are explicitly converted to approved inventory.
 - [ ] Use **Design** for treatments such as Fish Motif, Traditional, and Ikat Border; the weave itself remains the category.
 - [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
@@ -35,7 +35,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 ## 4. Collection behavior
 
-- [ ] Main-menu collection links, submenu weave links, and in-page weave/region filters land on the product catalogue, not the editorial description; verify both direct hash entry and on-page selection.
+- [ ] Main-menu collection links, submenu weave links, and in-page weave/region filters land with the first visible product gallery below the fixed navigation, not on the editorial description or collection-preview heading; verify direct hash entry and on-page selection at phone and desktop widths.
+- [ ] Use consistent US-English customer-facing wording: **Inquiry** for the navigation action, **Inquire about this saree** for priced products, and **Contact us for price** for inquiry-only listings.
 - [ ] Product image, name, pricing message, and “View details” affordance open the correct detailed view.
 - [ ] Keep product price and inquiry treatment consistent between the collection card, detailed view, and homepage featured-weave drawer. An inquiry link carries the exact product ID.
 - [ ] One-image products show no arrows, counter, thumbnails, automatic cycling, or fake loop.
@@ -48,8 +49,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 ### Availability-status workflow
 
-- [ ] Change availability once in the product metadata; never hardcode a product's status independently into a card, modal, filter, homepage drawer, or enquiry form.
-- [ ] For every product changed to **Sold Out**, verify the collection-card badge, muted product treatment, Availability filter, quick-view status, sold-out enquiry wording, and homepage collection-drawer status wherever that product appears.
+- [ ] Change availability once in the product metadata; never hardcode a product's status independently into a card, modal, filter, homepage drawer, or inquiry form.
+- [ ] For every product changed to **Sold Out**, verify the collection-card badge, muted product treatment, Availability filter, quick-view status, sold-out inquiry wording, and homepage collection-drawer status wherever that product appears.
 - [ ] For every product returned to **Available**, verify that all sold-out treatments disappear from those same surfaces.
 - [ ] Do not add availability badges to editorial masthead or homepage feature imagery unless that surface adopts availability labels for every product consistently. Product codes must still appear on every real-product masthead tile.
 - [ ] Recalculate only counts affected by the change. Availability changes do not alter total collection counts, but any visible available/sold-out subtotal must be derived again from product metadata.
@@ -104,7 +105,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## Rollout status
 
 - [x] Dhaniakhali: initial nine real products, optimized images, galleries, modal, filters, masthead features, and responsive interactions.
-- [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out enquiry state.
+- [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out inquiry state.
 - [ ] Dhaniakhali: apply this checklist automatically to each future product batch.
 - [x] Gorod: six real products, optimized galleries, researched editorial copy, independent filters, masthead features, and responsive interactions.
 - [ ] Baluchari: replace concept inventory and apply the complete system.
