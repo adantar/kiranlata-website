@@ -49,10 +49,10 @@ const regionPages={
   bengal:{eyebrow:'West Bengal · Bangladesh · The wider Bengal cultural region',title:'Bengal Handloom',intro:'Across West Bengal and Bangladesh—and among Bengali communities in Tripura and Assam’s Barak Valley—weaving traditions range from crisp everyday cotton and fine muslin to narrative silk.',board:'/assets/images/catalogue/regions/bengal-board.webp',types:[['Gorod','gorod'],['Dhaniakhali/Dhonekhali','dhaniakhali'],['Baluchari','baluchari'],['Phulia Tangail','phulia'],['Bengal Kalakshetra','kalakshetra']],cards:[
     gorodProduct('GOR-001',1,100),
     gorodProduct('GOR-002',2,200),
-    gorodProduct('GOR-003',1,200),
+    gorodProduct('GOR-003',1,120),
     gorodProduct('GOR-004',1,110),
     gorodProduct('GOR-005',1,110),
-    gorodProduct('GOR-006',1,120),
+    gorodProduct('GOR-006',1,200),
     dhaniakhaliProduct('DHA-001','Fish Motif Dhaniakhali','Fish Motif',['White','Red'],1),
     dhaniakhaliProduct('DHA-002','Fish Motif Dhaniakhali','Fish Motif',['White','Red','Black'],1,45,'Sold Out'),
     dhaniakhaliProduct('DHA-003','Fish Motif Dhaniakhali','Fish Motif',['White','Red','Basanti Yellow'],1,45,'Sold Out'),
