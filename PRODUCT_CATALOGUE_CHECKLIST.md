@@ -40,6 +40,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Use consistent US-English customer-facing wording: **Inquiry** for the navigation action, **Inquire about this saree** for priced products, and **Contact us for price** for inquiry-only listings.
 - [ ] Product image, name, pricing message, and “View details” affordance open the correct detailed view.
 - [ ] Keep product price and inquiry treatment consistent between the collection card, detailed view, and homepage featured-weave drawer. An inquiry link carries the exact product ID.
+- [ ] Global product search uses published real-product catalogue records as its source of truth; results include the product image, ID, name, weave, key fabric/color details, recorded public price or **Contact us for price**, and current availability. Concept/placeholding listings stay out until approved as real inventory.
+- [ ] Search works from desktop, tablet, and phone headers; keyboard focus, clear/close controls, empty and no-match states, result count, “View all,” and product links to the correct quick view are verified.
+- [ ] When product records change, update the search loader’s `region-page.js` cache version along with page asset versions so on-demand search never serves stale inventory.
 - [ ] One-image products show no arrows, counter, thumbnails, automatic cycling, or fake loop.
 - [ ] Multi-image products support desktop hover cycling and previous/next arrows.
 - [ ] Multi-image products support touch swipe and visible mobile arrow controls.
