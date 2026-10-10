@@ -214,9 +214,16 @@
 /* Mobile storefront polish: generous touch targets, clear focus and collision-free type. */
 @media(max-width:900px){
   body.mobile-nav-open{overflow:hidden}
-  .regional-nav.open{overscroll-behavior:contain}
+  .regional-nav.open{overscroll-behavior:contain;justify-content:flex-start}
+  .regional-nav>.region-menu{border-bottom:1px solid #d9b66d42}
   .region-menu>a{display:flex;align-items:center;min-height:52px}
   .region-menu>button{width:52px;height:52px!important}
+  .region-menu>button span{position:relative;width:16px;height:16px;border:0;transform:none!important}
+  .region-menu>button span:before,.region-menu>button span:after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:#d9b66d;transform:translate(-50%,-50%);transition:opacity .18s,transform .18s}
+  .region-menu>button span:after{transform:translate(-50%,-50%) rotate(90deg)}
+  .region-menu.open>button span:after{opacity:0;transform:translate(-50%,-50%) rotate(90deg) scaleY(.25)}
+  .region-menu>button:focus-visible{outline:1px solid #efd09b;outline-offset:-7px;border-radius:50%}
+  @media(hover:hover) and (pointer:fine){.region-menu:not(.open):hover .mega-menu{display:none}.region-menu:not(.open):hover>button{background:transparent}}
   .mega-menu.compact a{min-height:46px;display:flex;align-items:center}
   .weave-popover>button{width:44px;height:44px;top:.45rem;right:.45rem}
   .promise-card .line-icon{margin-bottom:1rem}

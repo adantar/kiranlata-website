@@ -36,6 +36,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## 4. Collection behavior
 
 - [ ] Main-menu collection links, submenu weave links, and in-page weave/region filters land with the first visible product gallery below the fixed navigation, not on the editorial description or collection-preview heading; verify direct hash entry and on-page selection at phone and desktop widths.
+- [ ] On phone, primary navigation labels remain direct collection links while adjacent plus/minus controls expand or collapse their submenus; use subtle palette-matched separators and verify touch, keyboard, expanded-state labels, and drawer close behavior. Keep desktop navigation behavior unchanged.
 - [ ] Use consistent US-English customer-facing wording: **Inquiry** for the navigation action, **Inquire about this saree** for priced products, and **Contact us for price** for inquiry-only listings.
 - [ ] Product image, name, pricing message, and “View details” affordance open the correct detailed view.
 - [ ] Keep product price and inquiry treatment consistent between the collection card, detailed view, and homepage featured-weave drawer. An inquiry link carries the exact product ID.
