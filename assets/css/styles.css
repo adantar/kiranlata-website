@@ -1190,6 +1190,48 @@ body.enquiry-open{overflow:hidden}
 @media(max-width:560px){.featured-stories>[data-featured-weave]{gap:2.5rem}.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-intro h3{font-size:clamp(2.8rem,12.5vw,3.2rem);overflow-wrap:normal}.featured-weave-lead{font-size:clamp(.95rem,4vw,1.1rem)}.collection-drawer-stage>a{height:161px;min-height:161px}}
 @media(max-width:350px){.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-panel{padding:.65rem}.featured-weave-panel:before,.featured-weave-panel>div:before{display:none}.featured-weave-panel>div{grid-template-columns:36px 1fr;gap:.5rem;padding:.55rem 0}.featured-weave-icon{width:36px;height:36px}.featured-weave-panel strong{font-size:.82rem}.featured-weave-panel p span{font-size:.64rem}}
 
+/* Category-specific art direction: distinct motifs for each new feature. */
+.theme-narayanpet{--feature-accent:#71372e;--feature-dark:#24463f;--feature-paper:#f1e4cc}
+.theme-narayanpet .featured-weave-visual{background-color:#e9d7b7;background-image:repeating-linear-gradient(0deg,#24463f14 0 2px,transparent 2px 22px),repeating-linear-gradient(90deg,#a53a2c12 0 2px,transparent 2px 22px),radial-gradient(circle at 48% 45%,#fff6e8,#d7bd91 80%)}
+.theme-narayanpet .featured-weave-decoration:before{background:repeating-linear-gradient(45deg,#24463f 0 8px,#d5ad54 8px 11px,#9c3027 11px 18px)}
+.theme-narayanpet .featured-weave-decoration:after{border:8px double #a43a2e;background:repeating-linear-gradient(0deg,#24463f 0 10px,#efe0c5 10px 20px)}
+.symbol-narayanpet-cloth{background-color:#f2e4cb;background-image:repeating-linear-gradient(0deg,transparent 0 12px,#24463f 12px 16px,#d3aa4d 16px 19px),repeating-linear-gradient(90deg,transparent 0 12px,#9b3028 12px 16px,#d3aa4d 16px 19px)}
+.symbol-narayanpet-cloth:after{inset:20%;border:3px solid #f4e6ce;background:#24463f77}
+.symbol-narayanpet-border{background:linear-gradient(90deg,#9c3027 0 15%,#d9b75f 15% 20%,#24463f 20% 80%,#d9b75f 80% 85%,#9c3027 85%)}
+.symbol-narayanpet-border:after{inset:22% 36%;border:0;background:repeating-linear-gradient(0deg,#f5e8d3 0 4px,#d9b75f 4px 7px,#24463f 7px 12px)}
+.symbol-narayanpet-colour{background:conic-gradient(#24463f 0 25%,#dbb75c 0 37%,#a4382c 0 62%,#f0e0c2 0 75%,#24463f 0)}
+.symbol-narayanpet-colour:after{inset:25%;border:4px dotted #f7ebd5;background:#71372e;transform:rotate(45deg)}
+.icon-narayanpet-checks{background-color:#f1e2c7;background-image:repeating-linear-gradient(0deg,transparent 0 6px,#24463f 6px 9px,#d7b251 9px 11px),repeating-linear-gradient(90deg,transparent 0 6px,#98372c 6px 9px,#d7b251 9px 11px)}
+.icon-narayanpet-cotton{background:radial-gradient(ellipse at 50% 50%,#f8eedb 0 18%,transparent 20%),radial-gradient(ellipse at 35% 62%,#d5b76d 0 15%,transparent 17%),radial-gradient(ellipse at 65% 62%,#d5b76d 0 15%,transparent 17%),#24463f}
+.icon-narayanpet-weft{background:repeating-linear-gradient(135deg,#24463f 0 5px,#d9b85d 5px 8px,#9d342b 8px 11px,#f2e2c8 11px 15px)}
+.icon-narayanpet-frame{background:#f3e5ca;box-shadow:inset 0 0 0 7px #9c3027,inset 0 0 0 11px #d8b657,inset 0 0 0 16px #24463f}
+.icon-narayanpet-bands{background:repeating-linear-gradient(0deg,#9c3027 0 6px,#dbb858 6px 9px,#24463f 9px 18px,#f2e3c9 18px 22px)}
+.icon-narayanpet-pallu{background:linear-gradient(135deg,transparent 30%,#d5b457 31% 36%,transparent 37%),repeating-linear-gradient(90deg,#24463f 0 6px,#eee0c7 6px 10px,#9c3027 10px 15px)}
+.icon-narayanpet-colour{background:radial-gradient(circle at 25% 30%,#9c3027 0 10%,transparent 11%),radial-gradient(circle at 72% 67%,#d6b34f 0 11%,transparent 12%),linear-gradient(135deg,#24463f 50%,#f2e3c9 50%)}
+.icon-narayanpet-contrast{background:radial-gradient(circle at 28% 30%,#a53b2f 0 12%,transparent 13%),radial-gradient(circle at 70% 68%,#d4b355 0 12%,transparent 13%),#24463f}
+.icon-narayanpet-zari{background:linear-gradient(135deg,#24463f 0 42%,#d8b34e 43% 49%,#f8e8b5 50%,#a23529 58% 100%)}
+.icon-narayanpet-palette{background:conic-gradient(#24463f 0 25%,#a6382b 0 50%,#d6af4c 0 75%,#efe0c6 0)}
+.theme-baluchari{--feature-accent:#851a35;--feature-dark:#3f3028;--feature-paper:#f2e4cd}
+.theme-baluchari .featured-weave-visual{background-color:#e7d3b0;background-image:repeating-linear-gradient(45deg,#7f193214 0 2px,transparent 2px 20px),repeating-linear-gradient(-45deg,#ba8a3a18 0 2px,transparent 2px 20px),radial-gradient(circle at 46% 43%,#fff6e7,#d6bd97 80%)}
+.theme-baluchari .featured-weave-decoration:before{background:repeating-linear-gradient(0deg,#851a35 0 5px,#d3ae55 5px 8px,#3f3028 8px 14px)}
+.theme-baluchari .featured-weave-decoration:after{border:7px double #d2aa4d;background:#851a3540}
+.symbol-baluchari-cloth{background:repeating-linear-gradient(45deg,#831c38 0 3px,#d2ad55 3px 6px,#f2e3ca 6px 12px,#3f3028 12px 15px)}
+.symbol-baluchari-cloth:after{inset:23%;border:2px solid #f6e7ce;background:#831c3877}
+.symbol-baluchari-story{background:#3f3028}
+.symbol-baluchari-story:after{inset:17% 26%;border:2px solid #d8b352;background:#831c35;clip-path:polygon(50% 0,66% 18%,63% 31%,82% 40%,88% 100%,12% 100%,18% 40%,37% 31%,34% 18%)}
+.symbol-baluchari-frame{background:repeating-linear-gradient(0deg,#831c35 0 5px,#e0c16e 5px 8px,#f2e4ce 8px 18px)}
+.symbol-baluchari-frame:after{inset:27%;border:5px double #831c35;box-shadow:0 0 0 4px #dfbe68;transform:rotate(45deg)}
+.icon-baluchari-silk{background:radial-gradient(ellipse at 35% 30%,#e5c768 0 8%,transparent 9%),radial-gradient(ellipse at 65% 66%,#e5c768 0 8%,transparent 9%),repeating-linear-gradient(45deg,#831c35 0 4px,#d3ae57 4px 6px,#3f3028 6px 10px)}
+.icon-baluchari-fibres{background:linear-gradient(135deg,#f0dfc2 0 48%,#851a35 49% 51%,#d5b35e 52% 100%)}
+.icon-baluchari-weave{background:repeating-linear-gradient(0deg,#3f3028 0 3px,#dfc16f 3px 5px,#851a35 5px 8px)}
+.icon-baluchari-epic{background:#f1e2c5}
+.icon-baluchari-epic:after{content:"";display:block;width:64%;height:66%;margin:16% auto;background:#851a35;clip-path:polygon(50% 0,60% 16%,60% 35%,80% 46%,86% 100%,14% 100%,20% 46%,40% 35%,40% 16%)}
+.icon-baluchari-figures{background:radial-gradient(circle at 30% 35%,#dfbf65 0 8%,transparent 9%),radial-gradient(circle at 70% 35%,#dfbf65 0 8%,transparent 9%),linear-gradient(0deg,#851a35 0 25%,#f0e2c8 25% 75%,#3f3028 75%)}
+.icon-baluchari-ramayana{background:linear-gradient(135deg,#851a35 0 40%,#d7b253 41% 47%,#f1e2c8 48% 70%,#3f3028 71%)}
+.icon-baluchari-pallu{background:linear-gradient(90deg,#3f3028 0 12%,#d8b45a 12% 18%,#851a35 18% 82%,#d8b45a 82% 88%,#3f3028 88%)}
+.icon-baluchari-border{background:repeating-linear-gradient(45deg,#851a35 0 6px,#d3b05b 6px 10px,#f0e2c8 10px 14px)}
+.icon-baluchari-motifs{background:radial-gradient(circle at 25% 30%,#d5b35e 0 8%,transparent 9%),radial-gradient(circle at 70% 65%,#d5b35e 0 8%,transparent 9%),#851a35}
+
 /* Catalogue price display and enquiry links */
 .product-facets{grid-template-columns:minmax(210px,.75fr) minmax(0,1fr) minmax(0,1.1fr)}
 .facet-primary,.facet-secondary{display:grid;align-content:start;gap:1.5rem;min-width:0}

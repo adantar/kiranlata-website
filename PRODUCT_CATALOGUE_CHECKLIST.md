@@ -8,6 +8,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Read `product-info.txt` and treat it as the source of truth.
 - [ ] Confirm product name, category, design, colors, fabric, GI designation, price, availability, and image filenames.
 - [ ] Verify every listed photograph exists and belongs to the same product.
+- [ ] Normalize inconsistent source filenames only in the derivative output; preserve the source and use a consistent numbered derivative sequence.
+- [ ] Compare GI wording to the official registry and apply it only where the supplied product metadata supports the claim; do not propagate a category-level claim to other fibres or listings without evidence.
+- [ ] Normalize genuinely synonymous or overlapping color labels for filters without changing the supplied product record or asserting a different visible color.
 - [ ] Flag discrepancies rather than guessing.
 
 ## 2. Image preparation
@@ -74,6 +77,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Feature three commercially useful and visually distinct real products when enough inventory exists.
 - [ ] Treat the category masthead selection as the homepage feature authority: one product uses one photograph, two use both, and three or more use the masthead's top three without duplication.
 - [ ] When masthead featured IDs change, update the corresponding entry in `assets/js/featured-weaves.js` in the same task.
+- [ ] When adding a real-product weave, synchronize its homepage feature drawer, global-search route/category, featured count, catalogue route, and masthead IDs.
 - [ ] Recalculate the homepage feature's collection count whenever products are added or removed; confirm the count matches published catalogue data.
 - [ ] Use three independently clickable masthead tiles linked to the exact product details.
 - [ ] Use floating ivory-and-gold captions with an image gradient and animated underline—no rectangular caption card.
@@ -112,12 +116,12 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out inquiry state.
 - [ ] Dhaniakhali: apply this checklist automatically to each future product batch.
 - [x] Gorod: six real products, optimized galleries, researched editorial copy, independent filters, masthead features, and responsive interactions.
-- [ ] Baluchari: replace concept inventory and apply the complete system.
-- [ ] Phulia: replace concept inventory and apply the complete system.
+- [x] Baluchari: three real listings, optimized galleries, researched feature, masthead, dynamic filters, search and product drawer; GI claim only on BAL-003.
+- [x] Phulia: 16 real listings, optimized galleries, researched feature, updated count, dynamic filters, masthead and product drawer.
 - [ ] Bengal Kalakshetra: replace concept inventory and apply the complete system.
 - [x] Dhalapathar: two real collector pieces, optimized galleries, blouse-piece labelling, masthead features, filters, and responsive interactions.
 - [ ] Ilkal: replace concept inventory and apply the complete system.
-- [ ] Narayanpet: replace concept inventory and apply the complete system.
+- [x] Narayanpet: eight real listings, optimized primary images, researched feature, masthead, dynamic filters, search and product drawer.
 - [ ] Patteda Anchu: replace concept inventory and apply the complete system.
 - [ ] Kanchipuram: replace concept inventory and apply the complete system.
 - [ ] Banarasi: replace concept inventory and apply the complete system.
