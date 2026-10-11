@@ -3,10 +3,10 @@
 - Parent region: Bengal Handloom
 - Featured-weave key: `baluchari`
 - Destination: `collections/bengal.html#baluchari`
-- Published inventory: `BAL-001`, `BAL-002`, `BAL-003` (three sarees)
-- Masthead and homepage photo IDs, in order: `BAL-001`, `BAL-002`, `BAL-003`
-- Prices and fibres: BAL-001 and BAL-002 are pure cotton at $75 each; BAL-003 is pure silk at $200.
-- GI wording: only BAL-003's supplied product info claims **Baluchari Saree** GI; do not attach that claim to the cotton listings.
+- Published inventory: `BALU-001`, `BALU-002`, `BALU-003` (three sarees)
+- Masthead and homepage photo IDs, in order: `BALU-001`, `BALU-002`, `BALU-003`
+- Prices and fibres: BALU-001 and BALU-002 are pure cotton at $75 each; BALU-003 is pure silk at $200.
+- GI wording: only BALU-003's supplied product info claims **Baluchari Saree** GI; do not attach that claim to the cotton listings.
 - Blouse piece: present on all three listings according to the supplied product info.
 
 ## Research notes
@@ -21,7 +21,7 @@ Primary references:
 ## Educational taxonomy and icon direction
 
 1. **Cloth**: distinguish the best-known silk tradition from this collection's cotton and silk mix.
-2. **Narrative**: woven figurative and epic scenes, with the GI claim scoped to BAL-003.
+2. **Narrative**: woven figurative and epic scenes, with the GI claim scoped to BALU-003.
 3. **Composition**: pallu as a narrative field, framed by border and supporting motif rhythm.
 
 Use bespoke, distinct silk, narrative-panel and framed-pallu controls, with separate matching but non-repeated example-row icons. Do not reuse icons from Phulia Tangail, Narayanpet, or other weave chapters. Present tradition-wide motifs as examples, not as claims about every product.
