@@ -175,7 +175,7 @@ const mastCopy={
 const key=document.body.dataset.region,info=regionPages[key],main=document.querySelector('#main-content');
 if(info&&main){
   const panelStyle=info.panel==null?'':`style="width:300%;max-width:none;transform:translateX(-${info.panel*33.333}%);object-fit:cover"`;
-  const featuredIds={bengal:{all:['DHA-003','DHA-005','DHA-007'],gorod:['GOR-002','GOR-003','GOR-006'],dhaniakhali:['DHA-003','DHA-014','DHA-015'],baluchari:['BAL-001','BAL-002','BAL-003'],phulia:['PHU-008','PHU-007','PHU-002']},'south-india':{narayanpet:['NAR-03','NAR-04','NAR-08']},odisha:{all:['DHP-001','DHP-002'],dhalapathar:['DHP-001','DHP-002']},banarasi:{all:['BAN-001','BAN-002'],banarasi:['BAN-001','BAN-002']}};
+  const featuredIds={bengal:{all:['DHA-003','DHA-005','DHA-007'],gorod:['GOR-002','GOR-003','GOR-006'],dhaniakhali:['DHA-003','DHA-014','DHA-015'],baluchari:['BAL-001','BAL-002','BAL-003'],phulia:['PHU-008','PHU-007','PHU-002']},'south-india':{narayanpet:['NAR-01','NAR-04','NAR-07']},odisha:{all:['DHP-001','DHP-002'],dhalapathar:['DHP-001','DHP-002']},banarasi:{all:['BAN-001','BAN-002'],banarasi:['BAN-001','BAN-002']}};
   const featureFor=id=>{const item=info.cards.find(card=>card.id===id),image=item?.images?.[0]?.card;if(!item||!image)return null;return [id,labelForType(item.type),item.mastheadLabel||item.design||item.name,image]};
   const labelForType=slug=>info.types.find(([,value])=>value===slug)?.[0]||info.title;
   const buildMastVisual=slug=>{

@@ -27,7 +27,7 @@
     if(cataloguePromise)return cataloguePromise;
     cataloguePromise=new Promise((resolve,reject)=>{
       const script=document.createElement('script');
-      script.src='/collections/region-page.js?v=20261010-6';
+      script.src='/collections/region-page.js?v=20261010-7';
       script.onload=()=>globalThis.kiranlataProductCatalogues?resolve(globalThis.kiranlataProductCatalogues):reject(new Error('Catalogue data unavailable'));
       script.onerror=()=>reject(new Error('Catalogue data unavailable'));
       document.head.append(script);

@@ -6,7 +6,7 @@
 - Display heading: Narayanpet; full product/category label: Narayanpet Sarees
 - Origin line: Narayanpet district, Telangana
 - Published inventory: 8 sarees, all listed as pure cotton
-- Masthead and homepage photo IDs, in order: `NAR-03`, `NAR-04`, `NAR-08`
+- Masthead and homepage photo IDs, in order: `NAR-01`, `NAR-04`, `NAR-07`
 - Published price: $50 each, as recorded in supplied product info
 - GI wording: **Narayanpet Sarees**, matching the official registry. Do not imply that every listed construction or material is identical.
 
