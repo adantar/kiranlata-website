@@ -1181,14 +1181,14 @@ body.enquiry-open{overflow:hidden}
 
 /* Keep each homepage weave chapter on a shared canvas, with a clear visual break. */
 .featured-stories>[data-featured-weave]{display:grid;gap:clamp(2.5rem,6vw,6rem)}
-.weave-feature{height:900px;min-height:0;grid-template-rows:280px 620px}
+.weave-feature{height:auto;min-height:790px;grid-template-rows:auto minmax(0,1fr)}
 .featured-weave-intro h3{margin:.15rem 0 .85rem;font-size:clamp(4rem,5.8vw,5.4rem);line-height:1}
 .featured-weave-lead{font-size:clamp(1rem,1.35vw,1.2rem)}
 .featured-weave-origin{display:none}
-@media(max-width:1100px){.weave-feature{height:auto;min-height:1576px;grid-template-rows:280px 650px minmax(644px,auto)}.featured-weave-intro h3{font-size:clamp(3.25rem,5.2vw,3.8rem)}}
-@media(max-width:900px){.weave-feature{min-height:1576px;grid-template-rows:280px min(64svh,650px) minmax(644px,auto)}.featured-weave-intro h3{font-size:clamp(2.8rem,8vw,4rem)}}
-@media(max-width:560px){.featured-stories>[data-featured-weave]{gap:2.5rem}.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-intro h3{font-size:clamp(2.8rem,12.5vw,3.2rem);overflow-wrap:normal}.featured-weave-lead{font-size:clamp(.95rem,4vw,1.1rem)}.collection-drawer-stage>a{height:161px;min-height:161px}}
-@media(max-width:350px){.weave-feature{min-height:1632px;grid-template-rows:280px 741px minmax(609px,auto)}.featured-weave-panel{padding:.65rem}.featured-weave-panel:before,.featured-weave-panel>div:before{display:none}.featured-weave-panel>div{grid-template-columns:36px 1fr;gap:.5rem;padding:.55rem 0}.featured-weave-icon{width:36px;height:36px}.featured-weave-panel strong{font-size:.82rem}.featured-weave-panel p span{font-size:.64rem}}
+@media(max-width:1100px){.weave-feature{min-height:790px}.featured-weave-intro h3{font-size:clamp(3.25rem,5.2vw,3.8rem)}}
+@media(max-width:900px){.weave-feature{min-height:0}.featured-weave-intro h3{font-size:clamp(2.8rem,8vw,4rem)}}
+@media(max-width:560px){.featured-stories>[data-featured-weave]{gap:2.5rem}.weave-feature{min-height:0}.featured-weave-intro h3{font-size:clamp(2.8rem,12.5vw,3.2rem);overflow-wrap:normal}.featured-weave-lead{font-size:clamp(.95rem,4vw,1.1rem)}.collection-drawer-stage>a{height:161px;min-height:161px}}
+@media(max-width:350px){.featured-weave-panel{padding:.65rem}.featured-weave-panel:before,.featured-weave-panel>div:before{display:none}.featured-weave-panel>div{grid-template-columns:36px 1fr;gap:.5rem;padding:.55rem 0}.featured-weave-icon{width:36px;height:36px}.featured-weave-panel strong{font-size:.82rem}.featured-weave-panel p span{font-size:.64rem}}
 
 /* Category-specific art direction: distinct motifs for each new feature. */
 .theme-narayanpet{--feature-accent:#71372e;--feature-dark:#24463f;--feature-paper:#f1e4cc}
