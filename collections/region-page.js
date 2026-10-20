@@ -120,15 +120,18 @@ const regionPages={
   kanchipuram:{eyebrow:'Kanchipuram · Tamil Nadu',title:'Kanchipuram',intro:'Architectural borders, substantial silk and the celebrated korvai join give Kanchipuram sarees their unmistakable presence.',board:'/assets/images/catalogue/regions/silk-regions-board.webp',panel:1,types:[['Kanchipuram','kanchipuram']],cards:paired(P+'kanchipuram-products.webp','kanchipuram','all',['Maroon Temple Korvai','Mulberry silk · Contrast border'],['Peacock Magenta Korvai','Mulberry silk · Figured pallu'])},
   maheshwari:{eyebrow:'Maheshwar · Madhya Pradesh',title:'Maheshwari',intro:'Light silk-cotton, elegant stripes and reversible borders carry the refined geometry of Maheshwar’s weaving heritage.',board:'/assets/images/catalogue/regions/silk-regions-board.webp',panel:2,types:[['Maheshwari','maheshwari']],cards:paired(P+'maheshwari-products.webp','maheshwari','all',['Sage Chandrakala','Silk-cotton · Zari border'],['Baingani Checks','Silk-cotton · Reversible border'])}
 };
-globalThis.kiranlataProductCatalogues={
-  dhaniakhali:regionPages.bengal.cards.filter(item=>item.type==='dhaniakhali'&&item.id),
-  gorod:regionPages.bengal.cards.filter(item=>item.type==='gorod'&&item.id),
-  phulia:regionPages.bengal.cards.filter(item=>item.type==='phulia'&&item.id),
-  baluchari:regionPages.bengal.cards.filter(item=>item.type==='baluchari'&&item.id),
-  narayanpet:regionPages['south-india'].cards.filter(item=>item.type==='narayanpet'&&item.id),
-  dhalapathar:regionPages.odisha.cards.filter(item=>item.type==='dhalapathar'&&item.id),
-  banarasi:regionPages.banarasi.cards.filter(item=>item.type==='banarasi'&&item.id)
-};
+const publishedCatalogue={},productRoutes={};
+Object.entries(regionPages).forEach(([region,collection])=>collection.cards.forEach(item=>{
+  if(!item.id||!item.type||!item.images?.[0]?.card)return;
+  (publishedCatalogue[item.type]??=[]).push(item);
+  productRoutes[item.type]??={page:`/collections/${region}.html`,anchor:item.type};
+}));
+const catalogueOrder=['dhaniakhali','gorod','phulia','baluchari','narayanpet','dhalapathar','banarasi'];
+globalThis.kiranlataProductCatalogues=Object.fromEntries(Object.entries(publishedCatalogue).sort(([a],[b])=>{
+  const ai=catalogueOrder.indexOf(a),bi=catalogueOrder.indexOf(b);
+  return (ai<0?Infinity:ai)-(bi<0?Infinity:bi)||a.localeCompare(b);
+}));
+globalThis.kiranlataProductRoutes=productRoutes;
 const categoryStories={
   bengal:{
     dhaniakhali:{kicker:'Hooghly district · West Bengal',title:'The quiet rhythm of Bengal cotton',lead:'Crisp, enduring and unmistakably grounded in place.',facts:[['Cloth','Handloom cotton'],['Known for','Distinctive woven borders'],['Heritage','Geographical Indication protected']],paragraphs:[

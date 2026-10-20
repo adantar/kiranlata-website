@@ -3,8 +3,9 @@
   if(!main||!catalogues)return;
 
   const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi'};
-  const routes={dhaniakhali:['/collections/bengal.html','dhaniakhali'],gorod:['/collections/bengal.html','gorod'],phulia:['/collections/bengal.html','phulia'],baluchari:['/collections/bengal.html','baluchari'],narayanpet:['/collections/south-india.html','narayanpet'],dhalapathar:['/collections/odisha.html','dhalapathar'],banarasi:['/collections/banarasi.html','banarasi']};
-  const products=Object.entries(catalogues).flatMap(([collection,items])=>items.map((item,index)=>({...item,collection,category:categoryNames[collection]||collection,order:index})));
+  const categoryLabel=key=>categoryNames[key]||String(key).replace(/[-_]+/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
+  const routes=globalThis.kiranlataProductRoutes||{};
+  const products=Object.entries(catalogues).flatMap(([collection,items])=>items.map((item,index)=>({...item,collection,category:categoryLabel(collection),order:index})));
   main.innerHTML=`<section class="shop-catalogue-intro"><p class="eyebrow">The complete collection · ${products.length} sarees</p><h1>Find your <em>saree.</em></h1><p>Explore Kiranlata’s handloom sarees by weave, design, color, and price. Open any piece to see its details and ask us about it.</p></section>
     <section class="shop-search-band" aria-label="Search the saree collection"><label class="shop-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" data-shop-search autocomplete="off" placeholder="Search by saree name, ID, weave, or color" aria-label="Search all sarees"><button type="button" data-shop-clear-search aria-label="Clear search" hidden>×</button></label></section>
     <div class="shop-results-toolbar"><p data-shop-count aria-live="polite"></p><button type="button" class="shop-filter-toggle" data-shop-filter-toggle aria-expanded="false">Filter sarees <span aria-hidden="true">＋</span></button><label class="shop-sort-label">Sort by<select data-shop-sort aria-label="Sort sarees"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label></div>
@@ -34,7 +35,7 @@
     if(key==='availability')return (product.availability||'Available')===value;
     return true;
   });
-  const productHref=product=>{const [page,anchor]=routes[product.collection]||['/collections/bengal.html','collection'];return `${page}?product=${encodeURIComponent(product.id)}#${anchor}`};
+  const productHref=product=>{const route=routes[product.collection];const page=route?.page||'/shop.html',anchor=route?.anchor||'';return `${page}?product=${encodeURIComponent(product.id)}${anchor?`#${encodeURIComponent(anchor)}`:''}`};
   const priceLabel=product=>product.priceValue==null?'Contact us for price':`$${Number(product.priceValue).toLocaleString('en-US')}`;
   const makeCard=product=>{
     const card=document.createElement('a');card.className=`shop-product-card${product.availability==='Sold Out'?' is-sold-out':''}`;card.href=productHref(product);card.setAttribute('aria-label',`${product.name}, ${product.id}, ${priceLabel(product)}, ${product.availability||'Available'}`);
