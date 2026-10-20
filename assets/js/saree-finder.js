@@ -37,17 +37,17 @@
   const promo=document.createElement('section');
   promo.className='saree-finder-promo';
   promo.setAttribute('aria-labelledby','saree-finder-promo-title');
-  promo.innerHTML='<div><p class="eyebrow">A little help, beautifully woven</p><h2 id="saree-finder-promo-title">Find your saree match.</h2><p>Five quick picks. No wrong answers. No fashion degree required.</p></div><button type="button" class="saree-finder-start">Find my match <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10"/></svg></button>';
+  promo.innerHTML='<div><p class="eyebrow">A little help, beautifully woven</p><h2 id="saree-finder-promo-title">Find your saree match.</h2><p>A few quick picks. No wrong answers. No fashion degree required.</p></div><button type="button" class="saree-finder-start">Find my match <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10"/></svg></button>';
   main.querySelector('.shop-catalogue-intro')?.after(promo);
 
   const dialog=document.createElement('dialog');
   dialog.className='saree-finder-dialog';
   dialog.setAttribute('aria-labelledby','saree-finder-title');
   dialog.innerHTML=`<div class="saree-finder-shell">
-    <header class="saree-finder-header"><div><p class="eyebrow">The Kiranlata saree finder</p><h2 id="saree-finder-title">Your saree shortlist.</h2><p>Five quick picks. No wrong answers, no personality diagnosis. Just sarees you might love.</p></div><button type="button" class="saree-finder-close" aria-label="Close saree finder">×</button></header>
+    <header class="saree-finder-header"><div><p class="eyebrow">The Kiranlata saree finder</p><h2 id="saree-finder-title">Your saree shortlist.</h2><p>A few quick picks. No wrong answers, no personality diagnosis. Just sarees you might love.</p></div><button type="button" class="saree-finder-close" aria-label="Close saree finder">×</button></header>
     <div class="saree-finder-progress" data-finder-progress-wrap><span data-finder-step-label>01 / 05</span><div role="progressbar" aria-label="Quiz progress" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" data-finder-progress><span></span></div></div>
     <section class="saree-finder-wizard" data-finder-wizard>
-      <fieldset class="saree-finder-question"><legend data-finder-question tabindex="-1"></legend><p data-finder-hint></p><div class="saree-finder-options" data-finder-options></div><label class="saree-finder-inquiry-toggle" data-finder-inquiry-wrap hidden><input type="checkbox" data-finder-inquiry><span>Also show pieces whose price is available by inquiry. They’ll be listed separately, not treated as within this budget.</span></label></fieldset>
+      <fieldset class="saree-finder-question"><legend data-finder-question tabindex="-1"></legend><p data-finder-hint></p><div class="saree-finder-options" data-finder-options></div></fieldset>
       <footer class="saree-finder-controls"><button type="button" class="saree-finder-back" data-finder-back>Back</button><button type="button" class="saree-finder-next" data-finder-next>Next question <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg></button></footer>
     </section>
     <section class="saree-finder-results" data-finder-results hidden aria-live="polite"></section>
@@ -57,24 +57,28 @@
   const parentOrder=['Bengal Handloom','Odisha Handloom','South Indian Handloom','Individual Traditions'];
   const parents=distinct(products.map(product=>product.parent)).sort((a,b)=>parentOrder.indexOf(a)-parentOrder.indexOf(b));
   const questions=[
-    {key:'parent',title:'Where should we take your drape?',hint:'Pick a broad handloom region, or be gloriously indecisive and explore them all.',options:[{value:'',label:'Surprise me across all regions'},...parents.map(value=>({value,label:value}))]},
-    {key:'weave',title:'Any weave catching your eye?',hint:'Gorod girl? Phulia fan? These choices follow the region you picked.',optionsFor:scope=>[{value:'',label:'Keep every weave in this collection'},...distinct(scope.map(product=>product.category)).sort(sortText).map(value=>({value,label:value}))]},
-    {key:'color',title:'Pick your colour mood.',hint:'Choose a palette, not a lifetime commitment. These shades are in the sarees you narrowed down.',optionsFor:scope=>[{value:'',label:'I’m open to every shade'},...distinct(scope.flatMap(product=>product.colors||[]).map(familyFor)).sort(sortText).map(value=>({value,label:value}))]},
-    {key:'design',title:'What details make you look twice?',hint:'No imaginary options: every style below appears in the sarees you shortlisted so far.',optionsFor:scope=>[{value:'',label:'Show me a little of everything'},...distinct(scope.map(product=>product.design)).sort(sortText).map(value=>({value,label:value}))]},
-    {key:'budget',title:'Where should we keep the price?',hint:'Choose a listed-price range for your current selection. Contact-for-price pieces stay separate.',optionsFor:budgetOptionsFor}
+    {key:'parent',title:'Where should this saree story begin?',hint:'Choose a handloom region, or let the plot take a little twist.',options:[{value:'',label:'Surprise me across all regions'},...parents.map(value=>({value,label:value}))]},
+    {key:'weave',title:'Any weave catching your eye?',hint:'Gorod girl? Phulia fan? No pressure; the other sarees won’t take it personally.',optionsFor:scope=>[{value:'',label:'Keep every weave in this collection'},...distinct(scope.map(product=>product.category)).sort(sortText).map(value=>({value,label:value}))]},
+    {key:'color',title:'Pick your colour mood.',hint:'Choose a palette, not a lifelong commitment. Your wardrobe can keep its options open.',optionsFor:scope=>[{value:'',label:'I’m open to every shade'},...distinct(scope.flatMap(product=>product.colors||[]).map(familyFor)).sort(sortText).map(value=>({value,label:value}))]},
+    {key:'design',title:'What detail makes you look twice?',hint:'Only styles in your shortlist made it past the bouncer.',optionsFor:scope=>[{value:'',label:'Show me a little of everything'},...distinct(scope.map(product=>product.design)).sort(sortText).map(value=>({value,label:value}))]},
+    {key:'budget',title:'What price range feels right?',hint:'No math pop quiz. We’ll ask only if your shortlist has more than one listed price level.',optionsFor:budgetOptionsFor}
   ];
-  const answers={parent:'',weave:'',color:'',design:'',budget:'all',includeInquiry:false};
-  const questionEl=dialog.querySelector('[data-finder-question]'),hintEl=dialog.querySelector('[data-finder-hint]'),optionsEl=dialog.querySelector('[data-finder-options]'),stepLabel=dialog.querySelector('[data-finder-step-label]'),progress=dialog.querySelector('[data-finder-progress]'),progressFill=progress.querySelector('span'),back=dialog.querySelector('[data-finder-back]'),next=dialog.querySelector('[data-finder-next]'),wizard=dialog.querySelector('[data-finder-wizard]'),results=dialog.querySelector('[data-finder-results]'),inquiryWrap=dialog.querySelector('[data-finder-inquiry-wrap]'),inquiryCheckbox=dialog.querySelector('[data-finder-inquiry]');
+  const answers={parent:'',weave:'',color:'',design:'',budget:'all'};
+  const questionEl=dialog.querySelector('[data-finder-question]'),hintEl=dialog.querySelector('[data-finder-hint]'),optionsEl=dialog.querySelector('[data-finder-options]'),stepLabel=dialog.querySelector('[data-finder-step-label]'),progress=dialog.querySelector('[data-finder-progress]'),progressFill=progress.querySelector('span'),back=dialog.querySelector('[data-finder-back]'),next=dialog.querySelector('[data-finder-next]'),wizard=dialog.querySelector('[data-finder-wizard]'),results=dialog.querySelector('[data-finder-results]');
   let step=0;
 
   const productsInScope=()=>products.filter(product=>(!answers.parent||product.parent===answers.parent)&&(!answers.weave||product.category===answers.weave));
   const productsMatchingPreferences=(includeDesign=false)=>productsInScope().filter(product=>(!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color))&&(!includeDesign||!answers.design||product.design===answers.design));
+  const activeQuestions=()=>questions.filter(question=>question.key!=='budget'||budgetOptionsFor(productsMatchingPreferences(true)).length>1);
 
   const renderQuestion=(restoreOptionFocus=false)=>{
-    const question=questions[step],scope=step===3?productsMatchingPreferences():step>3?productsMatchingPreferences(true):productsInScope(),options=question.optionsFor?question.optionsFor(scope):question.options;
-    stepLabel.textContent=`${String(step+1).padStart(2,'0')} / ${String(questions.length).padStart(2,'0')}`;
+    const flow=activeQuestions();
+    if(step>=flow.length)step=flow.length-1;
+    const question=flow[step],scope=question.key==='design'?productsMatchingPreferences():question.key==='budget'?productsMatchingPreferences(true):productsInScope(),options=question.optionsFor?question.optionsFor(scope):question.options;
+    stepLabel.textContent=`${String(step+1).padStart(2,'0')} / ${String(flow.length).padStart(2,'0')}`;
     progress.setAttribute('aria-valuenow',String(step+1));
-    progressFill.style.width=`${((step+1)/questions.length)*100}%`;
+    progress.setAttribute('aria-valuemax',String(flow.length));
+    progressFill.style.width=`${((step+1)/flow.length)*100}%`;
     questionEl.textContent=question.title;
     hintEl.textContent=question.hint;
     if(answers[question.key]&&!options.some(option=>option.value===answers[question.key]))answers[question.key]='';
@@ -92,12 +96,11 @@
     });
     if(restoreOptionFocus)optionsEl.querySelector('.is-selected')?.focus();
     back.disabled=step===0;
-    next.innerHTML=step===questions.length-1?'Show my shortlist <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10"/></svg>':'Next question <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg>';
-    inquiryWrap.hidden=question.key!=='budget';
-    inquiryCheckbox.checked=answers.includeInquiry;
+    next.innerHTML=step===flow.length-1?'Show my shortlist <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M6 4h10v10"/></svg>':'Next question <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5"/></svg>';
   };
 
   const budgetMatches=product=>{
+    if(answers.budget==='all')return true;
     const value=numericPrice(product);
     if(value===null)return false;
     if(answers.budget==='lower')return value<=activeCut1;
@@ -137,21 +140,16 @@
     copy.append(id,title,meta,reason,price);link.append(image,copy);return link;
   };
   const renderResults=()=>{
-  const eligible=productsInScope().filter(product=>budgetMatches(product));
+    const eligible=productsInScope().filter(product=>budgetMatches(product));
     eligible.sort((a,b)=>score(b)-score(a)||a.order-b.order);
-    const priced=eligible.filter(product=>numericPrice(product)!==null).slice(0,5);
-    const inquiry=answers.includeInquiry?productsInScope().filter(product=>product.priceValue==null).sort((a,b)=>score(b)-score(a)||a.order-b.order):[];
+    const recommendations=eligible.slice(0,5);
     results.replaceChildren();
     const heading=document.createElement('div');heading.className='saree-finder-results-heading';
     const eyebrow=document.createElement('p');eyebrow.className='eyebrow';eyebrow.textContent='Your edit';
-    const title=document.createElement('h3');title.tabIndex=-1;title.textContent=priced.length?'Your shortlist is ready.':'No listed-price matches in that range.';
-    const summary=document.createElement('p');const scope=[answers.weave,answers.parent].filter(Boolean).join(' · ')||'the current collection';const priceScope=answers.budget==='all'?'with listed prices':'within your selected price range';summary.textContent=priced.length?`${eligible.length} available sarees from ${scope} are ${priceScope}. Your colour and design preferences shape the order.`:inquiry.length?'The inquiry-priced pieces below have no confirmed price, so they are not budget matches.':'Try another price range, or include pieces priced by inquiry.';
+    const title=document.createElement('h3');title.tabIndex=-1;title.textContent=recommendations.length?'Your shortlist is ready.':'No sarees match that price range.';
+    const summary=document.createElement('p');const scope=[answers.weave,answers.parent].filter(Boolean).join(' · ')||'the current collection';const priceScope=answers.budget==='all'?'at a range of listed prices':'within your selected price range';summary.textContent=recommendations.length?`${eligible.length} available sarees from ${scope} are ${priceScope}. Your colour and design preferences shape the order.`:'Try another range or adjust your earlier picks.';
     heading.append(eyebrow,title,summary);results.append(heading);
-    if(priced.length){const grid=document.createElement('div');grid.className='saree-finder-result-grid';priced.forEach(product=>grid.append(cardFor(product)));results.append(grid)}
-    if(answers.includeInquiry){
-      const inquiryHeading=document.createElement('p');inquiryHeading.className='saree-finder-inquiry-note';inquiryHeading.textContent=`Price by inquiry · ${inquiry.length} ${inquiry.length===1?'piece':'pieces'} shown separately; these are not budget matches.`;results.append(inquiryHeading);
-      if(inquiry.length){const grid=document.createElement('div');grid.className='saree-finder-result-grid is-inquiry';inquiry.forEach(product=>grid.append(cardFor(product)));results.append(grid)}
-    }
+    if(recommendations.length){const grid=document.createElement('div');grid.className='saree-finder-result-grid';recommendations.forEach(product=>grid.append(cardFor(product)));results.append(grid)}
     const footer=document.createElement('footer');footer.className='saree-finder-results-controls';
     const edit=document.createElement('button');edit.type='button';edit.className='saree-finder-back';edit.textContent='Adjust my answers';edit.addEventListener('click',()=>{results.hidden=true;wizard.hidden=false;dialog.querySelector('[data-finder-progress-wrap]').hidden=false;step=0;renderQuestion();dialog.scrollTop=0;questionEl.focus()});
     const browse=document.createElement('button');browse.type='button';browse.className='saree-finder-next';browse.textContent='Browse all sarees';browse.addEventListener('click',()=>dialog.close());
@@ -161,5 +159,5 @@
   promo.querySelector('.saree-finder-start').addEventListener('click',()=>{step=0;renderQuestion();wizard.hidden=false;results.hidden=true;dialog.querySelector('[data-finder-progress-wrap]').hidden=false;dialog.showModal();dialog.scrollTop=0;dialog.querySelector('.saree-finder-close').focus()});
   dialog.querySelector('.saree-finder-close').addEventListener('click',()=>dialog.close());
   back.addEventListener('click',()=>{if(step>0){step-=1;renderQuestion();dialog.scrollTop=0;questionEl.focus()}});
-  next.addEventListener('click',()=>{if(step<questions.length-1){step+=1;renderQuestion();dialog.scrollTop=0;questionEl.focus()}else{answers.includeInquiry=inquiryCheckbox.checked;wizard.hidden=true;dialog.querySelector('[data-finder-progress-wrap]').hidden=true;results.hidden=false;dialog.scrollTop=0;renderResults();results.querySelector('.saree-finder-results-heading h3')?.focus()}});
+  next.addEventListener('click',()=>{const flow=activeQuestions();if(step<flow.length-1){step+=1;renderQuestion();dialog.scrollTop=0;questionEl.focus()}else{wizard.hidden=true;dialog.querySelector('[data-finder-progress-wrap]').hidden=true;results.hidden=false;dialog.scrollTop=0;renderResults();results.querySelector('.saree-finder-results-heading h3')?.focus()}});
 })();
