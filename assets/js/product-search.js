@@ -78,8 +78,8 @@
     });
   };
 
-  const openSearch=async()=>{
-    returnFocus=searchButton;showAll=false;input.value='';count.textContent='Loading the collection…';setMessage('Loading sarees…');dialog.showModal();input.focus();
+  const openSearch=async(showCompleteCatalogue=false)=>{
+    returnFocus=searchButton;browseAll=showCompleteCatalogue;showAll=showCompleteCatalogue;input.value='';count.textContent='Loading the collection…';setMessage('Loading sarees…');dialog.showModal();input.focus();
     try{const catalogue=await getCatalogue();allProducts=flattenCatalogue(catalogue);renderResults()}
     catch{count.textContent='Search is unavailable';setMessage('Please browse the collection while we reconnect search.');}
   };
