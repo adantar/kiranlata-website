@@ -120,9 +120,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Phulia: 16 real listings, optimized galleries, researched feature, updated count, dynamic filters, masthead and product drawer.
 - [ ] Bengal Kalakshetra: replace concept inventory and apply the complete system.
 - [x] Dhalapathar: two real collector pieces, optimized galleries, blouse-piece labelling, masthead features, filters, and responsive interactions.
-- [ ] Ilkal: replace concept inventory and apply the complete system.
+- [x] Ilkal: replace concept inventory and apply the complete system.
 - [x] Narayanpet: eight real listings, optimized primary images, researched feature, masthead, dynamic filters, search and product drawer.
-- [ ] Patteda Anchu: replace concept inventory and apply the complete system.
+- [x] Patteda Anchu: replace concept inventory and apply the complete system.
 - [ ] Kanchipuram: replace concept inventory and apply the complete system.
 - [ ] Banarasi: replace concept inventory and apply the complete system.
 - [ ] Maheshwari: replace concept inventory and apply the complete system.

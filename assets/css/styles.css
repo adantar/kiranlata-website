@@ -1280,6 +1280,37 @@ body.enquiry-open{overflow:hidden}
 .icon-narayanpet-bands{background:repeating-linear-gradient(0deg,#9c3027 0 6px,#dbb858 6px 9px,#24463f 9px 18px,#f2e3c9 18px 22px)}
 .icon-narayanpet-pallu{background:linear-gradient(135deg,transparent 30%,#d5b457 31% 36%,transparent 37%),repeating-linear-gradient(90deg,#24463f 0 6px,#eee0c7 6px 10px,#9c3027 10px 15px)}
 .icon-narayanpet-colour{background:radial-gradient(circle at 25% 30%,#9c3027 0 10%,transparent 11%),radial-gradient(circle at 72% 67%,#d6b34f 0 11%,transparent 12%),linear-gradient(135deg,#24463f 50%,#f2e3c9 50%)}
+
+.theme-ilkal{--feature-accent:#8f3528;--feature-dark:#30351b;--feature-paper:#f2e5cf}
+.theme-ilkal .featured-weave-visual{background-color:#ead8b9;background-image:repeating-linear-gradient(0deg,#30351b12 0 2px,transparent 2px 20px),repeating-linear-gradient(90deg,#9b382b13 0 2px,transparent 2px 20px),linear-gradient(135deg,#f1e3cc,#cdb786)}
+.theme-ilkal .featured-weave-decoration:before{background:repeating-linear-gradient(45deg,#30351b 0 8px,#d2ad57 8px 11px,#9a392c 11px 18px)}
+.theme-ilkal .featured-weave-decoration:after{border:8px double #9a392c;background:repeating-linear-gradient(0deg,#30351b 0 10px,#efe0c5 10px 20px)}
+.symbol-ilkal-join{background:repeating-linear-gradient(90deg,#30351b 0 6px,#c8ad75 6px 8px,#f3e6d0 8px 14px);overflow:hidden}
+.symbol-ilkal-join:after{inset:24%;border:4px double #96382b;border-radius:48% 48% 38% 38%;transform:rotate(45deg)}
+.symbol-ilkal-border{background:repeating-linear-gradient(0deg,#30351b 0 10px,#d2ad57 10px 13px,#9a392c 13px 22px,#f0e2ca 22px 27px)}
+.symbol-ilkal-border:after{inset:24% 18%;border:3px solid #f2e5ce;background:repeating-linear-gradient(45deg,#9a392c 0 4px,#d2ad57 4px 7px,#30351b 7px 11px);transform:rotate(0)}
+.symbol-ilkal-pallu{background:linear-gradient(90deg,#9a392c 0 24%,#ead8b9 24% 76%,#9a392c 76%)}
+.symbol-ilkal-pallu:after{inset:42% 18% 14%;border:0;background:repeating-linear-gradient(90deg,#f4e7d1 0 7px,transparent 7px 14px),linear-gradient(0deg,#30351b 0 30%,transparent 30%);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.featured-weave-icon[class*="icon-ilkal-"]{position:relative;overflow:hidden}
+.icon-ilkal-interlock{background:repeating-linear-gradient(0deg,#f1e3cc 0 5px,#c5a96d 5px 7px),linear-gradient(90deg,#30351b 0 25%,transparent 25% 75%,#9a392c 75%)}
+.icon-ilkal-interlock:after{inset:25% 30%;border:3px solid #98382b;border-radius:50%;box-shadow:9px 0 0 -1px #30351b,-9px 0 0 -1px #d2ad57}
+.icon-ilkal-warps{background:linear-gradient(90deg,#30351b 0 22%,#d2ad57 22% 29%,#f2e5cf 29% 67%,#9a392c 67% 74%,#30351b 74%)}
+.icon-ilkal-warps:after{inset:18% 20%;border:2px solid #f4e8d3;background:repeating-linear-gradient(0deg,transparent 0 8px,#d2ad57 8px 10px)}
+.icon-ilkal-shuttles{background:repeating-linear-gradient(45deg,#30351b 0 8px,#f0e2ca 8px 13px,#96382b 13px 18px)}
+.icon-ilkal-shuttles:after{inset:36% 20%;border:2px solid #f4e7d1;border-radius:50% 8px;background:#d2ad57;transform:rotate(-30deg)}
+.icon-ilkal-gomi{background:repeating-linear-gradient(0deg,#9a392c 0 7px,#d2ad57 7px 10px,#30351b 10px 18px,#f1e3cc 18px 22px)}
+.icon-ilkal-gomi:after{inset:28% 18%;border:2px solid #f4e7d1;background:repeating-linear-gradient(90deg,#d2ad57 0 4px,#30351b 4px 8px)}
+.icon-ilkal-paraspet{background:#30351b}
+.icon-ilkal-paraspet:after{inset:18%;border:3px solid #d2ad57;background:repeating-linear-gradient(45deg,transparent 0 6px,#f1e3cc 6px 9px,transparent 9px 15px);transform:rotate(45deg)}
+.icon-ilkal-gaadi{background:linear-gradient(0deg,#9a392c 0 20%,#d2ad57 20% 27%,#30351b 27% 40%,transparent 40%),#f1e3cc}
+.icon-ilkal-gaadi:after{inset:22% 20%;border:0;background:linear-gradient(90deg,#30351b 0 24%,transparent 24% 38%,#9a392c 38% 62%,transparent 62% 76%,#30351b 76%);clip-path:polygon(0 42%,22% 42%,22% 20%,40% 20%,40% 0,60% 0,60% 20%,78% 20%,78% 42%,100% 42%,100% 100%,0 100%)}
+.icon-ilkal-red-pallu{background:linear-gradient(90deg,#96382b 0 23%,#f2e5cf 23% 77%,#96382b 77%)}
+.icon-ilkal-red-pallu:after{inset:14% 42%;border:0;background:repeating-linear-gradient(0deg,#d2ad57 0 3px,transparent 3px 9px)}
+.icon-ilkal-jowar{background:linear-gradient(160deg,#f1e3cc 0 34%,#30351b 35% 65%,#9a392c 66%)}
+.icon-ilkal-jowar:after{inset:15% 42%;border:0;background:linear-gradient(0deg,#d2ad57 0 5%,transparent 5% 95%,#d2ad57 95%),linear-gradient(90deg,transparent 35%,#d2ad57 35% 65%,transparent 65%)}
+.icon-ilkal-jowar:before{content:"";position:absolute;inset:18% 28%;background:radial-gradient(ellipse at 50% 0,#d2ad57 0 8%,transparent 9%),radial-gradient(ellipse at 30% 24%,#d2ad57 0 9%,transparent 10%),radial-gradient(ellipse at 70% 24%,#d2ad57 0 9%,transparent 10%),radial-gradient(ellipse at 27% 48%,#d2ad57 0 9%,transparent 10%),radial-gradient(ellipse at 73% 48%,#d2ad57 0 9%,transparent 10%)}
+.icon-ilkal-lattigum{background:repeating-linear-gradient(45deg,#f1e3cc 0 9px,#d2ad57 9px 12px,#30351b 12px 18px)}
+.icon-ilkal-lattigum:after{inset:42% 15%;border:3px solid #96382b;border-radius:50% 12% 12% 50%;background:#f2e5cf;box-shadow:0 0 0 3px #d2ad57;transform:rotate(-18deg)}
 .icon-narayanpet-contrast{background:radial-gradient(circle at 28% 30%,#a53b2f 0 12%,transparent 13%),radial-gradient(circle at 70% 68%,#d4b355 0 12%,transparent 13%),#24463f}
 .icon-narayanpet-zari{background:linear-gradient(135deg,#24463f 0 42%,#d8b34e 43% 49%,#f8e8b5 50%,#a23529 58% 100%)}
 .icon-narayanpet-palette{background:conic-gradient(#24463f 0 25%,#a6382b 0 50%,#d6af4c 0 75%,#efe0c6 0)}
@@ -1321,3 +1352,29 @@ body.enquiry-open{overflow:hidden}
 .preview-product-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.28rem;margin-top:.55rem}
 .visible-product-price{font-size:1.08rem;line-height:1.2;font-weight:700;letter-spacing:.01em}
 .product-enquiry-link{margin:0;font-size:.86em}
+
+/* Patteda Anchu: ink, ivory and a disciplined checked border. */
+.theme-patteda-anchu{--feature-accent:#37352f;--feature-dark:#292823;--feature-paper:#f0e7d8}
+.theme-patteda-anchu .featured-weave-visual{background-color:#eee6d8;background-image:repeating-linear-gradient(0deg,#27272210 0 1px,transparent 1px 16px),repeating-linear-gradient(90deg,#27272210 0 1px,transparent 1px 16px),linear-gradient(135deg,#f6efdf,#d4c7ae)}
+.theme-patteda-anchu .featured-weave-decoration:before{background:repeating-linear-gradient(45deg,#292823 0 8px,#f0e7d8 8px 11px,#807b6f 11px 14px,#292823 14px 20px)}
+.theme-patteda-anchu .featured-weave-decoration:after{border:7px double #4a4841;background:repeating-linear-gradient(0deg,#292823 0 9px,#f0e7d8 9px 12px,#8e887b 12px 14px)}
+.theme-patteda-anchu[data-photo-count="1"] .featured-weave-photo{inset:8% 20% 14%;transform:rotate(-1deg)}
+.theme-patteda-anchu .featured-weave-photo{border-color:#f7f2e8}
+.theme-patteda-anchu .featured-weave-photo:focus-visible{outline:3px solid #a57934;outline-offset:5px}
+.theme-patteda-anchu a.featured-weave-photo.is-active{pointer-events:auto}
+.symbol-patteda-checks{background-color:#f2eddf;background-image:repeating-linear-gradient(0deg,transparent 0 9px,#292823 9px 11px,#817b70 11px 12px),repeating-linear-gradient(90deg,transparent 0 9px,#292823 9px 11px,#817b70 11px 12px)}
+.symbol-patteda-border{background:linear-gradient(90deg,#292823 0 18%,#f2eddf 18% 23%,#777267 23% 26%,#f2eddf 26% 74%,#777267 74% 77%,#f2eddf 77% 82%,#292823 82%)}
+.symbol-patteda-border:after{inset:40% 0;border:0;background:repeating-linear-gradient(0deg,#292823 0 4px,#f2eddf 4px 7px)}
+.symbol-patteda-place{background:#e9deca}
+.symbol-patteda-place:after{inset:15% 27%;border:3px solid #49463e;border-radius:50% 50% 50% 0;background:#f6eedf;transform:rotate(-45deg)}
+.icon-patteda-cotton{background:radial-gradient(ellipse at 50% 50%,#fbf7ed 0 20%,transparent 22%),radial-gradient(ellipse at 35% 62%,#d7c8ae 0 17%,transparent 19%),radial-gradient(ellipse at 65% 62%,#d7c8ae 0 17%,transparent 19%),#4b4942}
+.icon-patteda-grid{background-color:#f2eddf;background-image:repeating-linear-gradient(0deg,transparent 0 6px,#292823 6px 8px,#817b70 8px 9px),repeating-linear-gradient(90deg,transparent 0 6px,#292823 6px 8px,#817b70 8px 9px)}
+.icon-patteda-palette{background:linear-gradient(90deg,#292823 0 34%,#f3eedf 34% 68%,#777267 68%)}
+.icon-patteda-band{background:linear-gradient(0deg,#292823 0 30%,#f4eedf 30% 37%,#777267 37% 43%,#f4eedf 43% 50%,#292823 50% 100%)}
+.icon-patteda-stripes{background:repeating-linear-gradient(0deg,#4a4841 0 7px,#f4eedf 7px 10px,#8a8477 10px 12px)}
+.icon-patteda-variation{background:linear-gradient(135deg,#292823 0 32%,#eee5d4 32% 65%,#853c32 65%)}
+.icon-patteda-town{background:linear-gradient(135deg,#ddd0b7,#f7f0e3)}
+.icon-patteda-town:after{inset:17% 28%;border:2px solid #4a4841;border-radius:50% 50% 50% 0;background:#efe6d4;transform:rotate(-45deg)}
+.icon-patteda-wedding{background:linear-gradient(135deg,#8b3530 0 34%,#e7d1a2 34% 42%,#f3ebdc 42% 70%,#454239 70%)}
+.icon-patteda-offering{background:radial-gradient(ellipse at 50% 70%,#ac7b35 0 18%,transparent 20%),linear-gradient(0deg,#47443d 0 24%,#eee5d3 24% 76%,#47443d 76%)}
+.collection-drawer[aria-label="Browse every patteda-anchu saree"] .collection-drawer-stage>a:focus-visible{outline:3px solid #a57934;outline-offset:4px}

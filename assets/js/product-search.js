@@ -16,8 +16,8 @@
   document.body.append(dialog);
 
   const input=dialog.querySelector('input'),clear=dialog.querySelector('[data-search-clear]'),count=dialog.querySelector('[data-search-count]'),viewAll=dialog.querySelector('[data-search-view-all]'),results=dialog.querySelector('[data-search-results]');
-  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi'};
-  const routes={dhaniakhali:['/collections/bengal.html','dhaniakhali'],gorod:['/collections/bengal.html','gorod'],phulia:['/collections/bengal.html','phulia'],baluchari:['/collections/bengal.html','baluchari'],narayanpet:['/collections/south-india.html','narayanpet'],dhalapathar:['/collections/odisha.html','dhalapathar'],banarasi:['/collections/banarasi.html','banarasi']};
+  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi'};
+  const routes={dhaniakhali:['/collections/bengal.html','dhaniakhali'],gorod:['/collections/bengal.html','gorod'],phulia:['/collections/bengal.html','phulia'],baluchari:['/collections/bengal.html','baluchari'],ilkal:['/collections/south-india.html','ilkal'],'patteda-anchu':['/collections/south-india.html','patteda-anchu'],narayanpet:['/collections/south-india.html','narayanpet'],dhalapathar:['/collections/odisha.html','dhalapathar'],banarasi:['/collections/banarasi.html','banarasi']};
   let allProducts=[],showAll=false,cataloguePromise=null,returnFocus=null;
 
   const setMessage=(message)=>{results.replaceChildren();const empty=document.createElement('p');empty.className='product-search-empty';empty.textContent=message;results.append(empty)};
@@ -27,7 +27,7 @@
     if(cataloguePromise)return cataloguePromise;
     cataloguePromise=new Promise((resolve,reject)=>{
       const script=document.createElement('script');
-      script.src='/collections/region-page.js?v=20261011-1';
+      script.src='/collections/region-page.js?v=20261020-3';
       script.onload=()=>globalThis.kiranlataProductCatalogues?resolve(globalThis.kiranlataProductCatalogues):reject(new Error('Catalogue data unavailable'));
       script.onerror=()=>reject(new Error('Catalogue data unavailable'));
       document.head.append(script);
@@ -40,7 +40,7 @@
 
   const renderPopular=()=>{
     results.replaceChildren();
-    const links=[['Gorod','/collections/bengal.html#gorod'],['Dhaniakhali / Dhonekhali','/collections/bengal.html#dhaniakhali'],['Phulia Tangail','/collections/bengal.html#phulia'],['Baluchari','/collections/bengal.html#baluchari'],['Narayanpet','/collections/south-india.html#narayanpet'],['Dhalapathar','/collections/odisha.html#dhalapathar'],['Banarasi','/collections/banarasi.html#banarasi']];
+    const links=[['Gorod','/collections/bengal.html#gorod'],['Dhaniakhali / Dhonekhali','/collections/bengal.html#dhaniakhali'],['Phulia Tangail','/collections/bengal.html#phulia'],['Baluchari','/collections/bengal.html#baluchari'],['Ilkal','/collections/south-india.html#ilkal'],['Patteda Anchu','/collections/south-india.html#patteda-anchu'],['Narayanpet','/collections/south-india.html#narayanpet'],['Dhalapathar','/collections/odisha.html#dhalapathar'],['Banarasi','/collections/banarasi.html#banarasi']];
     const group=document.createElement('div');group.className='product-search-popular';
     links.forEach(([label,href])=>{const link=document.createElement('a');link.href=href;link.textContent=label;group.append(link)});
     results.append(group);

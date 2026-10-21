@@ -3,7 +3,7 @@
   const catalogues=globalThis.kiranlataProductCatalogues;
   if(!main||!catalogues)return;
 
-  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',kalakshetra:'Bengal Kalakshetra'};
+  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',kalakshetra:'Bengal Kalakshetra'};
   const parentNames={bengal:'Bengal Handloom',odisha:'Odisha Handloom','south-india':'South Indian Handloom',banarasi:'Individual Traditions',maheshwari:'Individual Traditions'};
   const categoryLabel=key=>categoryNames[key]||String(key).replace(/[-_]+/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
   const products=Object.entries(catalogues).flatMap(([collection,items])=>items.filter(item=>item.id&&item.images?.[0]?.card).map((item,index)=>({...item,collection,parent:parentNames[globalThis.kiranlataProductRoutes?.[collection]?.page?.split('/').pop()?.replace('.html','')]||'Individual Traditions',category:categoryLabel(collection),order:index}))).filter(item=>item.availability!=='Sold Out');
@@ -16,7 +16,7 @@
     if(/red|rose|pink|burgundy|maroon|crimson|vermil|wine|magenta/.test(value))return 'Reds & roses';
     if(/green|olive|sage|pistachio|lime/.test(value))return 'Greens';
     if(/blue|teal|turquoise|navy|indigo/.test(value))return 'Blues & teals';
-    if(/purple|violet|lavender|lilac/.test(value))return 'Purples';
+    if(/purple|violet|lavender|lilac|plum/.test(value))return 'Purples';
     if(/gold|yellow|mustard|basanti|ochre/.test(value))return 'Golds & yellows';
     if(/ivory|white|cream|beige|peach|chandan|tan/.test(value))return 'Ivories & warm neutrals';
     if(/grey|gray|black|charcoal|silver/.test(value))return 'Greys & black';
@@ -60,21 +60,31 @@
     {key:'parent',title:'Where should this saree story begin?',hint:'Choose a handloom region, or let the plot take a little twist.',options:[{value:'',label:'Surprise me across all regions'},...parents.map(value=>({value,label:value}))]},
     {key:'weave',title:'Any weave catching your eye?',hint:'Gorod girl? Phulia fan? No pressure; the other sarees won’t take it personally.',optionsFor:scope=>[{value:'',label:'Keep every weave in this collection'},...distinct(scope.map(product=>product.category)).sort(sortText).map(value=>({value,label:value}))]},
     {key:'color',title:'Pick your colour mood.',hint:'Choose a palette, not a lifelong commitment. Your wardrobe can keep its options open.',optionsFor:scope=>[{value:'',label:'I’m open to every shade'},...distinct(scope.flatMap(product=>product.colors||[]).map(familyFor)).sort(sortText).map(value=>({value,label:value}))]},
+    {key:'primaryColor',title:'What colour should lead?',hint:'We’ll use the recorded main/body colours for this weave—no guessing from the photo.',optionsFor:scope=>[{value:'',label:'Let the main colour surprise me'},...distinct(scope.flatMap(product=>product.primaryColors||[])).sort(sortText).map(value=>({value,label:value}))]},
+    {key:'accentColor',title:'And what should frame it?',hint:'Border/accent colours only, as recorded for these sarees. Pallu colours stay out unless the catalogue names them separately.',optionsFor:scope=>[{value:'',label:'I’m open to every border'},...distinct(scope.flatMap(product=>product.accentColors||[])).sort(sortText).map(value=>({value,label:value}))]},
     {key:'design',title:'What detail makes you look twice?',hint:'Only styles in your shortlist made it past the bouncer.',optionsFor:scope=>[{value:'',label:'Show me a little of everything'},...distinct(scope.map(product=>product.design)).sort(sortText).map(value=>({value,label:value}))]},
     {key:'budget',title:'What price range feels right?',hint:'No math pop quiz. We’ll ask only if your shortlist has more than one listed price level.',optionsFor:budgetOptionsFor}
   ];
-  const answers={parent:'',weave:'',color:'',design:'',budget:'all'};
+  const answers={parent:'',weave:'',color:'',primaryColor:'',accentColor:'',design:'',budget:'all'};
   const questionEl=dialog.querySelector('[data-finder-question]'),hintEl=dialog.querySelector('[data-finder-hint]'),optionsEl=dialog.querySelector('[data-finder-options]'),stepLabel=dialog.querySelector('[data-finder-step-label]'),progress=dialog.querySelector('[data-finder-progress]'),progressFill=progress.querySelector('span'),back=dialog.querySelector('[data-finder-back]'),next=dialog.querySelector('[data-finder-next]'),wizard=dialog.querySelector('[data-finder-wizard]'),results=dialog.querySelector('[data-finder-results]');
   let step=0;
 
   const productsInScope=()=>products.filter(product=>(!answers.parent||product.parent===answers.parent)&&(!answers.weave||product.category===answers.weave));
-  const productsMatchingPreferences=(includeDesign=false)=>productsInScope().filter(product=>(!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color))&&(!includeDesign||!answers.design||product.design===answers.design));
-  const activeQuestions=()=>questions.filter(question=>question.key!=='budget'||budgetOptionsFor(productsMatchingPreferences(true)).length>1);
+  const productsMatchingColors=()=>productsInScope().filter(product=>(!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color))&&(!answers.primaryColor||(product.primaryColors||[]).includes(answers.primaryColor))&&(!answers.accentColor||(product.accentColors||[]).includes(answers.accentColor)));
+  const productsMatchingPreferences=(includeDesign=false)=>productsMatchingColors().filter(product=>(!includeDesign||!answers.design||product.design===answers.design));
+  const activeQuestions=()=>questions.filter(question=>{
+    const scope=productsInScope();
+    if(question.key==='color')return !scope.length||!scope.every(product=>Array.isArray(product.primaryColors)&&Array.isArray(product.accentColors));
+    if(question.key==='primaryColor')return scope.length>0&&scope.every(product=>Array.isArray(product.primaryColors)&&Array.isArray(product.accentColors))&&distinct(scope.flatMap(product=>product.primaryColors)).length>1;
+    if(question.key==='accentColor')return scope.length>0&&scope.every(product=>Array.isArray(product.primaryColors)&&Array.isArray(product.accentColors))&&distinct(scope.flatMap(product=>product.accentColors)).length>1;
+    if(question.key==='budget')return budgetOptionsFor(productsMatchingPreferences(true)).length>1;
+    return true;
+  });
 
   const renderQuestion=(restoreOptionFocus=false)=>{
     const flow=activeQuestions();
     if(step>=flow.length)step=flow.length-1;
-    const question=flow[step],scope=question.key==='design'?productsMatchingPreferences():question.key==='budget'?productsMatchingPreferences(true):productsInScope(),options=question.optionsFor?question.optionsFor(scope):question.options;
+    const question=flow[step],scope=question.key==='design'?productsMatchingColors():question.key==='budget'?productsMatchingPreferences(true):question.key==='accentColor'?products.filter(product=>(!answers.parent||product.parent===answers.parent)&&(!answers.weave||product.category===answers.weave)&&(!answers.primaryColor||(product.primaryColors||[]).includes(answers.primaryColor))):productsInScope(),options=question.optionsFor?question.optionsFor(scope):question.options;
     stepLabel.textContent=`${String(step+1).padStart(2,'0')} / ${String(flow.length).padStart(2,'0')}`;
     progress.setAttribute('aria-valuenow',String(step+1));
     progress.setAttribute('aria-valuemax',String(flow.length));
@@ -91,7 +101,7 @@
       if(question.key==='color')button.style.setProperty('--finder-swatch',swatches[option.value]||'linear-gradient(135deg,#eee 0 50%,#aaa 50%)');
       button.setAttribute('aria-pressed',String(answers[question.key]===option.value));
       if(answers[question.key]===option.value)button.classList.add('is-selected');
-      button.addEventListener('click',()=>{answers[question.key]=option.value;if(question.key==='parent'){answers.weave='';answers.color='';answers.design='';answers.budget='all'}if(question.key==='weave'){answers.color='';answers.design='';answers.budget='all'}if(question.key==='color'){answers.design='';answers.budget='all'}if(question.key==='design')answers.budget='all';renderQuestion(true)});
+      button.addEventListener('click',()=>{answers[question.key]=option.value;if(question.key==='parent'){answers.weave='';answers.color='';answers.primaryColor='';answers.accentColor='';answers.design='';answers.budget='all'}if(question.key==='weave'){answers.color='';answers.primaryColor='';answers.accentColor='';answers.design='';answers.budget='all'}if(question.key==='color'){answers.primaryColor='';answers.accentColor='';answers.design='';answers.budget='all'}if(question.key==='primaryColor'){answers.accentColor='';answers.design='';answers.budget='all'}if(question.key==='accentColor'){answers.design='';answers.budget='all'}if(question.key==='design')answers.budget='all';renderQuestion(true)});
       optionsEl.append(button);
     });
     if(restoreOptionFocus)optionsEl.querySelector('.is-selected')?.focus();
@@ -108,10 +118,10 @@
     if(answers.budget==='upper')return value>(activePriceCount===2?activeCut1:activeCut2);
     return true;
   };
-  const colorMatches=product=>!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color);
+  const colorMatches=product=>(!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color))&&(!answers.primaryColor||(product.primaryColors||[]).includes(answers.primaryColor))&&(!answers.accentColor||(product.accentColors||[]).includes(answers.accentColor));
   const score=product=>{
     let earned=0,total=0;
-    const criteria=[['color',50,colorMatches(product)],['design',50,product.design]];
+    const criteria=[['color',30,colorMatches(product)],['primaryColor',25,product.primaryColors?.includes(answers.primaryColor)],['accentColor',25,product.accentColors?.includes(answers.accentColor)],['design',20,product.design]];
     criteria.forEach(([key,weight,match])=>{
       if(!answers[key])return;
       total+=weight;
@@ -125,6 +135,8 @@
     if(answers.parent&&product.parent===answers.parent)labels.push(product.parent);
     if(answers.weave&&product.category===answers.weave)labels.push(product.category);
     if(answers.color&&colorMatches(product))labels.push(answers.color);
+    if(answers.primaryColor&&product.primaryColors?.includes(answers.primaryColor))labels.push(`${answers.primaryColor} main colour`);
+    if(answers.accentColor&&product.accentColors?.includes(answers.accentColor))labels.push(`${answers.accentColor} border`);
     if(answers.design&&product.design===answers.design)labels.push(product.design);
     return labels.length?labels.join(' · '):'A considered pick from the current collection';
   };
@@ -140,7 +152,7 @@
     copy.append(id,title,meta,reason,price);link.append(image,copy);return link;
   };
   const renderResults=()=>{
-    const eligible=productsInScope().filter(product=>budgetMatches(product));
+    const eligible=productsMatchingPreferences().filter(product=>budgetMatches(product));
     eligible.sort((a,b)=>score(b)-score(a)||a.order-b.order);
     const recommendations=eligible.slice(0,5);
     results.replaceChildren();
