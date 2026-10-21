@@ -2,7 +2,7 @@
   const main=document.querySelector('.all-sarees-content'),catalogues=globalThis.kiranlataProductCatalogues;
   if(!main||!catalogues)return;
 
-  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi'};
+  const categoryNames={dhaniakhali:'Dhaniakhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi'};
   const categoryLabel=key=>categoryNames[key]||String(key).replace(/[-_]+/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
   const routes=globalThis.kiranlataProductRoutes||{};
   const products=Object.entries(catalogues).flatMap(([collection,items])=>items.map((item,index)=>({...item,collection,category:categoryLabel(collection),order:index})));

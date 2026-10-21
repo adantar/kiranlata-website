@@ -3,7 +3,7 @@
   const catalogues=globalThis.kiranlataProductCatalogues;
   if(!main||!catalogues)return;
 
-  const categoryNames={dhaniakhali:'Dhaniakhali / Dhonekhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',kalakshetra:'Bengal Kalakshetra'};
+  const categoryNames={dhaniakhali:'Dhaniakhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',kalakshetra:'Bengal Kalakshetra'};
   const parentNames={bengal:'Bengal Handloom',odisha:'Odisha Handloom','south-india':'South Indian Handloom',banarasi:'Individual Traditions',maheshwari:'Individual Traditions'};
   const categoryLabel=key=>categoryNames[key]||String(key).replace(/[-_]+/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
   const products=Object.entries(catalogues).flatMap(([collection,items])=>items.filter(item=>item.id&&item.images?.[0]?.card).map((item,index)=>({...item,collection,parent:parentNames[globalThis.kiranlataProductRoutes?.[collection]?.page?.split('/').pop()?.replace('.html','')]||'Individual Traditions',category:categoryLabel(collection),order:index}))).filter(item=>item.availability!=='Sold Out');
