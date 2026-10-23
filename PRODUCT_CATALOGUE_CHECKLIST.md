@@ -116,7 +116,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Dhaniakhali: added DHA-010–DHA-016, Inch Par filtering, and an accessible sold-out inquiry state.
 - [ ] Dhaniakhali: apply this checklist automatically to each future product batch.
 - [x] Gorod: six real products, optimized galleries, researched editorial copy, independent filters, masthead features, and responsive interactions.
-- [x] Baluchari: three real listings, optimized galleries, researched feature, masthead, dynamic filters, search and product drawer; GI claim only on BALU-003.
+- [x] Baluchari: six real listings, optimized galleries, researched feature, masthead, dynamic filters, search and product drawer; GI labels follow product metadata.
 - [x] Phulia: 16 real listings, optimized galleries, researched feature, updated count, dynamic filters, masthead and product drawer.
 - [ ] Bengal Kalakshetra: replace concept inventory and apply the complete system.
 - [x] Dhalapathar: two real collector pieces, optimized galleries, blouse-piece labelling, masthead features, filters, and responsive interactions.
