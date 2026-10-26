@@ -5,8 +5,10 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## 1. Intake and validation
 
 - [ ] Confirm the product folder has a stable ID, for example `DHA-010`.
-- [ ] Read `product-info.txt` and treat it as the source of truth.
+- [ ] Read the supplied `product_info.txt` (or the existing legacy `product-info.txt`) and treat it as the product-intake source of truth.
 - [ ] Confirm product name, category, design, colors, fabric, GI designation, price, availability, and image filenames.
+- [ ] Resolve missing or conflicting metadata before publication: research only verifiable claims using authoritative sources or ask the user for product-specific facts. Never leave `pending`, `TBD`, or invented copy in `product_info.txt` or public product information.
+- [ ] Record only supplied and verified image filenames. Do not copy, rename, delete, or add photos in user-managed staging folders unless asked; use `.jpg` names there only when confirmed by the user.
 - [ ] Verify every listed photograph exists and belongs to the same product.
 - [ ] Normalize inconsistent source filenames only in the derivative output; preserve the source and use a consistent numbered derivative sequence.
 - [ ] Compare GI wording to the official registry and apply it only where the supplied product metadata supports the claim; do not propagate a category-level claim to other fibres or listings without evidence.
@@ -34,6 +36,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Keep card and modal titles concise and design-led (for example, **Ikat Border Dhaniakhali**); display colors in the details line rather than repeating them in the title.
 - [ ] Keep display capitalization consistent while retaining normalized values for filtering.
 - [ ] Preserve special product attributes such as collector status and an included blouse piece as structured data, and surface them consistently on cards and detailed views.
+- [ ] Treat product-specific weave features (including whether a saree has two pallus) as explicit per-product facts, never a category default. Current Ilkal confirmations: two pallus for ILK-01, ILK-02, ILK-03, ILK-05, ILK-07, ILK-08, ILK-11, and ILK-12; ILK-04 and ILK-06 do not have two pallus. Ask before assigning this feature to other products.
 - [ ] Remove superseded concept products once real inventory for that category is approved.
 
 ## 4. Collection behavior
@@ -45,6 +48,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Keep product price and inquiry treatment consistent between the collection card, detailed view, and homepage featured-weave drawer. An inquiry link carries the exact product ID.
 - [ ] Global product search uses published real-product catalogue records as its source of truth; results include the product image, ID, name, weave, key fabric/color details, recorded public price or **Contact us for price**, and current availability. Concept/placeholding listings stay out until approved as real inventory.
 - [ ] Search works from desktop, tablet, and phone headers; keyboard focus, clear/close controls, empty and no-match states, result count, “View all,” and product links to the correct quick view are verified.
+- [ ] Search indexes product ID, name, weave, design, recorded main colors, and explicit accent colors. A color query may match either role, but incidental color words in descriptive copy must not create matches; keep the search as one query field and use dedicated facets when shoppers need to distinguish main from accent color.
 - [ ] When product records change, update the search loader’s `region-page.js` cache version along with page asset versions so on-demand search never serves stale inventory.
 - [ ] One-image products show no arrows, counter, thumbnails, automatic cycling, or fake loop.
 - [ ] Multi-image products support desktop hover cycling and previous/next arrows.
@@ -65,11 +69,13 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 ## 5. Dynamic filters
 
 - [ ] Generate Design options from the products currently available in the selected weave.
-- [ ] Generate Color options from normalized product color arrays.
+- [ ] Generate separate **Main color** and **Border / accent color** options from role-specific metadata. Main color uses nonempty `primaryColors`, falling back to the first legacy `colors` value; accent uses only explicit `accentColors`. Do not classify every color in a details string or legacy color list as an accent match.
+- [ ] Omit the Border / accent color facet if the selected product set has no explicit accent values; do not show an empty facet or infer accent data. Preserve older catalogue records through the main-color fallback so they remain filterable and never disappear.
 - [ ] Generate Availability options from published product data. Always provide **All**; show **Available** and **Sold Out** only when those states exist in the selected weave.
-- [ ] When a regional page contains real inventory for multiple weaves, derive and render Design, Color, and Availability filters independently for each selected weave; adding one weave must not replace or contaminate another weave's facets.
+- [ ] When a regional page contains real inventory for multiple weaves, derive and render Design, Main color, Border / accent color, and Availability filters independently for each selected weave; adding one weave must not replace or contaminate another weave's facets.
 - [ ] Derive price-filter choices from recorded prices for the selected weave; show a **Price on request** option only where products in that weave have no numeric price. Keep concept/placeholding listings out of product price facets.
-- [ ] Confirm Design, Color, Availability, and Price filters work in combination and “Clear filters” restores every real product.
+- [ ] Keep dependent facet values scoped to the selected collection/weave and compatible result set; a design choice must not expose designs from unrelated weaves. Combine selected facets with AND logic, show individually removable applied-filter chips plus Clear all, and verify clearing restores every eligible real product, including legacy records.
+- [ ] Confirm Design, Main color, Border / accent color, Availability, and Price filters work in combination.
 - [ ] Confirm result counts update accessibly.
 
 ## 6. Editorial and masthead consistency
@@ -81,6 +87,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Recalculate the homepage feature's collection count whenever products are added or removed; confirm the count matches published catalogue data.
 - [ ] Use three independently clickable masthead tiles linked to the exact product details.
 - [ ] Use floating ivory-and-gold captions with an image gradient and animated underline—no rectangular caption card.
+- [ ] Use the approved slim translucent caption stripe with legible type; keep the photograph visible and do not regress to a large opaque/boxed overlay. Regional “All” chapters lead with weave names; individual weave mastheads lead with design identification, with category and product code retained in the smaller label as appropriate.
 - [ ] Select features that represent distinct designs, price positions, or use cases rather than near-duplicates.
 - [ ] Keep category descriptions and collection actions consistent with the established Bengal layout.
 - [ ] For a new homepage feature, use the `kiranlata-featured-weave` skill to research its educational taxonomy, create a distinct regional art direction, and verify synchronized interactions.
@@ -107,7 +114,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Summarize local changes and test results for review.
 - [ ] Do not deploy until explicitly requested.
 - [ ] Before deployment, review the staged file list and ensure no originals or unrelated files are included.
+- [ ] Stage an explicit allowlist of intended source, catalogue, and required derivative files; never stage browser artifacts, `output/`, originals, or unrelated untracked files wholesale.
 - [ ] Commit with a focused message and push the intended branch.
+- [ ] Verify the deployed site and representative collection/search/filter flows after the push.
 - [ ] Report the branch and commit hash after a successful push.
 
 ## Rollout status

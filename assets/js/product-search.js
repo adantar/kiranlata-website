@@ -12,7 +12,7 @@
   const dialog=document.createElement('dialog');
   dialog.className='product-search-dialog';
   dialog.setAttribute('aria-labelledby','product-search-title');
-  dialog.innerHTML='<div class="product-search-shell"><header class="product-search-heading"><div><p class="eyebrow">The Kiranlata collection</p><h2 id="product-search-title">Find a saree</h2></div><button type="button" class="product-search-close" aria-label="Close search">×</button></header><label class="product-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" autocomplete="off" spellcheck="false" placeholder="Search by name, ID, weave, or color" aria-label="Search products"><button type="button" data-search-clear aria-label="Clear search" hidden>×</button></label><div class="product-search-results-heading"><p data-search-count aria-live="polite">Browse by weave</p><button type="button" data-search-view-all hidden>View all</button></div><div class="product-search-results" data-search-results></div></div>';
+  dialog.innerHTML='<div class="product-search-shell"><header class="product-search-heading"><div><p class="eyebrow">The Kiranlata collection</p><h2 id="product-search-title">Find a saree</h2></div><button type="button" class="product-search-close" aria-label="Close search">×</button></header><label class="product-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" autocomplete="off" spellcheck="false" placeholder="Search by name, ID, weave, main or border color" aria-label="Search by name, ID, weave, main or border color"><button type="button" data-search-clear aria-label="Clear search" hidden>×</button></label><div class="product-search-results-heading"><p data-search-count aria-live="polite">Browse by weave</p><button type="button" data-search-view-all hidden>View all</button></div><div class="product-search-results" data-search-results></div></div>';
   document.body.append(dialog);
 
   const input=dialog.querySelector('input'),clear=dialog.querySelector('[data-search-clear]'),count=dialog.querySelector('[data-search-count]'),viewAll=dialog.querySelector('[data-search-view-all]'),results=dialog.querySelector('[data-search-results]');
@@ -27,7 +27,7 @@
     if(cataloguePromise)return cataloguePromise;
     cataloguePromise=new Promise((resolve,reject)=>{
       const script=document.createElement('script');
-      script.src='/collections/region-page.js?v=20261020-3';
+      script.src='/collections/region-page.js?v=20261026-2';
       script.onload=()=>globalThis.kiranlataProductCatalogues?resolve(globalThis.kiranlataProductCatalogues):reject(new Error('Catalogue data unavailable'));
       script.onerror=()=>reject(new Error('Catalogue data unavailable'));
       document.head.append(script);
@@ -36,7 +36,15 @@
   };
   const flattenCatalogue=catalogue=>Object.entries(catalogue).flatMap(([collection,items])=>items.map(item=>({ ...item,collection,category:categoryNames[collection]||collection })));
   const productHref=product=>{const [page,filter]=routes[product.collection]||['/index.html#collections',''];return `${page}?product=${encodeURIComponent(product.id)}${filter?`#${filter}`:''}`};
-  const productSearchText=product=>normalise([product.id,product.name,product.category,product.type,product.design,(product.colors||[]).join(' '),product.details,product.fabric,product.availability,product.priceValue].join(' '));
+  const mainColors=product=>Array.isArray(product.primaryColors)&&product.primaryColors.length?product.primaryColors:(product.colors||[]).slice(0,1);
+  const productSearchText=product=>{
+    let details=product.details||'';
+    (product.colors||[]).slice().sort((a,b)=>String(b).length-String(a).length).forEach(color=>{
+      const escaped=String(color).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      details=details.replace(new RegExp(escaped,'ig'),' ');
+    });
+    return normalise([product.id,product.name,product.category,product.type,product.design,mainColors(product).join(' '),(product.accentColors||[]).join(' '),details,product.fabric,product.availability,product.priceValue].join(' '));
+  };
 
   const renderPopular=()=>{
     results.replaceChildren();

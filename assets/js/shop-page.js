@@ -7,7 +7,7 @@
   const routes=globalThis.kiranlataProductRoutes||{};
   const products=Object.entries(catalogues).flatMap(([collection,items])=>items.map((item,index)=>({...item,collection,category:categoryLabel(collection),order:index})));
   main.innerHTML=`<section class="shop-catalogue-intro"><p class="eyebrow">The complete collection · ${products.length} sarees</p><h1>Find your <em>saree.</em></h1><p>Explore Kiranlata’s handloom sarees by weave, design, color, and price. Open any piece to see its details and ask us about it.</p></section>
-    <section class="shop-search-band" aria-label="Search the saree collection"><label class="shop-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" data-shop-search autocomplete="off" placeholder="Search by saree name, ID, weave, or color" aria-label="Search all sarees"><button type="button" data-shop-clear-search aria-label="Clear search" hidden>×</button></label></section>
+    <section class="shop-search-band" aria-label="Search the saree collection"><label class="shop-search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg><input type="search" data-shop-search autocomplete="off" placeholder="Search by name, ID, weave, main or border color" aria-label="Search all sarees by name, ID, weave, main or border color"><button type="button" data-shop-clear-search aria-label="Clear search" hidden>×</button></label></section>
     <div class="shop-results-toolbar"><p data-shop-count aria-live="polite"></p><button type="button" class="shop-filter-toggle" data-shop-filter-toggle aria-expanded="false">Filters <span data-shop-filter-count></span></button><label class="shop-sort-label">Sort by<select data-shop-sort aria-label="Sort sarees"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></label></div>
     <div class="shop-workspace"><button class="shop-filter-backdrop" type="button" data-shop-filter-backdrop aria-label="Close filters" hidden></button><aside class="shop-filter-panel is-collapsed" data-shop-filter-panel aria-label="Filter sarees"><div class="shop-filter-heading"><h2>Refine your search</h2><button type="button" data-shop-clear-filters>Clear all</button><button type="button" class="shop-filter-close" data-shop-filter-close aria-label="Close filters">×</button></div><div class="shop-filter-groups" data-shop-filter-groups></div><div class="shop-filter-footer"><span data-shop-filter-result-count></span><button type="button" data-shop-filter-apply>Show sarees</button></div></aside><section class="shop-results" aria-label="Saree results"><div class="shop-filter-summary" data-shop-active-filters></div><div class="shop-product-grid" data-shop-grid></div><p class="shop-no-results" data-shop-empty hidden>No sarees match these choices. Try clearing a filter or changing your search.</p></section></div>`;
 
@@ -45,9 +45,17 @@
   const productFacetValues=(product,key)=>[].concat(facetValue(product,key)).map(String);
   const selectedCount=selection=>Object.values(selection).reduce((total,values)=>total+values.length,0);
   const passesFilters=(product,selection)=>Object.entries(selection).every(([key,values])=>!values.length||values.some(value=>passesOneFilter(product,key,value)));
+  const searchableProductText=product=>{
+    let details=product.details||'';
+    (product.colors||[]).slice().sort((a,b)=>String(b).length-String(a).length).forEach(color=>{
+      const escaped=String(color).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      details=details.replace(new RegExp(escaped,'ig'),' ');
+    });
+    return [product.id,product.name,product.category,product.type,product.design,mainColors(product).join(' '),(product.accentColors||[]).join(' '),details,product.availability,product.priceValue].join(' ');
+  };
   const facetMatches=product=>{
     const terms=normalise(search.value).split(' ').filter(Boolean);
-    const haystack=normalise([product.id,product.name,product.category,product.type,product.design,(product.colors||[]).join(' '),product.details,product.availability,product.priceValue].join(' '));
+    const haystack=normalise(searchableProductText(product));
     return terms.every(term=>haystack.includes(term));
   };
   const colorSwatch=value=>{
