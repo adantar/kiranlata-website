@@ -75,6 +75,8 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] When a regional page contains real inventory for multiple weaves, derive and render Design, Main color, Border / accent color, and Availability filters independently for each selected weave; adding one weave must not replace or contaminate another weave's facets.
 - [ ] Derive price-filter choices from recorded prices for the selected weave; show a **Price on request** option only where products in that weave have no numeric price. Keep concept/placeholding listings out of product price facets.
 - [ ] Keep dependent facet values scoped to the selected collection/weave and compatible result set; a design choice must not expose designs from unrelated weaves. Combine selected facets with AND logic, show individually removable applied-filter chips plus Clear all, and verify clearing restores every eligible real product, including legacy records.
+- [ ] For dependent facets such as Main color and Border / accent color, keep all known options visible with live compatible-result counts; disable only options that would produce zero results, preserve the currently selected option so it can be toggled off, and keep All/reset choices and removable active-filter chips available. Do not silently remove unavailable combinations or allow shoppers to get trapped.
+- [ ] Render filter groups as accessible collapsible disclosures with a clear expand/collapse indicator; verify keyboard operation and that collapsing a group does not clear its selection.
 - [ ] Confirm Design, Main color, Border / accent color, Availability, and Price filters work in combination.
 - [ ] Confirm result counts update accessibly.
 

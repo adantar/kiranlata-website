@@ -1341,7 +1341,21 @@ body.enquiry-open{overflow:hidden}
 /* Catalogue price display and enquiry links */
 .product-facets{grid-template-columns:minmax(210px,.75fr) minmax(0,1fr) minmax(0,1.1fr)}
 .facet-primary,.facet-secondary{display:grid;align-content:start;gap:1.5rem;min-width:0}
-.facet-secondary{grid-template-columns:1fr}
+.facet-secondary{grid-template-columns:minmax(0,1fr)}
+.facet-filter-group{min-width:0;border-bottom:1px solid #72572d38}
+.facet-filter-group>summary{display:flex;min-height:38px;align-items:center;gap:.5rem;color:#6d100b;font:.6rem var(--sans);font-weight:600;letter-spacing:.14em;list-style:none;text-transform:uppercase;cursor:pointer}
+.facet-filter-group>summary::-webkit-details-marker{display:none}
+.facet-filter-group>summary:after{content:'＋';margin-left:auto;color:#8a6d42;font-size:.9rem;line-height:1}
+.facet-filter-group[open]>summary:after{content:'−'}
+.facet-filter-group .facet-options{padding:0 0 .8rem}
+.facet-option-count{margin-left:.15rem;color:#806a4d;font-size:.56rem}
+.facet-options button:disabled{opacity:.42;cursor:not-allowed;filter:saturate(.55)}
+.facet-options button:disabled:hover{border-color:#72572d55}
+.facet-applied{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.15rem}
+.facet-applied[hidden]{display:none}
+.facet-applied-chip{min-height:34px;padding:.45rem .7rem;border:1px solid #72572d66;border-radius:999px;background:#343216;color:#fff8e9;font:.62rem var(--sans);cursor:pointer}
+.facet-applied-chip:hover,.facet-applied-chip:focus-visible{border-color:#bd8b3c;outline:2px solid #bd8b3c;outline-offset:2px}
+.facet-filter-group>summary:focus-visible{outline:2px solid #bd8b3c;outline-offset:2px}
 .preview-product-meta{display:block;line-height:1.65}
 .visible-product-price{white-space:nowrap}
 .product-enquiry-link{margin-left:.35rem;white-space:nowrap;font-size:.9em}
@@ -1349,7 +1363,7 @@ body.enquiry-open{overflow:hidden}
 .quick-view-price-enquiry{align-self:flex-start;margin:1.4rem 0;color:#342b1e;font:1.35rem var(--serif)}
 .collection-drawer-price{font-size:.62rem!important;letter-spacing:.02em!important;text-transform:none!important;color:#493724!important}
 @media(max-width:1050px){.product-facets{grid-template-columns:repeat(2,minmax(0,1fr))}.facet-secondary{grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.product-facets{grid-template-columns:1fr}.facet-secondary{grid-column:auto;grid-template-columns:1fr}.facet-primary,.facet-secondary{gap:1.25rem}.quick-view-price-enquiry{margin:.65rem 0;font-size:1.35rem}}
+@media(max-width:560px){.product-facets{grid-template-columns:1fr}.facet-secondary{grid-column:auto;grid-template-columns:minmax(0,1fr)}.facet-primary,.facet-secondary{gap:1.25rem}.quick-view-price-enquiry{margin:.65rem 0;font-size:1.35rem}}
 
 /* Keep card descriptions, prices, and inquiry actions visually distinct. */
 .preview-product-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.28rem;margin-top:.55rem}
