@@ -79,11 +79,13 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Render filter groups as accessible collapsible disclosures with a clear expand/collapse indicator; verify keyboard operation and that collapsing a group does not clear its selection.
 - [ ] Confirm Design, Main color, Border / accent color, Availability, and Price filters work in combination.
 - [ ] Confirm result counts update accessibly.
-- [ ] Provide a collection sort control for every category and subcategory page, alongside the global shop sort. Include Featured (catalogue order), Price: low to high, Price: high to low, and Name: A to Z; keep the selected sort applied while facets change, place unpriced items last in both price sorts, and verify the result count and visible order on desktop and mobile.
+- [ ] Provide a collection sort control for every category and subcategory page, alongside the global shop sort. Include Featured (catalogue order), Price: low to high, Price: high to low, Name: A to Z, and Product ID: low to high (numeric ID ordering); keep the selected sort applied while facets change, place unpriced items last in both price sorts, and verify the result count and visible order on desktop and mobile.
 
 ## 6. Editorial and masthead consistency
 
 - [ ] Feature three commercially useful and visually distinct real products when enough inventory exists.
+- [ ] Give each featured weave chapter a small, unobtrusive decorative mark based on a documented or image-confirmed motif/construction; keep it outside the saree's focal area and make the mark distinct across weaves.
+- [ ] Use distinct icons for each feature category and educational example; avoid generic fallback shapes and visually audit every icon at desktop and phone sizes.
 - [ ] Treat the category masthead selection as the homepage feature authority: one product uses one photograph, two use both, and three or more use the masthead's top three without duplication.
 - [ ] When masthead featured IDs change, update the corresponding entry in `assets/js/featured-weaves.js` in the same task.
 - [ ] When adding a real-product weave, synchronize its homepage feature drawer, global-search route/category, featured count, catalogue route, and masthead IDs.
