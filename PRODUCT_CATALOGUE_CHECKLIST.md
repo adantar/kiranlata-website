@@ -79,6 +79,7 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] Render filter groups as accessible collapsible disclosures with a clear expand/collapse indicator; verify keyboard operation and that collapsing a group does not clear its selection.
 - [ ] Confirm Design, Main color, Border / accent color, Availability, and Price filters work in combination.
 - [ ] Confirm result counts update accessibly.
+- [ ] Provide a collection sort control for every category and subcategory page, alongside the global shop sort. Include Featured (catalogue order), Price: low to high, Price: high to low, and Name: A to Z; keep the selected sort applied while facets change, place unpriced items last in both price sorts, and verify the result count and visible order on desktop and mobile.
 
 ## 6. Editorial and masthead consistency
 
@@ -136,4 +137,4 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Patteda Anchu: replace concept inventory and apply the complete system.
 - [ ] Kanchipuram: replace concept inventory and apply the complete system.
 - [ ] Banarasi: replace concept inventory and apply the complete system.
-- [ ] Maheshwari: replace concept inventory and apply the complete system.
+- [x] Maheshwari: verify eight Drive product records and photo counts; publish eight products, 17-photo galleries, researched feature chapter, dependent filters, search routing, masthead and collection sorting.

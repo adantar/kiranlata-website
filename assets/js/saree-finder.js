@@ -3,7 +3,7 @@
   const catalogues=globalThis.kiranlataProductCatalogues;
   if(!main||!catalogues)return;
 
-  const categoryNames={dhaniakhali:'Dhaniakhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',kalakshetra:'Bengal Kalakshetra'};
+  const categoryNames={dhaniakhali:'Dhaniakhali',gorod:'Gorod',phulia:'Phulia Tangail',baluchari:'Baluchari',ilkal:'Ilkal','patteda-anchu':'Patteda Anchu',narayanpet:'Narayanpet',dhalapathar:'Dhalapathar',banarasi:'Banarasi',maheshwari:'Maheshwari',kalakshetra:'Bengal Kalakshetra'};
   const parentNames={bengal:'Bengal Handloom',odisha:'Odisha Handloom','south-india':'South Indian Handloom',banarasi:'Individual Traditions',maheshwari:'Individual Traditions'};
   const categoryLabel=key=>categoryNames[key]||String(key).replace(/[-_]+/g,' ').replace(/\b\w/g,letter=>letter.toUpperCase());
   const products=Object.entries(catalogues).flatMap(([collection,items])=>items.filter(item=>item.id&&item.images?.[0]?.card).map((item,index)=>({...item,collection,parent:parentNames[globalThis.kiranlataProductRoutes?.[collection]?.page?.split('/').pop()?.replace('.html','')]||'Individual Traditions',category:categoryLabel(collection),order:index}))).filter(item=>item.availability!=='Sold Out');
@@ -84,7 +84,7 @@
   const renderQuestion=(restoreOptionFocus=false)=>{
     const flow=activeQuestions();
     if(step>=flow.length)step=flow.length-1;
-    const question=flow[step],scope=question.key==='design'?productsMatchingColors():question.key==='budget'?productsMatchingPreferences(true):question.key==='accentColor'?products.filter(product=>(!answers.parent||product.parent===answers.parent)&&(!answers.weave||product.category===answers.weave)&&(!answers.primaryColor||(product.primaryColors||[]).includes(answers.primaryColor))):productsInScope(),options=question.optionsFor?question.optionsFor(scope):question.options;
+    const question=flow[step],baseScope=productsInScope(),moodScope=baseScope.filter(product=>!answers.color||(product.colors||[]).some(color=>familyFor(color)===answers.color)),scope=question.key==='design'?productsMatchingColors():question.key==='budget'?productsMatchingPreferences(true):question.key==='accentColor'?moodScope.filter(product=>!answers.primaryColor||(product.primaryColors||[]).includes(answers.primaryColor)):question.key==='primaryColor'?moodScope:baseScope,options=question.optionsFor?question.optionsFor(scope):question.options;
     stepLabel.textContent=`${String(step+1).padStart(2,'0')} / ${String(flow.length).padStart(2,'0')}`;
     progress.setAttribute('aria-valuenow',String(step+1));
     progress.setAttribute('aria-valuemax',String(flow.length));
