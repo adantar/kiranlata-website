@@ -139,4 +139,4 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [x] Patteda Anchu: replace concept inventory and apply the complete system.
 - [ ] Kanchipuram: replace concept inventory and apply the complete system.
 - [ ] Banarasi: replace concept inventory and apply the complete system.
-- [x] Maheshwari: verify eight Drive product records and photo counts; publish eight products, 17-photo galleries, researched feature chapter, dependent filters, search routing, masthead and collection sorting.
+- [x] Maheshwari: verify nine Drive product records and photo counts; publish nine products, 20 total product photos, researched feature chapter, dependent filters, search routing, masthead and collection sorting.
