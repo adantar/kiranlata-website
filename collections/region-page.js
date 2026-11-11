@@ -46,9 +46,9 @@ const pattedaAnchuProduct=()=>({
   designFeature:'Fine checks · Narrow striped border',details:'Pure cotton · Black, White/Ivory, Charcoal Grey · Handloom woven',
   images:[{card:`${P}patteda-anchu/PAT-01/01-card.jpg`,large:`${P}patteda-anchu/PAT-01/01-large.jpg`,label:'Primary view'}]
 });
-const maheshwariProduct=(id,primaryColor,accentColors,count,price,designFeature)=>{
+const maheshwariProduct=(id,primaryColor,accentColors,count,price,designFeature,availability='Available')=>{
   const item=inventoryProduct(id,'maheshwari',`Traditional Maheshwari Saree — ${primaryColor==='Magneta'?'Magenta':primaryColor}`,'Traditional',[primaryColor,...accentColors],count,price,
-    'Silk-cotton · pure mulberry silk warp and pure cotton weft','Maheshwar, Madhya Pradesh, India','Maheshwar Sarees & Fabrics',false,'Available',[primaryColor],accentColors,designFeature);
+    'Silk-cotton · pure mulberry silk warp and pure cotton weft','Maheshwar, Madhya Pradesh, India','Maheshwar Sarees & Fabrics',false,availability,[primaryColor],accentColors,designFeature);
   item.details=`Pure mulberry silk warp and pure cotton weft · ${primaryColor}`;
   item.designFeature=designFeature;
   item.mastheadLabel=({
@@ -151,9 +151,9 @@ const regionPages={
   kanchipuram:{eyebrow:'Kanchipuram · Tamil Nadu',title:'Kanchipuram',intro:'Architectural borders, substantial silk and the celebrated korvai join give Kanchipuram sarees their unmistakable presence.',board:'/assets/images/catalogue/regions/silk-regions-board.webp',panel:1,types:[['Kanchipuram','kanchipuram']],cards:paired(P+'kanchipuram-products.webp','kanchipuram','all',['Maroon Temple Korvai','Mulberry silk · Contrast border'],['Peacock Magenta Korvai','Mulberry silk · Figured pallu'])},
   maheshwari:{eyebrow:'Maheshwar · Madhya Pradesh',title:'Maheshwari',intro:'Light silk-cotton, measured stripes and checks, and distinctive borders carry the weaving heritage of Maheshwar.',types:[['Maheshwari','maheshwari']],cards:[
     maheshwariProduct('MAH-01','Plum red',['Blue','Golden'],3,85,'Checked field with fine gold lines and a broad geometric border edged in blue'),
-    maheshwariProduct('MAH-02','Maroon',['Blue','Golden'],2,85,'Maroon checked field with a gold grid and a broad blue-edged geometric border'),
+    maheshwariProduct('MAH-02','Maroon',['Blue','Golden'],2,85,'Maroon checked field with a gold grid and a broad blue-edged geometric border','Sold Out'),
     maheshwariProduct('MAH-03','Coffee',['Ivory','Navy Blue','Golden'],2,85,'Coffee checked field with an ivory geometric border and navy edge'),
-    maheshwariProduct('MAH-04','Shimmering red',['Red','Golden'],2,80,'Fine stripes across the shimmering red field with a red-and-gold geometric border'),
+    maheshwariProduct('MAH-04','Shimmering red',['Red','Golden'],2,80,'Fine stripes across the shimmering red field with a red-and-gold geometric border','Sold Out'),
     maheshwariProduct('MAH-05','Blue',['Red','Golden'],2,80,'Blue striped field framed by a red-and-gold geometric border'),
     maheshwariProduct('MAH-06','Blue and green',['Blue','Golden'],2,85,'Blue-green field with small gold diamond motifs and a striped pallu'),
     maheshwariProduct('MAH-07','Dark Blue and green',['Blue','Golden'],2,85,'Dark blue-green field with fine gold stripes and small diamond motifs'),
