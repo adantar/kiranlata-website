@@ -62,6 +62,15 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 
 - [ ] Change availability once in the product metadata; never hardcode a product's status independently into a card, modal, filter, homepage drawer, or inquiry form.
 - [ ] For every product changed to **Sold Out**, verify the collection-card badge, muted product treatment, Availability filter, quick-view status, sold-out inquiry wording, and homepage collection-drawer status wherever that product appears.
+
+### Inquiry cart and product comparison
+
+- [ ] Keep the inquiry cart separate from checkout: there is no payment or order placement. Persist only product IDs, resolve names/prices/status from the published catalogue, and prevent sold-out products from being added.
+- [ ] Let shoppers remove individual items or clear the cart; show a clear empty state and the current item count. Verify the cart persists across page navigation and stays synchronized across tabs.
+- [ ] The primary cart action sends all selected products, IDs, prices, and availability through the existing inquiry form. Clear the cart only after a successful inquiry submission; preserve it if submission fails.
+- [ ] The Instagram handoff must accurately explain that shoppers copy their selection and paste it into a message; do not imply Instagram DMs are prefilled.
+- [ ] Keep comparison as a separate, optional action with a maximum of three catalogue products. Compare only recorded catalogue fields, allow removing selections, and provide an add-to-inquiry-cart action from the comparison view.
+- [ ] Verify cart and comparison controls are usable by keyboard and touch, work at phone widths without horizontal page overflow, and display sold-out availability accurately.
 - [ ] For every product returned to **Available**, verify that all sold-out treatments disappear from those same surfaces.
 - [ ] Do not add availability badges to editorial masthead or homepage feature imagery unless that surface adopts availability labels for every product consistently. Product codes must still appear on every real-product masthead tile.
 - [ ] Recalculate only counts affected by the change. Availability changes do not alter total collection counts, but any visible available/sold-out subtotal must be derived again from product metadata.
@@ -100,6 +109,9 @@ Use this checklist for every Dhaniakhali upload and when converting any other we
 - [ ] If the full category name is too long for the display heading, use a concise display-only name while preserving the full category name in navigation, accessible labels, product data, and the collection CTA.
 - [ ] Measure all sibling feature heights and the chapter gap at desktop, tablet, standard-phone, and narrow-phone widths. Confirm long glossary content is fully visible; prefer content-sized rows with shared minimum heights to clipping or text-specific fixed heights.
 - [ ] Check the key interactive states (each educational tab, arrows, photos, product drawer) after responsive reflow, including keyboard/touch and reduced-motion behavior.
+
+- [ ] Prevent duplicate cart entries for unique sarees: after adding, show a distinct sage “✓ In cart” state and disable that add button until the product is removed from the cart. Keep a clear Remove action in the cart. Add concise hover help for Add to cart and Compare; comparison toggles off and supports up to three pieces.
+- [ ] Keep one compact, visible cart instruction that explains both purchase paths: begin a website inquiry or message Kiranlata on Instagram. Use short buttons (“Begin inquiry” and “Message on Instagram”); the Instagram action copies the selection, opens the profile, and prompts shoppers to paste it into their message. Present Instagram messaging and website inquiry as equally prominent primary purchase options, with matching button size and visual weight.
 
 ## 7. Professional QA
 

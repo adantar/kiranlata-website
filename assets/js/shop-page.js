@@ -103,7 +103,8 @@
   const productHref=product=>{const route=routes[product.collection];const page=route?.page||'/shop.html',anchor=route?.anchor||'';return `${page}?product=${encodeURIComponent(product.id)}${anchor?`#${encodeURIComponent(anchor)}`:''}`};
   const priceLabel=product=>product.priceValue==null?'Contact us for price':`$${Number(product.priceValue).toLocaleString('en-US')}`;
   const makeCard=product=>{
-    const card=document.createElement('a');card.className=`shop-product-card${product.availability==='Sold Out'?' is-sold-out':''}`;card.href=productHref(product);card.setAttribute('aria-label',`${product.name}, ${product.id}, ${priceLabel(product)}, ${product.availability||'Available'}`);
+    const card=document.createElement('article');card.className=`shop-product-card${product.availability==='Sold Out'?' is-sold-out':''}`;
+    const link=document.createElement('a');link.className='shop-product-link';link.href=productHref(product);link.setAttribute('aria-label',`${product.name}, ${product.id}, ${priceLabel(product)}, ${product.availability||'Available'}`);
     const media=document.createElement('span');media.className='shop-product-media';
     const image=document.createElement('img');image.src=product.images?.[0]?.card||'';image.alt=`${product.name} · ${product.id}`;image.loading='lazy';media.append(image);
     const id=document.createElement('span');id.className='shop-product-id';id.textContent=product.id;media.append(id);
@@ -114,9 +115,12 @@
     const details=document.createElement('span');details.className='shop-product-details';details.textContent=product.details||[product.design,(product.colors||[]).join(', ')].filter(Boolean).join(' · ');
     const meta=document.createElement('span');meta.className='shop-product-meta';
     const price=document.createElement('strong');price.className='shop-product-price';price.textContent=priceLabel(product);
-    const status=document.createElement('small');status.className=product.availability==='Sold Out'?'is-sold-out':'';status.textContent=product.availability||'Available';
     const action=document.createElement('span');action.className='shop-product-action';action.textContent='View saree details ↗';
-    copy.append(category,name,details,meta);meta.append(price,status);card.append(media,copy,action);return card;
+    copy.append(category,name,details,meta);meta.append(price);link.append(media,copy,action);card.append(link);
+    const actions=document.createElement('div');actions.className='shop-product-actions';
+    const add=document.createElement('button');add.type='button';add.className='inquiry-cart-add';add.dataset.cartAdd=product.id;add.textContent='Add to cart';add.hidden=product.availability==='Sold Out';add.disabled=product.availability==='Sold Out';
+    const compare=document.createElement('button');compare.type='button';compare.className='compare-add';compare.dataset.compareAdd=product.id;compare.textContent='Compare';
+    actions.append(add,compare);card.append(actions);return card;
   };
   const render=()=>{
     const selection=filters();clearSearch.hidden=!search.value;
