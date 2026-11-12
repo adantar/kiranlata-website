@@ -118,8 +118,8 @@
     const action=document.createElement('span');action.className='shop-product-action';action.textContent='View saree details ↗';
     copy.append(category,name,details,meta);meta.append(price);link.append(media,copy,action);card.append(link);
     const actions=document.createElement('div');actions.className='shop-product-actions';
-    const add=document.createElement('button');add.type='button';add.className='inquiry-cart-add';add.dataset.cartAdd=product.id;add.textContent='Add to cart';add.hidden=product.availability==='Sold Out';add.disabled=product.availability==='Sold Out';
-    const compare=document.createElement('button');compare.type='button';compare.className='compare-add';compare.dataset.compareAdd=product.id;compare.textContent='Compare';
+    const add=document.createElement('button');add.type='button';add.className='inquiry-cart-add';add.dataset.cartAdd=product.id;add.textContent='Add to cart';add.disabled=product.availability==='Sold Out';add.title=product.availability==='Sold Out'?'This saree is sold out.':'Add this saree to your cart.';
+    const compare=document.createElement('button');compare.type='button';compare.className='compare-add';compare.dataset.compareAdd=product.id;compare.textContent='Compare';compare.disabled=product.availability==='Sold Out';compare.title=product.availability==='Sold Out'?'Sold-out sarees cannot be compared.':'Compare this saree with others.';
     actions.append(add,compare);card.append(actions);return card;
   };
   const render=()=>{
